@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>S2 Pendidikan Geografi – Universitas Sebelas Maret</title>
+  <meta name="description" content="Program Studi Magister (S2) Pendidikan Geografi FKIP Universitas Sebelas Maret (UNS). Terakreditasi Unggul dengan fokus kajian lingkungan, kebencanaan, dan analisis geospasial.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-deep: #0c4a6e;
+      --primary-light: #38bdf8;
+      --accent: #22d3ee;
+      --ink: #0f172a;
+      --body: #475569;
+      --muted: #64748b;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --border-subtle: #f1f5f9;
+      --badge-bg: #e0f2fe;
+      --badge-text: #0369a1;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.12);
+      --font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font);
+      color: var(--body);
+      background-color: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 100% - 36px);
+      margin-inline: auto;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--primary-light);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ===== HERO SECTION (NO HEADER) ===== */
+    .hero {
+      position: relative;
+      background: linear-gradient(145deg, #075985 0%, #0284c7 48%, #0369a1 100%);
+      color: #ffffff;
+      padding: 56px 0 110px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Subtle Geo Topology Accent Circles */
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 70%);
+    }
+
+    .hero::before {
+      width: 480px;
+      height: 480px;
+      top: -120px;
+      left: -120px;
+    }
+
+    .hero::after {
+      width: 540px;
+      height: 540px;
+      bottom: 20px;
+      right: -140px;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      margin-inline: auto;
+    }
+
+    /* Official Campus Brand Bar on Hero */
+    .hero-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 8px 18px 8px 10px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .brand-logo-pill {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: var(--primary-dark);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.76rem;
+      letter-spacing: -0.02em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
+    .brand-meta {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .brand-univ {
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+    }
+
+    .brand-faculty {
+      font-size: 0.74rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+    }
+
+    /* Program Badge */
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 10px #34d399;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5.2vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      text-shadow: 0 2px 14px rgba(2, 44, 75, 0.25);
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      max-width: 660px;
+      margin: 0 auto 36px;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    /* Quick Jump Navigation Buttons */
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      min-height: 46px;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .action-btn.primary {
+      background: #ffffff;
+      color: var(--primary-deep);
+      border: 1.5px solid #ffffff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    }
+
+    .action-btn.primary:hover {
+      transform: translateY(-2px);
+      background: #f0f9ff;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    }
+
+    .action-btn.outline {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .action-btn.outline:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.24);
+      border-color: #ffffff;
+    }
+
+    /* Wave Bottom Divider */
+    .hero-wave {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 60px;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* ===== SECTIONS GLOBAL ===== */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      margin-bottom: 44px;
+    }
+
+    .section-header.centered {
+      text-align: center;
+      max-width: 680px;
+      margin-inline: auto;
+      margin-bottom: 48px;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary-dark);
+      background: var(--badge-bg);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      color: var(--ink);
+      font-size: clamp(1.8rem, 3.2vw, 2.35rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.22;
+      margin-bottom: 14px;
+    }
+
+    .lead {
+      font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+      color: var(--body);
+      line-height: 1.7;
+    }
+
+    /* ===== PROFIL SECTION ===== */
+    .about {
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg-alt) 100%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-text .lead {
+      margin-bottom: 24px;
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      min-height: 44px;
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.28);
+    }
+
+    .btn-link:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(2, 132, 199, 0.35);
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .fact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: 22px 20px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .fact-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .fact-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .fact-metric {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.15;
+      margin-bottom: 4px;
+    }
+
+    .fact-label {
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .fact-title {
+      font-size: 1.05rem;
+      color: var(--ink);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .fact-desc {
+      font-size: 0.92rem;
+      color: var(--body);
+    }
+
+    .tags-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .tag-item {
+      display: inline-block;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid #bae6fd;
+    }
+
+    /* ===== PENGAJAR & KEAHLIAN (REDESIGNED: NO RAINBOW, CLEAN & MODERN) ===== */
+    .faculty-section {
+      background: #ffffff;
+      padding: 88px 0;
+    }
+
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 20px;
+    }
+
+    /* Uniform Elegant Faculty Card */
+    .faculty-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px 20px;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .faculty-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-light), var(--primary));
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-4px);
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 28px -4px rgba(2, 132, 199, 0.12);
+    }
+
+    .faculty-card:hover::before {
+      opacity: 1;
+    }
+
+    .faculty-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    /* Monogram initials avatar with refined academic navy/sky styling */
+    .faculty-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    }
+
+    .faculty-number {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      padding: 3px 9px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .faculty-body {
+      flex: 1;
+    }
+
+    .faculty-name {
+      color: var(--ink);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .faculty-role {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .faculty-role svg {
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* Cohesive expertise badge */
+    .faculty-field-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0f9ff;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .faculty-field-badge svg {
+      color: #0284c7;
+      flex-shrink: 0;
+    }
+
+    /* ===== KARIR & FASILITAS ===== */
+    .facilities-section {
+      background: var(--bg-alt);
+    }
+
+    .panels-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .panel-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel-box-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .panel-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--badge-bg);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .panel-box h3 {
+      color: var(--ink);
+      font-size: 1.28rem;
+      font-weight: 700;
+    }
+
+    .panel-box ul {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .panel-box li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 0.95rem;
+      color: var(--body);
+      line-height: 1.55;
+    }
+
+    .check-bullet {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #e0f2fe;
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ===== MITRA KERJASAMA ===== */
+    .partners-section {
+      background: #ffffff;
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .partner-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      transition: all 0.2s ease;
+    }
+
+    .partner-card:hover {
+      border-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .partner-ico {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--primary);
+    }
+
+    .partners-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 18px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: linear-gradient(165deg, #075985 0%, #0369a1 60%, #0284c7 100%);
+      color: #ffffff;
+      padding: 72px 0 28px;
+    }
+
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.6fr;
+      gap: 40px;
+    }
+
+    .foot-col h4 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .foot-col h5 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 18px;
+    }
+
+    .foot-col p {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.65;
+    }
+
+    .foot-col ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .foot-col a {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .foot-col a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .contact-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.5;
+    }
+
+    .contact-list svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      opacity: 0.9;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .social-links a {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .foot-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 56px;
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    /* Floating Back to Top Button */
+    .to-top {
+      position: fixed;
+      right: 20px;
+      bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #0284c7;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.2s ease, background 0.2s ease;
+      z-index: 40;
+    }
+
+    .to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .to-top:hover {
+      background: #0369a1;
+      transform: translateY(-2px);
+    }
+
+    /* ===== COMPREHENSIVE RESPONSIVE DESIGN (MOBILE & TABLET) ===== */
+    @media (max-width: 1024px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .foot-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+      }
+
+      .foot-col:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 820px) {
+      section {
+        padding: 64px 0;
+      }
+
+      .hero {
+        padding: 48px 0 90px;
+      }
+
+      .panels-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .foot-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .foot-col:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .hero {
+        padding: 40px 0 76px;
+      }
+
+      .hero-brand {
+        margin-bottom: 22px;
+        padding: 6px 14px 6px 8px;
+      }
+
+      .brand-univ {
+        font-size: 0.78rem;
+      }
+
+      .brand-faculty {
+        font-size: 0.7rem;
+      }
+
+      .hero h1 {
+        font-size: 2.15rem;
+      }
+
+      .hero p {
+        font-size: 0.98rem;
+        margin-bottom: 26px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin-inline: auto;
+      }
+
+      .action-btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+        font-size: 0.94rem;
+      }
+
+      .facts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faculty-section {
+        padding: 60px 0;
+      }
+
+      .faculty-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .partners-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .foot-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .foot-bottom {
+        margin-top: 40px;
+      }
+
+      .to-top {
+        right: 16px;
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .faculty-card, .action-btn, .btn-link {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="beranda">
+    <div class="container hero-inner">
+      <!-- Identitas Resmi Kampus -->
+      <div class="hero-brand">
+        <div class="brand-logo-pill">UNS</div>
+        <div class="brand-meta">
+          <span class="brand-univ">UNIVERSITAS SEBELAS MARET</span>
+          <span class="brand-faculty">Fakultas Keguruan dan Ilmu Pendidikan</span>
+        </div>
+      </div>
+
+      <!-- Badge Akreditasi -->
+      <div>
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          Program Magister (S2) • Akreditasi Unggul
+        </div>
+      </div>
+
+      <!-- Judul Utama -->
+      <h1>Pendidikan Geografi</h1>
+
+      <!-- Deskripsi -->
+      <p>
+        Mempersiapkan pendidik, akademisi, dan peneliti geografi unggul berwawasan lingkungan dan kebencanaan dengan keahlian penguasaan teknologi geospasial modern.
+      </p>
+
+      <!-- Navigasi Pintas Section (Pengganti Search Bar) -->
+      <div class="hero-actions">
+        <a href="#profil" class="action-btn primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Profil Program Studi
+        </a>
+        <a href="#pengajar" class="action-btn outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Daftar Pengajar (13)
+        </a>
+        <a href="#karir" class="action-btn outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+          Karir &amp; Fasilitas
+        </a>
+        <a href="#mitra" class="action-btn outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+          Mitra Kerjasama
+        </a>
+      </div>
+    </div>
+
+    <!-- Pemisah Ombak Elegan -->
+    <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,24 C320,54 720,8 1080,32 C1260,44 1380,20 1440,24 L1440,60 L0,60 Z" fill="#ffffff"/>
+    </svg>
+  </section>
+
+  <!-- ===== PROFIL PROGRAM STUDI ===== -->
+  <section class="about" id="profil">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-badge">Profil Program Studi</span>
+          <h2>Membangun Keahlian Geografi Berkelanjutan</h2>
+          <p class="lead">
+            Program Magister Pendidikan Geografi FKIP UNS menyelenggarakan pendidikan tingkat lanjut yang menggabungkan pedagogi modern, riset lingkungan, kajian mitigasi bencana, serta kompetensi teknologi geospasial (SIG dan Penginderaan Jauh).
+          </p>
+          <a href="#pengajar" class="btn-link">
+            Lihat Staf Pengajar
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+
+        <div class="facts-grid">
+          <div class="fact-card">
+            <div class="fact-metric">Unggul</div>
+            <div class="fact-label">Akreditasi Program Studi (BAN-PT/LAMDIK)</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-metric">2 Tahun</div>
+            <div class="fact-label">Masa Studi Normal (4 Semester)</div>
+          </div>
+          <div class="fact-card">
+            <h3 class="fact-title">Core Study</h3>
+            <p class="fact-desc">Pendidikan Geografi, Lingkungan Hidup, dan Kajian Kebencanaan.</p>
+          </div>
+          <div class="fact-card">
+            <h3 class="fact-title">Kompetensi Utama</h3>
+            <p class="fact-desc">Analisis Geospasial, GIS Terapan, dan Metodologi Pembelajaran Inovatif.</p>
+          </div>
+          <div class="fact-card full-width">
+            <h3 class="fact-title">Fokus Keilmuan</h3>
+            <div class="tags-list">
+              <span class="tag-item">Pendidikan Geografi</span>
+              <span class="tag-item">Ilmu Geografi Murni &amp; Terapan</span>
+              <span class="tag-item">Geografi Kebencanaan</span>
+              <span class="tag-item">Geoinformatika</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DAFTAR PENGAJAR & KEAHLIAN (REDESIGNED: COHESIVE & NOT RAINBOW) ===== -->
+  <section class="faculty-section" id="pengajar">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-badge">Tenaga Pendidik &amp; Pakar</span>
+        <h2>Pengajar &amp; Bidang Keahlian</h2>
+        <p class="lead">
+          Tiga belas staf pengajar berkualifikasi Guru Besar dan Doktor dengan kepakaran multidisipliner yang siap membimbing dan menginspirasi mahasiswa program magister.
+        </p>
+      </div>
+
+      <!-- Container Grid Kartu Dosen Bersih & Seragam -->
+      <div class="faculty-grid" id="facultyGrid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PELUANG KARIR & FASILITAS ===== -->
+  <section class="facilities-section" id="karir">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-badge">Keunggulan &amp; Prospek</span>
+        <h2>Peluang Karir &amp; Fasilitas Belajar</h2>
+        <p class="lead">
+          Kurikulum yang dirancang adaptif terhadap kebutuhan dunia akademik dan industri, ditunjang sarana perkuliahan yang representatif.
+        </p>
+      </div>
+
+      <div class="panels-grid">
+        <!-- Panel Karir -->
+        <div class="panel-box">
+          <div class="panel-box-header">
+            <div class="panel-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3>Peluang Karir Lulusan</h3>
+          </div>
+          <ul>
+            <li>
+              <span class="check-bullet"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Dosen &amp; Pendidik Profesional:</strong> Tenaga pengajar geografi di perguruan tinggi dan sekolah menengah bertaraf nasional/internasional.</span>
+            </li>
+            <li>
+              <span class="check-bullet"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Pengembang Media Pembelajaran:</strong> Perancang media edukasi geospasial, kurikulum digital, dan simulasi spasial.</span>
+            </li>
+            <li>
+              <span class="check-bullet"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Pakar Pendidikan Kebencanaan:</strong> Pengembang program mitigasi bencana dan literasi lingkungan di instansi pemerintah/NGO.</span>
+            </li>
+            <li>
+              <span class="check-bullet"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Peneliti Geografi:</strong> Peneliti pada lembaga riset, badan perencanaan pembangunan, serta konsultan lingkungan wilayah.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Panel Fasilitas -->
+        <div class="panel-box">
+          <div class="panel-box-header">
+            <div class="panel-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Fasilitas Akademik</h3>
+          </div>
+          <ul>
+            <li>
+              <span class="check-bullet"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Ruang Kelas Interaktif:</strong> Dirancang khusus untuk kelompok diskusi kecil magister (maksimal 20 mahasiswa).</span>
+            </li>
+            <li>
+              <span class="check-bullet"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Kenyamanan Belajar:</strong> Ruangan ber-AC dengan proyektor multimedia interaktif dan smart screen.</span>
+            </li>
+            <li>
+              <span class="check-bullet"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Konektivitas Tinggi:</strong> Akses Wi-Fi kampus berkecepatan tinggi di seluruh area perkuliahan.</span>
+            </li>
+            <li>
+              <span class="check-bullet"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span><strong>Perpustakaan &amp; Jurnal Digital:</strong> Akses gratis ke ribuan jurnal internasional terindeks Scopus/WoS serta koleksi buku teks geografi.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MITRA KERJASAMA ===== -->
+  <section class="partners-section" id="mitra">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-badge">Jejaring Kerjasama</span>
+        <h2>Mitra Kolaborasi Strategis</h2>
+        <p class="lead">
+          Kolaborasi riset, magang, penelitian tesis, dan pengabdian masyarakat bersama institusi nasional dan internasional.
+        </p>
+      </div>
+
+      <div class="partners-grid">
+        <div class="partner-card">
+          <span class="partner-ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+          </span>
+          <span>Badan Standar, Kurikulum, dan Asesmen Pendidikan (Kemendikbudristek)</span>
+        </div>
+        <div class="partner-card">
+          <span class="partner-ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 21V10l5 3V10l5 3V6l6 4v11z"/></svg>
+          </span>
+          <span>Pertamina (Persero) RU Sungai II Pakning</span>
+        </div>
+        <div class="partner-card">
+          <span class="partner-ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9l10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5"/></svg>
+          </span>
+          <span>National Changhua University of Education (Taiwan)</span>
+        </div>
+      </div>
+
+      <p class="partners-note">Serta berbagai kemitraan aktif dengan pemerintah daerah, BIG, BMKG, dan sekolah mitra di seluruh Indonesia.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-col">
+          <h4>S2 Pendidikan Geografi</h4>
+          <p>
+            Fakultas Keguruan dan Ilmu Pendidikan, Universitas Sebelas Maret. Menghasilkan lulusan magister yang unggul dalam riset lingkungan, kebencanaan, dan inovasi pendidikan.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+            <a href="#" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.3l-7.2 8.2L22 21h-6.6l-5.2-6.8L4.3 21H1l7.7-8.8L1 3h6.8l4.7 6.2zM16.3 19h1.8L7 4.9H5z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8s-.2-1.6-.8-2.3c-.8-.8-1.7-.8-2.1-.9C16.2 4.6 12 4.6 12 4.6s-4.2 0-7.1.2c-.4.1-1.3.1-2.1.9C2.2 6.4 2 8 2 8s-.2 1.9-.2 3.8v1.8c0 1.9.2 3.8.2 3.8s.2 1.6.8 2.3c.8.8 1.9.8 2.4.9 1.7.2 6.8.2 6.8.2s4.2 0 7.1-.2c.4-.1 1.3-.1 2.1-.9.6-.7.8-2.3.8-2.3s.2-1.9.2-3.8v-1.8C22.2 9.9 22 8 22 8zM9.9 15.2V8.8l5.6 3.2z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="foot-col">
+          <h5>Menu Cepat</h5>
+          <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#profil">Profil Program Studi</a></li>
+            <li><a href="#pengajar">Daftar Pengajar</a></li>
+            <li><a href="#karir">Peluang Karir &amp; Fasilitas</a></li>
+            <li><a href="#mitra">Mitra Kerjasama</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h5>Tautan Penting</h5>
+          <ul>
+            <li><a href="https://uns.ac.id" target="_blank" rel="noopener">Portal Universitas Sebelas Maret</a></li>
+            <li><a href="https://fkip.uns.ac.id" target="_blank" rel="noopener">Portal FKIP UNS</a></li>
+            <li><a href="https://spmb.uns.ac.id" target="_blank" rel="noopener">Pendaftaran Mahasiswa Baru (SPMB)</a></li>
+            <li><a href="#">Sistem Informasi Akademik (SIAKAD)</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h5>Kontak &amp; Alamat</h5>
+          <ul class="contact-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Gedung Pascasarjana FKIP UNS, Jl. Ir. Sutami 36A, Kentingan, Jebres, Surakarta, Jawa Tengah 57126</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+              <span>(0271) 648939</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span>s2geografi@fkip.uns.ac.id</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        &copy; 2026 Program Studi S2 Pendidikan Geografi, Fakultas Keguruan dan Ilmu Pendidikan, Universitas Sebelas Maret.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tombol Melayang Kembali ke Atas -->
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    // ===== DATA 13 DOSEN PENGAJAR =====
+    const dataDosen = [
+      {
+        nama: "Prof. Dr. Chatarina Muryani, M.Si.",
+        bidang: "Geografi Kebencanaan",
+        inisial: "CM"
+      },
+      {
+        nama: "Prof. Dr. Nunuk Suryani, M.Pd.",
+        bidang: "Teknologi Pendidikan",
+        inisial: "NS"
+      },
+      {
+        nama: "Prof. Dr. Drs. Sugiyanto, M.Si., M.Si.",
+        bidang: "Pembelajaran Geografi",
+        inisial: "SG"
+      },
+      {
+        nama: "Prof. Dr. Siswandari, M.Stat.",
+        bidang: "Statistika Terapan",
+        inisial: "SW"
+      },
+      {
+        nama: "Dr. Rita Noviani, S.Si., M.Sc.",
+        bidang: "Perencanaan Wilayah",
+        inisial: "RN"
+      },
+      {
+        nama: "Dr. Pipit Wijayanti, S.Si., M.Sc.",
+        bidang: "Hidrologi Karst",
+        inisial: "PW"
+      },
+      {
+        nama: "Dr. Mohammad Gamal R., M.Si.",
+        bidang: "Geografi Permukiman Kota",
+        inisial: "MG"
+      },
+      {
+        nama: "Dr. Singgih Prihadi, S.Pd., M.Pd.",
+        bidang: "Teknologi Pembelajaran Geografi",
+        inisial: "SP"
+      },
+      {
+        nama: "Dr. Agung Hidayat, S.Pd., M.Sc.",
+        bidang: "Geografi Lingkungan",
+        inisial: "AH"
+      },
+      {
+        nama: "Dr.rer.nat Nurhadi, S.Ant., M.Hum.",
+        bidang: "Geografi Manusia",
+        inisial: "NH"
+      },
+      {
+        nama: "Dr. Rahning Utomowati, S.Si., M.Sc.",
+        bidang: "Geografi Lingkungan",
+        inisial: "RU"
+      },
+      {
+        nama: "Seno Budi Ajar, S.Pd., M.Si., Ph.D.",
+        bidang: "Geografi Budaya",
+        inisial: "SB"
+      },
+      {
+        nama: "Yosafat Hermawan T., S.Sos., MA., Ph.D.",
+        bidang: "Sosiologi Perkotaan & Kependudukan",
+        inisial: "YH"
+      }
+    ];
+
+    // ===== RENDER KARTU DOSEN (ELEGANT, UNIFORM, TIDAK WARNA-WARNI) =====
+    const facultyGrid = document.getElementById("facultyGrid");
+
+    dataDosen.forEach((d, idx) => {
+      const card = document.createElement("article");
+      card.className = "faculty-card";
+      
+      const numFormatted = String(idx + 1).padStart(2, "0");
+
+      card.innerHTML = `
+        <div>
+          <div class="faculty-header">
+            <div class="faculty-avatar" aria-hidden="true">${d.inisial}</div>
+            <span class="faculty-number">#${numFormatted}</span>
+          </div>
+          <div class="faculty-body" style="margin-top: 14px;">
+            <div class="faculty-role">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span>Dosen Program Magister</span>
+            </div>
+            <h3 class="faculty-name">${d.nama}</h3>
+          </div>
+        </div>
+        <div>
+          <div class="faculty-field-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            <span>${d.bidang}</span>
+          </div>
+        </div>
+      `;
+
+      facultyGrid.appendChild(card);
+    });
+
+    // ===== TOMBOL KEMBALI KE ATAS =====
+    const toTopBtn = document.getElementById("toTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        toTopBtn.classList.add("show");
+      } else {
+        toTopBtn.classList.remove("show");
+      }
+    }, { passive: true });
+
+    toTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
