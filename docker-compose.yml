@@ -1,13 +1,10 @@
 services:
   s2pendgeo:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: alphabloo7/s2pendgeo:latest
+    image: ${DOCKER_IMAGE:-alphabloo7/s2pendgeo:latest}
     container_name: s2pendgeo-web
     restart: always
     ports:
-      - "8085:80" # Port 8085 di host server diarahkan ke port 80 di container. Sesuaikan jika perlu.
+      - "8085:80" # Sesuaikan port host yang diinginkan di server VPS Anda
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://localhost/healthz"]
       interval: 30s
