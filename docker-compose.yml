@@ -1,0 +1,16 @@
+services:
+  s2pendgeo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: alphabloo7/s2pendgeo:latest
+    container_name: s2pendgeo-web
+    restart: always
+    ports:
+      - "8085:80" # Port 8085 di host server diarahkan ke port 80 di container. Sesuaikan jika perlu.
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
