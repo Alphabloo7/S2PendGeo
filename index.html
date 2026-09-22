@@ -57,39 +57,47 @@
 
     /* --- Main blue header --- */
     .site-header{
-      background:linear-gradient(98deg,var(--uns-blue-3) 0%,var(--uns-blue) 70%,var(--uns-blue-2) 100%);
+      background:#0062B1;
       color:#fff;
       position:relative;
       z-index:40;
-      border-bottom:1px solid rgba(255,255,255,.22);
     }
-    .header-main{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-    .brand{display:flex;align-items:center;gap:14px;min-width:0}
-    .logo-box{width:54px;height:54px;padding:7px;border-radius:50%;background:#fff;object-fit:contain;flex:0 0 auto;display:block;box-shadow:0 2px 8px rgba(0,40,90,.22)}
-    .brand-copy{min-width:0}
-    .brand-copy strong{display:block;font-size:16px;line-height:1.15;letter-spacing:.01em}
-    .brand-copy span{display:block;font-size:11px;opacity:.9;margin-top:4px}
-    .header-links{display:flex;gap:24px;align-items:center;font-size:12px;font-weight:700}
-    .header-links a{opacity:.97}.header-links a:hover{opacity:.78}
-    .header-search{
-      min-width:255px;display:flex;height:31px;border-radius:3px;overflow:hidden;background:#fff;
-      box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);
+    .header-main{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand-group{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
+    .brand-logo-uns{height:44px;width:auto;filter:brightness(0) invert(1);display:block}
+    .brand-logo-diktisaintek{height:42px;width:auto;filter:brightness(0) invert(1);display:block}
+    .brand-v-divider{width:1px;height:38px;background:rgba(255,255,255,.35);margin:0 4px}
+    .brand-text{display:flex;flex-direction:column}
+    .brand-text strong{display:block;font-size:16px;font-weight:800;line-height:1.15;letter-spacing:.02em;color:#fff}
+    .brand-text span{display:block;font-size:11px;opacity:.92;margin-top:3px;color:#fff;font-weight:400}
+    
+    .header-search-form{
+      display:flex;align-items:center;background:#fff;border-radius:4px;overflow:hidden;
+      height:36px;width:290px;box-shadow:0 2px 6px rgba(0,0,0,.08);
     }
-    .header-search span{flex:1;color:#7B8791;font-size:10px;display:flex;align-items:center;padding:0 10px}
-    .header-search b{width:36px;display:grid;place-items:center;background:#0C8FC5;color:#fff}
+    .header-search-form input{
+      flex:1;border:none;outline:none;padding:0 12px;font-size:11px;color:#333;font-family:inherit;
+    }
+    .header-search-form input::placeholder{color:#7B8791}
+    .header-search-form button{
+      width:36px;height:100%;background:#0090D0;border:none;color:#fff;
+      display:grid;place-items:center;cursor:pointer;font-size:14px;transition:background .2s;
+    }
+    .header-search-form button:hover{background:#007db8}
 
     /* --- Program nav --- */
     .program-nav{
       position:sticky;top:0;z-index:45;
-      background:#078AC8;color:#fff;
-      border-bottom:5px solid var(--uns-yellow);
+      background:#0090D0;color:#fff;
+      border-bottom:3px solid var(--uns-yellow);
       box-shadow:0 4px 16px rgba(0,70,120,.08);
     }
-    .program-nav .container{height:64px;display:flex;align-items:center;justify-content:space-between;gap:40px}
-    .program-name{font-size:13px;font-weight:900;letter-spacing:.06em;white-space:nowrap}
-    .program-menu{display:flex;align-items:center;gap:44px;font-size:12.5px;font-weight:800;letter-spacing:.04em}
-    .program-menu a:hover{color:var(--uns-yellow)}
-    .nav-cta{padding:11px 22px;white-space:nowrap;background:var(--uns-yellow);color:#183143;border-radius:4px;font-weight:900}
+    .program-nav .container{height:52px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .program-name{font-size:13.5px;font-weight:900;letter-spacing:.05em;white-space:nowrap;color:#fff}
+    .program-menu{display:flex;align-items:center;gap:32px;font-size:12px;font-weight:800;letter-spacing:.03em}
+    .program-menu a{color:#fff;transition:.18s ease}.program-menu a:hover{color:var(--uns-yellow)}
+    .nav-cta{padding:8px 20px;white-space:nowrap;background:var(--uns-yellow);color:#183143;border-radius:4px;font-weight:900;font-size:12px;transition:.18s ease}
+    .nav-cta:hover{background:#f5cb1a;transform:translateY(-1px)}
 
     /* --- Hero --- */
     .hero{
@@ -201,25 +209,25 @@
 
     /* --- accreditation --- */
     .accreditation{background:#fff}
-    .accredit-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:20px;align-items:stretch}
-    .accredit-main{position:relative;overflow:hidden;border-radius:12px;padding:30px;background:linear-gradient(145deg,#0877D2 0%,#049AD9 100%);color:#fff;box-shadow:0 14px 38px rgba(0,92,160,.16);border-bottom:5px solid var(--uns-yellow)}
+    .accredit-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px;align-items:stretch}
+    .accredit-main{position:relative;overflow:hidden;border-radius:12px;padding:30px;background:linear-gradient(145deg,#0877D2 0%,#049AD9 100%);color:#fff;box-shadow:0 14px 38px rgba(0,92,160,.16);border-bottom:5px solid var(--uns-yellow);display:flex;flex-direction:column;justify-content:space-between}
     .accredit-main:after{content:"";position:absolute;width:190px;height:190px;border:34px solid rgba(255,255,255,.08);border-radius:50%;right:-72px;top:-70px}
     .accredit-eyebrow{font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:#DDF4FF}
     .accredit-grade{font-size:58px;line-height:.95;font-weight:950;letter-spacing:-.05em;color:var(--uns-yellow);margin:10px 0 8px}
-    .accredit-score{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border-radius:5px;background:rgba(255,255,255,.13);font-size:10px;font-weight:850;margin-bottom:19px}
-    .accredit-main h3{font-size:20px;margin:0 0 6px}.accredit-main p{font-size:11.5px;color:#DDEFFA;margin:0 0 18px;max-width:500px}
-    .accredit-period{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
-    .accredit-period div{padding:12px;border:1px solid rgba(255,255,255,.19);border-radius:7px;background:rgba(255,255,255,.08)}
-    .accredit-period small{display:block;font-size:9px;opacity:.78;text-transform:uppercase;font-weight:800}.accredit-period strong{display:block;font-size:12px;margin-top:2px}
-    .accredit-detail{border:1px solid var(--line);border-radius:12px;padding:27px;background:#F9FCFE}
-    .accredit-detail h3{margin:0 0 6px;color:var(--uns-teal);font-size:21px}.accredit-detail>p{margin:0 0 18px;color:var(--muted);font-size:11.5px}
+    .accredit-score{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:5px;background:rgba(255,255,255,.16);font-size:11px;font-weight:850;margin-bottom:19px;color:#fff}
+    .accredit-main h3{font-size:22px;margin:0 0 4px;font-weight:800;color:#fff}.accredit-main p{font-size:12px;color:#DDEFFA;margin:0 0 20px;max-width:500px}
+    .accredit-period{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:auto}
+    .accredit-period div{padding:14px;border:1px solid rgba(255,255,255,.22);border-radius:8px;background:rgba(255,255,255,.10)}
+    .accredit-period small{display:block;font-size:9.5px;opacity:.85;text-transform:uppercase;font-weight:800;letter-spacing:.03em}.accredit-period strong{display:block;font-size:13px;margin-top:3px;font-weight:800}
+    .accredit-detail{border:1px solid var(--line);border-radius:12px;padding:28px;background:#F9FCFE;box-shadow:0 6px 20px rgba(0,74,130,.04);display:flex;flex-direction:column;justify-content:space-between}
+    .accredit-detail h3{margin:0 0 4px;color:var(--uns-teal);font-size:22px;font-weight:800}.accredit-detail>p{margin:0 0 18px;color:var(--muted);font-size:12px}
     .accredit-data{display:grid;gap:0;border-top:1px solid #DCE8F0}
-    .accredit-row{display:grid;grid-template-columns:155px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid #DCE8F0;font-size:11px}
-    .accredit-row span{color:#71828E;font-weight:700}.accredit-row strong{color:#174F70;overflow-wrap:anywhere}
-    .accredit-history{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:17px}
-    .history-item{background:#fff;border:1px solid #DCE8F0;border-radius:7px;padding:12px}
-    .history-item strong{display:block;color:var(--uns-blue);font-size:12px}.history-item span{font-size:9.5px;color:var(--muted)}
-    .accredit-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}
+    .accredit-row{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid #DCE8F0;font-size:11.5px}
+    .accredit-row span{color:#71828E;font-weight:700}.accredit-row strong{color:#174F70;overflow-wrap:anywhere;font-weight:800}
+    .accredit-history{display:grid;grid-template-columns:1fr;gap:10px;margin-top:18px}
+    .history-item{background:#fff;border:1px solid #DCE8F0;border-radius:8px;padding:14px}
+    .history-item strong{display:block;color:var(--uns-blue);font-size:12.5px;font-weight:800}.history-item span{font-size:10.5px;color:var(--muted);margin-top:3px;display:block}
+    .accredit-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:20px}
 
     /* --- curriculum --- */
     .curriculum-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
@@ -258,12 +266,110 @@
     .cta-box h2{font-size:30px;line-height:1.18;margin:0 0 7px}.cta-box p{font-size:12.5px;margin:0;color:#EAF7FF;max-width:680px}.cta-actions{display:flex;gap:9px}
 
     /* --- UNS dark footer pattern --- */
-    footer{background:var(--footer);color:#fff;border-top:5px solid var(--uns-yellow);padding:42px 0 20px}
-    .footer-portals{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;padding-bottom:30px;border-bottom:1px solid #343434}
-    .portal{font-size:20px;font-weight:950;color:#F5F5F5;letter-spacing:-.02em}.portal small{display:block;font-size:8px;color:#AFAFAF;margin-top:3px;letter-spacing:.04em}
-    .foot-grid{display:grid;grid-template-columns:1.35fr .7fr .7fr;gap:52px;padding:34px 0 22px}
-    .foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:13px}.foot-mark{width:50px;height:50px;padding:6px;border-radius:50%;background:#fff;object-fit:contain;display:block}.foot-brand strong{font-size:19px;line-height:1.05}.foot-text{font-size:10px;color:#C5C5C5;max-width:440px}.foot-title{font-size:12px;font-weight:900;margin-bottom:9px}.foot-links{display:grid;gap:6px;font-size:10px;color:#D0D0D0}.foot-links a:hover{color:var(--uns-yellow)}
-    .copyright{text-align:center;border-top:1px solid #343434;padding-top:16px;font-size:9px;color:#BEBEBE}
+    footer{
+      background:#181818;
+      color:#fff;
+      border-top:3px solid var(--uns-yellow);
+      padding:36px 0 20px;
+    }
+    .footer-portals{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:18px;
+      padding-bottom:28px;
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+    .portal-item{
+      text-decoration:none;
+      color:#fff;
+      display:block;
+      transition:opacity .2s;
+    }
+    .portal-item:hover{opacity:.85}
+    .portal-item strong{
+      display:block;
+      font-size:20px;
+      font-weight:950;
+      color:#F5F5F5;
+      letter-spacing:-.02em;
+      line-height:1.1;
+    }
+    .portal-item span{
+      display:block;
+      font-size:8px;
+      font-weight:700;
+      color:#AFAFAF;
+      margin-top:4px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    .foot-grid{
+      display:grid;
+      grid-template-columns:1.35fr .7fr .7fr;
+      gap:48px;
+      padding:30px 0 24px;
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+    .foot-brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:14px;
+    }
+    .foot-logo-uns{
+      height:46px;
+      width:auto;
+      filter:brightness(0) invert(1);
+    }
+    .foot-brand-names strong{
+      display:block;
+      font-size:21px;
+      font-weight:900;
+      line-height:1;
+      color:#fff;
+    }
+    .foot-brand-names span{
+      display:block;
+      font-size:10px;
+      font-weight:700;
+      color:#fff;
+      margin-top:3px;
+      letter-spacing:.04em;
+    }
+    .foot-text{
+      font-size:11.5px;
+      line-height:1.6;
+      color:#C5C5C5;
+      max-width:440px;
+      margin:0;
+    }
+    .foot-title{
+      font-size:13px;
+      font-weight:900;
+      color:#fff;
+      margin-bottom:12px;
+    }
+    .foot-links{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      font-size:11px;
+      color:#D0D0D0;
+    }
+    .foot-links a{
+      color:#D0D0D0;
+      text-decoration:none;
+      transition:color .2s;
+    }
+    .foot-links a:hover{
+      color:var(--uns-yellow);
+    }
+    .copyright{
+      text-align:center;
+      padding-top:16px;
+      font-size:10px;
+      color:#BEBEBE;
+    }
 
     .mobile-cta{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:100;background:var(--uns-yellow);color:#17364B;border-radius:6px;padding:12px 16px;text-align:center;font-weight:950;box-shadow:0 13px 35px rgba(0,0,0,.24)}
 
@@ -275,19 +381,26 @@
       .spmb-summary{grid-template-columns:repeat(3,1fr)}.spmb-grid{grid-template-columns:1fr}
       .path-grid{grid-template-columns:240px 1fr}.curriculum-grid{grid-template-columns:1fr}
       .expert-banner{grid-template-columns:1fr}.expert-search{min-width:0;width:100%}
-      .cta-box{grid-template-columns:1fr}.footer-portals{grid-template-columns:repeat(3,1fr)}
+      .cta-box{grid-template-columns:1fr}
+      .footer-portals{grid-template-columns:repeat(3,1fr)}
     }
     @media(max-width:720px){
       .container{width:min(calc(100% - 24px),var(--max))}.utility-right{display:none}.utility-left{gap:12px}
-      .header-main{height:68px}.header-search{display:none}.brand-copy strong{font-size:13px}.brand-copy span{font-size:9px}.logo-box{width:46px;height:46px;padding:6px}
-      .program-nav .container{height:auto;min-height:56px;padding:12px 0}.program-menu{display:none}.program-name{font-size:11px}.nav-cta{font-size:10px}
+      .header-main{height:auto;padding:12px 0;flex-direction:column;align-items:flex-start;gap:14px}
+      .header-search-form{width:100%}
+      .brand-v-divider{height:28px}
+      .brand-text strong{font-size:14px}
+      .program-nav .container{height:auto;min-height:48px;padding:10px 0}.program-menu{display:none}.program-name{font-size:11px}.nav-cta{font-size:10px}
       .hero-inner{padding:48px 0 56px}.hero h1{font-size:42px}.hero p{font-size:15px}.hero-actions{display:grid}.btn{width:100%}
       .accredit-row{grid-template-columns:1fr;gap:3px}.accredit-history,.accredit-period{grid-template-columns:1fr}
       section{padding:62px 0}.highlight-grid,.feature-grid,.faculty-grid,.path-points{grid-template-columns:1fr}
       .path-grid{grid-template-columns:1fr}.tab-list{grid-template-columns:1fr 1fr}.path-panel{padding:22px}
       .spmb-summary,.requirement-list{grid-template-columns:1fr}
       .expert-banner{padding:16px}.expert-brand{align-items:flex-start}.expert-mark{width:46px;height:46px}.expert-search{height:40px}
-      .cta-box{padding:28px 22px}.cta-actions{display:grid}.footer-portals{grid-template-columns:repeat(2,1fr)}.foot-grid{grid-template-columns:1fr;gap:25px}
+      .cta-box{padding:28px 22px}.cta-actions{display:grid}
+      .footer-portals{grid-template-columns:repeat(2,1fr)}
+      .foot-grid{grid-template-columns:1fr;gap:24px}
+      .copyright{text-align:center}
       .mobile-cta{display:block}body{padding-bottom:70px}
     }
 
@@ -322,16 +435,19 @@
 
   <header class="site-header">
     <div class="container header-main">
-      <a class="brand" href="#top" aria-label="Pascasarjana FKIP UNS">
-        <img class="logo-box" src="assets/logo-uns.png" alt="Logo Universitas Sebelas Maret" />
-        <div class="brand-copy">
-          <strong>PASCASARJANA FKIP UNS</strong>
-          <span>Universitas Sebelas Maret · Surakarta</span>
+      <a class="brand-group" href="#top" aria-label="Pascasarjana FKIP UNS">
+        <img class="brand-logo-uns" src="assets/logo-uns.png" alt="Logo UNS" />
+        <img class="brand-logo-diktisaintek" src="assets/logo_diktisaintek.png" alt="Logo Diktisaintek Berdampak" />
+        <div class="brand-v-divider"></div>
+        <div class="brand-text">
+          <strong>PASCASARJANA FKIP</strong>
+          <span>Universitas Sebelas Maret - Surakarta</span>
         </div>
       </a>
-      <a class="header-search" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener" aria-label="Cari kepakaran di Expert UNS">
-        <span>Cari dosen / bidang kepakaran...</span><b>⌕</b>
-      </a>
+      <form class="header-search-form" action="https://expert.uns.ac.id/researchers" target="_blank" rel="noopener">
+        <input type="text" name="q" placeholder="Cari dosen / bidang kepakaran..." aria-label="Cari dosen atau bidang kepakaran" />
+        <button type="submit" aria-label="Cari">⌕</button>
+      </form>
     </div>
   </header>
 
@@ -400,28 +516,39 @@
         </div>
         <div class="accredit-grid">
           <article class="accredit-main" aria-label="Status akreditasi saat ini">
-            <div class="accredit-eyebrow">Status Akreditasi Saat Ini</div>
-            <div class="accredit-grade">UNGGUL</div>
-            <div class="accredit-score">LAMDIK</div>
-            <h3>S2 Pendidikan Geografi</h3>
-            <p>Fakultas Keguruan dan Ilmu Pendidikan · Universitas Sebelas Maret</p>
+            <div>
+              <div class="accredit-eyebrow">STATUS AKREDITASI SAAT INI</div>
+              <div class="accredit-grade">UNGGUL</div>
+              <div class="accredit-score">LAMDIK</div>
+              <h3>S2 Pendidikan Geografi</h3>
+              <p>Fakultas Keguruan dan Ilmu Pendidikan - Universitas Sebelas Maret</p>
+            </div>
             <div class="accredit-period">
-              <div><small>Status Peringkat</small><strong>Terakreditasi Unggul</strong></div>
-              <div><small>Lembaga</small><strong>LAMDIK</strong></div>
+              <div><small>BERLAKU MULAI</small><strong>7 Juni 2023</strong></div>
+              <div><small>BERLAKU SAMPAI</small><strong>6 Juni 2028</strong></div>
             </div>
           </article>
 
           <article class="accredit-detail">
-            <h3>Detail Sertifikat Akreditasi</h3>
-            <p>Ringkasan status terbaru program studi dan acuan mutu pendidikan.</p>
-            <div class="accredit-data">
-              <div class="accredit-row"><span>Lembaga Akreditasi</span><strong>Lembaga Akreditasi Mandiri Kependidikan (LAMDIK)</strong></div>
-              <div class="accredit-row"><span>Peringkat / Nilai</span><strong>UNGGUL</strong></div>
-              <div class="accredit-row"><span>Fakultas / Univ</span><strong>FKIP · Universitas Sebelas Maret</strong></div>
+            <div>
+              <h3>Detail Sertifikat Akreditasi</h3>
+              <p>Ringkasan status terbaru program studi dan riwayat akreditasi sebelumnya.</p>
+              <div class="accredit-data">
+                <div class="accredit-row"><span>Lembaga Akreditasi</span><strong>Lembaga Akreditasi Mandiri Kependidikan (LAMDIK)</strong></div>
+                <div class="accredit-row"><span>Nomor SK</span><strong>430/SK/LAMDIK/Ak/M/IV/2023</strong></div>
+                <div class="accredit-row"><span>Peringkat / Nilai</span><strong>UNGGUL</strong></div>
+                <div class="accredit-row"><span>Periode</span><strong>7 Juni 2023 – 6 Juni 2028</strong></div>
+              </div>
+              <div class="accredit-history">
+                <div class="history-item">
+                  <strong>LAMDIK</strong>
+                  <span>430/SK/LAMDIK/Ak/M/IV/2023 · 7 Juni 2023 – 6 Juni 2028</span>
+                </div>
+              </div>
             </div>
             <div class="accredit-actions" style="margin-top:20px">
               <a class="btn btn-blue" href="https://akademik.fkip.uns.ac.id/s2-pendidikan-geografi/" target="_blank" rel="noopener">AKREDITASI FKIP UNS ↗</a>
-              <a class="mini-link" href="https://s2geo.fkip.uns.ac.id/" target="_blank" rel="noopener">Portal Resmi Geografi UNS ↗</a>
+              <a class="mini-link" href="https://layanan-lppmp.uns.ac.id/akreditasi/prodi/s-2-pendidikan-geografi" target="_blank" rel="noopener">Detail sertifikat UNS ↗</a>
             </div>
           </article>
         </div>
@@ -645,21 +772,61 @@
   <footer>
     <div class="container">
       <div class="footer-portals">
-        <a class="portal" href="https://uns.ac.id/" target="_blank" rel="noopener">UNS<small>UNIVERSITAS SEBELAS MARET</small></a>
-        <a class="portal" href="https://fkip.uns.ac.id/" target="_blank" rel="noopener">FKIP<small>FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</small></a>
-        <a class="portal" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">SPMB<small>PENERIMAAN MAHASISWA BARU</small></a>
-        <a class="portal" href="https://expert.uns.ac.id/" target="_blank" rel="noopener">EXPERT<small>PORTAL KEPAKARAN UNS</small></a>
-        <a class="portal" href="https://geografi.fkip.uns.ac.id/" target="_blank" rel="noopener">PRODI<small>PENDIDIKAN GEOGRAFI</small></a>
+        <a class="portal-item" href="https://uns.ac.id/" target="_blank" rel="noopener">
+          <strong>UNS</strong>
+          <span>UNIVERSITAS SEBELAS MARET</span>
+        </a>
+        <a class="portal-item" href="https://fkip.uns.ac.id/" target="_blank" rel="noopener">
+          <strong>FKIP</strong>
+          <span>FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</span>
+        </a>
+        <a class="portal-item" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">
+          <strong>SPMB</strong>
+          <span>PENERIMAAN MAHASISWA BARU</span>
+        </a>
+        <a class="portal-item" href="https://expert.uns.ac.id/" target="_blank" rel="noopener">
+          <strong>EXPERT</strong>
+          <span>PORTAL KEPAKARAN UNS</span>
+        </a>
+        <a class="portal-item" href="https://s2geo.fkip.uns.ac.id/" target="_blank" rel="noopener">
+          <strong>PRODI</strong>
+          <span>PENDIDIKAN GEOGRAFI</span>
+        </a>
       </div>
       <div class="foot-grid">
         <div>
-          <div class="foot-brand"><img class="foot-mark" src="assets/logo-uns.png" alt="Logo Universitas Sebelas Maret" /><strong>UNIVERSITAS<br>SEBELAS MARET</strong></div>
-          <div class="foot-text">S2 Pendidikan Geografi · Pascasarjana FKIP Universitas Sebelas Maret. Jl. Ir. Sutami 36A Kentingan, Jebres, Surakarta, Jawa Tengah.</div>
+          <div class="foot-brand">
+            <img class="foot-logo-uns" src="assets/logo-uns.png" alt="Logo UNS" />
+            <div class="foot-brand-names">
+            </div>
+          </div>
+          <p class="foot-text">
+            S2 Pendidikan Geografi · Pascasarjana FKIP Universitas Sebelas Maret. Jl. Ir. Sutami 36A Kentingan, Jebres, Surakarta, Jawa Tengah.
+          </p>
         </div>
-        <div><div class="foot-title">Layanan Sistem</div><div class="foot-links"><a href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">SPMB UNS</a><a href="https://expert.uns.ac.id/" target="_blank" rel="noopener">Expert UNS</a><a href="https://geografi.fkip.uns.ac.id/" target="_blank" rel="noopener">Website Prodi</a></div></div>
-        <div><div class="foot-title">Informasi</div><div class="foot-links"><a href="#jalur">Jalur Masuk</a><a href="#akreditasi">Akreditasi</a><a href="#spmb">Info SPMB</a><a href="#kurikulum">Kurikulum</a><a href="#dosen">Dosen & Kepakaran</a><a href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">Pendaftaran</a></div></div>
+        <div>
+          <div class="foot-title">Layanan Sistem</div>
+          <div class="foot-links">
+            <a href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">SPMB UNS</a>
+            <a href="https://expert.uns.ac.id/" target="_blank" rel="noopener">Expert UNS</a>
+            <a href="https://geografi.fkip.uns.ac.id/" target="_blank" rel="noopener">Website Prodi</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-title">Informasi</div>
+          <div class="foot-links">
+            <a href="#jalur">Jalur Masuk</a>
+            <a href="#akreditasi">Akreditasi</a>
+            <a href="#spmb">Info SPMB</a>
+            <a href="#kurikulum">Kurikulum</a>
+            <a href="#dosen">Dosen & Kepakaran</a>
+            <a href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">Pendaftaran</a>
+          </div>
+        </div>
       </div>
-      <div class="copyright">Copyright © 2026 Pascasarjana FKIP Universitas Sebelas Maret</div>
+      <div class="copyright">
+        Copyright © 2026 Pascasarjana FKIP Universitas Sebelas Maret
+      </div>
     </div>
   </footer>
 
