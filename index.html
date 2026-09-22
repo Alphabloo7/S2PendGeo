@@ -1,422 +1,2022 @@
 <!doctype html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0074D6" />
-  <meta name="description" content="Program Studi Magister (S2) Pendidikan Geografi FKIP Universitas Sebelas Maret (UNS) — Terakreditasi Unggul dengan fokus kajian lingkungan, kebencanaan, dan analisis geospasial." />
+  <meta name="description"
+    content="Program Studi Magister (S2) Pendidikan Geografi FKIP Universitas Sebelas Maret (UNS) — Terakreditasi Unggul dengan fokus kajian lingkungan, kebencanaan, dan analisis geospasial." />
   <title>S2 Pendidikan Geografi | Pascasarjana FKIP UNS</title>
   <style>
-    :root{
+    :root {
       /* Palet mengikuti pola visual portal UNS saat ini: blue–cyan, yellow accent, dark footer */
-      --uns-blue:#0074D6;
-      --uns-blue-2:#009BDD;
-      --uns-blue-3:#005AA8;
-      --uns-cyan:#00A8E8;
-      --uns-yellow:#FFDE35;
-      --uns-yellow-2:#F5C91F;
-      --uns-teal:#047EA9;
-      --ink:#1A1A1A;
-      --muted:#677585;
-      --line:#E5ECF2;
-      --soft:#F5F9FC;
-      --white:#FFFFFF;
-      --footer:#1A1A1A;
-      --shadow:0 12px 32px rgba(0,73,132,.12);
-      --max:1180px;
-      --radius:14px;
+      --uns-blue: #0074D6;
+      --uns-blue-2: #009BDD;
+      --uns-blue-3: #005AA8;
+      --uns-cyan: #00A8E8;
+      --uns-yellow: #FFDE35;
+      --uns-yellow-2: #F5C91F;
+      --uns-teal: #047EA9;
+      --ink: #1A1A1A;
+      --muted: #677585;
+      --line: #E5ECF2;
+      --soft: #F5F9FC;
+      --white: #FFFFFF;
+      --footer: #1A1A1A;
+      --shadow: 0 12px 32px rgba(0, 73, 132, .12);
+      --max: 1180px;
+      --radius: 14px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:"Poppins","Segoe UI",Arial,sans-serif;
-      color:var(--ink);
-      background:#fff;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
+    * {
+      box-sizing: border-box
     }
-    a{color:inherit;text-decoration:none}
-    button,input{font:inherit}
-    .container{width:min(calc(100% - 36px),var(--max));margin-inline:auto}
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button,
+    input {
+      font: inherit
+    }
+
+    .container {
+      width: min(calc(100% - 36px), var(--max));
+      margin-inline: auto
+    }
 
     /* --- UNS-style utility bar --- */
-    .utility{
-      background:#008BBE;
-      color:#fff;
-      font-size:11px;
-      font-weight:700;
-      border-bottom:1px solid rgba(255,255,255,.24);
+    .utility {
+      background: #008BBE;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255, 255, 255, .24);
     }
-    .utility-inner{height:30px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .utility-left,.utility-right{display:flex;align-items:center;gap:18px;white-space:nowrap}
-    .utility a{opacity:.96}.utility a:hover{opacity:.78}
-    .id-badge{display:inline-flex;align-items:center;gap:5px}
-    .id-dot{width:13px;height:8px;border-radius:1px;background:linear-gradient(#ef3340 0 50%,#fff 50%)}
+
+    .utility-inner {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px
+    }
+
+    .utility-left,
+    .utility-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      white-space: nowrap
+    }
+
+    .utility a {
+      opacity: .96
+    }
+
+    .utility a:hover {
+      opacity: .78
+    }
+
+    .id-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px
+    }
+
+    .id-dot {
+      width: 13px;
+      height: 8px;
+      border-radius: 1px;
+      background: linear-gradient(#ef3340 0 50%, #fff 50%)
+    }
 
     /* --- Main blue header --- */
-    .site-header{
-      background:#0062B1;
-      color:#fff;
-      position:relative;
-      z-index:40;
+    .site-header {
+      background: #0062B1;
+      color: #fff;
+      position: relative;
+      z-index: 40;
     }
-    .header-main{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand-group{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
-    .brand-logo-uns{height:44px;width:auto;filter:brightness(0) invert(1);display:block}
-    .brand-logo-diktisaintek{height:42px;width:auto;filter:brightness(0) invert(1);display:block}
-    .brand-v-divider{width:1px;height:38px;background:rgba(255,255,255,.35);margin:0 4px}
-    .brand-text{display:flex;flex-direction:column}
-    .brand-text strong{display:block;font-size:16px;font-weight:800;line-height:1.15;letter-spacing:.02em;color:#fff}
-    .brand-text span{display:block;font-size:11px;opacity:.92;margin-top:3px;color:#fff;font-weight:400}
-    
-    .header-search-form{
-      display:flex;align-items:center;background:#fff;border-radius:4px;overflow:hidden;
-      height:36px;width:290px;box-shadow:0 2px 6px rgba(0,0,0,.08);
+
+    .header-main {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px
     }
-    .header-search-form input{
-      flex:1;border:none;outline:none;padding:0 12px;font-size:11px;color:#333;font-family:inherit;
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #fff
     }
-    .header-search-form input::placeholder{color:#7B8791}
-    .header-search-form button{
-      width:36px;height:100%;background:#0090D0;border:none;color:#fff;
-      display:grid;place-items:center;cursor:pointer;font-size:14px;transition:background .2s;
+
+    .brand-logo-uns {
+      height: 44px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      display: block
     }
-    .header-search-form button:hover{background:#007db8}
+
+    .brand-logo-diktisaintek {
+      height: 42px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      display: block
+    }
+
+    .brand-v-divider {
+      width: 1px;
+      height: 38px;
+      background: rgba(255, 255, 255, .35);
+      margin: 0 4px
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: .02em;
+      color: #fff
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 11px;
+      opacity: .92;
+      margin-top: 3px;
+      color: #fff;
+      font-weight: 400
+    }
+
+    .header-search-form {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 36px;
+      width: 290px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+    }
+
+    .header-search-form input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 0 12px;
+      font-size: 11px;
+      color: #333;
+      font-family: inherit;
+    }
+
+    .header-search-form input::placeholder {
+      color: #7B8791
+    }
+
+    .header-search-form button {
+      width: 36px;
+      height: 100%;
+      background: #0090D0;
+      border: none;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background .2s;
+    }
+
+    .header-search-form button:hover {
+      background: #007db8
+    }
 
     /* --- Program nav --- */
-    .program-nav{
-      position:sticky;top:0;z-index:45;
-      background:#0090D0;color:#fff;
-      border-bottom:3px solid var(--uns-yellow);
-      box-shadow:0 4px 16px rgba(0,70,120,.08);
+    .program-nav {
+      position: sticky;
+      top: 0;
+      z-index: 45;
+      background: #0090D0;
+      color: #fff;
+      border-bottom: 3px solid var(--uns-yellow);
+      box-shadow: 0 4px 16px rgba(0, 70, 120, .08);
     }
-    .program-nav .container{height:52px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .program-name{font-size:13.5px;font-weight:900;letter-spacing:.05em;white-space:nowrap;color:#fff}
-    .program-menu{display:flex;align-items:center;gap:32px;font-size:12px;font-weight:800;letter-spacing:.03em}
-    .program-menu a{color:#fff;transition:.18s ease}.program-menu a:hover{color:var(--uns-yellow)}
-    .nav-cta{padding:8px 20px;white-space:nowrap;background:var(--uns-yellow);color:#183143;border-radius:4px;font-weight:900;font-size:12px;transition:.18s ease}
-    .nav-cta:hover{background:#f5cb1a;transform:translateY(-1px)}
+
+    .program-nav .container {
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px
+    }
+
+    .program-name {
+      font-size: 13.5px;
+      font-weight: 900;
+      letter-spacing: .05em;
+      white-space: nowrap;
+      color: #fff
+    }
+
+    .program-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .03em
+    }
+
+    .program-menu a {
+      color: #fff;
+      transition: .18s ease
+    }
+
+    .program-menu a:hover {
+      color: var(--uns-yellow)
+    }
+
+    .nav-cta {
+      padding: 8px 20px;
+      white-space: nowrap;
+      background: var(--uns-yellow);
+      color: #183143;
+      border-radius: 4px;
+      font-weight: 900;
+      font-size: 12px;
+      transition: .18s ease
+    }
+
+    .nav-cta:hover {
+      background: #f5cb1a;
+      transform: translateY(-1px)
+    }
 
     /* --- Hero --- */
-    .hero{
-      position:relative;overflow:hidden;color:#fff;
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
       background:
-        linear-gradient(90deg,rgba(0,116,214,.96),rgba(0,168,232,.82)),
-        radial-gradient(circle at 80% 20%,rgba(255,255,255,.28),transparent 28%);
-      min-height:470px;
+        linear-gradient(90deg, rgba(0, 116, 214, .96), rgba(0, 168, 232, .82)),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, .28), transparent 28%);
+      min-height: 470px;
     }
-    .hero:before{
-      content:"";position:absolute;inset:0;opacity:.16;
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .16;
       background-image:
-        linear-gradient(rgba(255,255,255,.18) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.18) 1px,transparent 1px);
-      background-size:84px 84px;
-      mask-image:linear-gradient(90deg,#000,transparent 85%);
+        linear-gradient(rgba(255, 255, 255, .18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .18) 1px, transparent 1px);
+      background-size: 84px 84px;
+      mask-image: linear-gradient(90deg, #000, transparent 85%);
     }
-    .hero:after{
-      content:"UNS";position:absolute;right:5%;bottom:-78px;font-size:250px;font-weight:950;
-      color:rgba(255,255,255,.055);line-height:1;letter-spacing:-.08em;
+
+    .hero:after {
+      content: "UNS";
+      position: absolute;
+      right: 5%;
+      bottom: -78px;
+      font-size: 250px;
+      font-weight: 950;
+      color: rgba(255, 255, 255, .055);
+      line-height: 1;
+      letter-spacing: -.08em;
     }
-    .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:58px;padding:70px 0 74px}
-    .breadcrumbs{font-size:11px;font-weight:700;opacity:.88;margin-bottom:16px}
-    .hero-kicker{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
-    .hero-kicker:before{content:"";width:34px;height:4px;background:var(--uns-yellow)}
-    .hero h1{font-size:clamp(44px,6vw,70px);line-height:1.03;margin:13px 0 18px;letter-spacing:-.04em;max-width:720px}
-    .hero h1 span{color:var(--uns-yellow)}
-    .hero p{font-size:17px;max-width:690px;color:#EAF7FF;margin:0 0 29px}
-    .hero-actions{display:flex;gap:11px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border-radius:5px;font-weight:900;font-size:12px;border:1px solid transparent;transition:.18s ease}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-yellow{background:var(--uns-yellow);color:#17364B}
-    .btn-outline{border-color:rgba(255,255,255,.72);color:#fff;background:rgba(255,255,255,.06)}
-    .btn-blue{background:var(--uns-blue);color:#fff}
-    .hero-card{
-      background:rgba(255,255,255,.96);color:var(--ink);border-radius:12px;padding:25px;
-      box-shadow:0 22px 55px rgba(0,57,105,.22);border-top:6px solid var(--uns-yellow);
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      align-items: center;
+      gap: 58px;
+      padding: 70px 0 74px
     }
-    .hero-card-label{font-size:11px;font-weight:900;color:var(--uns-teal);text-transform:uppercase;letter-spacing:.08em}
-    .hero-card h3{margin:7px 0 10px;font-size:25px;color:#087CAF;line-height:1.2}
-    .hero-card p{color:var(--muted);font-size:13px;margin:0 0 20px}
-    .hero-mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .hero-mini{padding:13px;background:#F2F8FC;border-radius:8px;border:1px solid #DCEBF3}
-    .hero-mini strong{display:block;color:var(--uns-blue);font-size:17px}.hero-mini span{font-size:10px;color:var(--muted);font-weight:700}
-    .accred{margin-top:13px;padding:11px 12px;border-radius:8px;background:#FFF8CD;border-left:4px solid var(--uns-yellow-2);font-size:11px;color:#5F5320;font-weight:700}
+
+    .breadcrumbs {
+      font-size: 11px;
+      font-weight: 700;
+      opacity: .88;
+      margin-bottom: 16px
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em
+    }
+
+    .hero-kicker:before {
+      content: "";
+      width: 34px;
+      height: 4px;
+      background: var(--uns-yellow)
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 70px);
+      line-height: 1.03;
+      margin: 13px 0 18px;
+      letter-spacing: -.04em;
+      max-width: 720px
+    }
+
+    .hero h1 span {
+      color: var(--uns-yellow)
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 690px;
+      color: #EAF7FF;
+      margin: 0 0 29px
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 11px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 17px;
+      border-radius: 5px;
+      font-weight: 900;
+      font-size: 12px;
+      border: 1px solid transparent;
+      transition: .18s ease
+    }
+
+    .btn:hover {
+      transform: translateY(-2px)
+    }
+
+    .btn-yellow {
+      background: var(--uns-yellow);
+      color: #17364B
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, .72);
+      color: #fff;
+      background: rgba(255, 255, 255, .06)
+    }
+
+    .btn-blue {
+      background: var(--uns-blue);
+      color: #fff
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, .96);
+      color: var(--ink);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 22px 55px rgba(0, 57, 105, .22);
+      border-top: 6px solid var(--uns-yellow);
+    }
+
+    .hero-card-label {
+      font-size: 11px;
+      font-weight: 900;
+      color: var(--uns-teal);
+      text-transform: uppercase;
+      letter-spacing: .08em
+    }
+
+    .hero-card h3 {
+      margin: 7px 0 10px;
+      font-size: 25px;
+      color: #087CAF;
+      line-height: 1.2
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0 0 20px
+    }
+
+    .hero-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px
+    }
+
+    .hero-mini {
+      padding: 13px;
+      background: #F2F8FC;
+      border-radius: 8px;
+      border: 1px solid #DCEBF3
+    }
+
+    .hero-mini strong {
+      display: block;
+      color: var(--uns-blue);
+      font-size: 17px
+    }
+
+    .hero-mini span {
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 700
+    }
+
+    .accred {
+      margin-top: 13px;
+      padding: 11px 12px;
+      border-radius: 8px;
+      background: #FFF8CD;
+      border-left: 4px solid var(--uns-yellow-2);
+      font-size: 11px;
+      color: #5F5320;
+      font-weight: 700
+    }
 
     /* --- shared sections --- */
-    section{padding:78px 0}
-    .section-title{text-align:center;margin-bottom:38px}
-    .section-title.left{text-align:left}
-    .section-title h2{margin:0;color:var(--uns-teal);font-size:clamp(28px,3.2vw,39px);line-height:1.15}
-    .title-line{width:74px;height:4px;background:var(--uns-yellow);margin:11px auto 0}
-    .left .title-line{margin-left:0}
-    .section-title p{max-width:720px;margin:16px auto 0;color:var(--muted);font-size:14px}
-    .left p{margin-left:0}
+    section {
+      padding: 78px 0
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 38px
+    }
+
+    .section-title.left {
+      text-align: left
+    }
+
+    .section-title h2 {
+      margin: 0;
+      color: var(--uns-teal);
+      font-size: clamp(28px, 3.2vw, 39px);
+      line-height: 1.15
+    }
+
+    .title-line {
+      width: 74px;
+      height: 4px;
+      background: var(--uns-yellow);
+      margin: 11px auto 0
+    }
+
+    .left .title-line {
+      margin-left: 0
+    }
+
+    .section-title p {
+      max-width: 720px;
+      margin: 16px auto 0;
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .left p {
+      margin-left: 0
+    }
 
     /* --- promotion highlights --- */
-    .highlights{background:#fff;padding-top:62px}
-    .highlight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .highlight{border:1px solid var(--line);border-radius:10px;padding:23px 20px;background:#fff;box-shadow:0 5px 20px rgba(0,70,120,.05);position:relative;overflow:hidden}
-    .highlight:before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:var(--uns-yellow)}
-    .highlight strong{display:block;color:var(--uns-blue);font-size:25px;line-height:1.15}.highlight span{font-size:11px;color:var(--muted);font-weight:700}
+    .highlights {
+      background: #fff;
+      padding-top: 62px
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px
+    }
+
+    .highlight {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 23px 20px;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0, 70, 120, .05);
+      position: relative;
+      overflow: hidden
+    }
+
+    .highlight:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--uns-yellow)
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--uns-blue);
+      font-size: 25px;
+      line-height: 1.15
+    }
+
+    .highlight span {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700
+    }
 
     /* --- profile cards --- */
-    .about{background:#F9FBFD}
-    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .feature{background:#fff;border:1px solid var(--line);border-radius:10px;padding:25px 23px;box-shadow:0 5px 18px rgba(0,70,120,.045)}
-    .feature-icon{width:46px;height:46px;border-radius:7px;background:linear-gradient(135deg,var(--uns-blue),var(--uns-cyan));display:grid;place-items:center;color:#fff;font-weight:900;margin-bottom:17px;box-shadow:0 7px 18px rgba(0,116,214,.18)}
-    .feature h3{font-size:17px;color:var(--uns-teal);margin:0 0 7px}.feature p{font-size:12.5px;color:var(--muted);margin:0}
+    .about {
+      background: #F9FBFD
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .feature {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 25px 23px;
+      box-shadow: 0 5px 18px rgba(0, 70, 120, .045)
+    }
+
+    .feature-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, var(--uns-blue), var(--uns-cyan));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 17px;
+      box-shadow: 0 7px 18px rgba(0, 116, 214, .18)
+    }
+
+    .feature h3 {
+      font-size: 17px;
+      color: var(--uns-teal);
+      margin: 0 0 7px
+    }
+
+    .feature p {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin: 0
+    }
 
     /* --- admission pathways --- */
-    .pathways{background:linear-gradient(180deg,#0877D2 0%,#068EDB 100%);color:#fff;border-top:5px solid var(--uns-yellow);border-bottom:5px solid var(--uns-yellow)}
-    .pathways .section-title h2,.pathways .section-title p{color:#fff}.pathways .section-title p{opacity:.86}
-    .pathways .title-line{background:var(--uns-yellow)}
-    .path-grid{display:grid;grid-template-columns:300px 1fr;gap:24px;align-items:start}
-    .tab-list{display:grid;gap:10px}
-    .tab-btn{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.09);color:#fff;border-radius:7px;text-align:left;padding:17px 16px;cursor:pointer;font-weight:900}
-    .tab-btn small{display:block;font-size:10px;margin-top:4px;opacity:.8;font-weight:600}
-    .tab-btn.active{background:#fff;color:var(--uns-blue);border-color:#fff;box-shadow:0 12px 30px rgba(0,55,100,.16)}
-    .path-panel{display:none;background:#fff;color:var(--ink);border-radius:10px;padding:28px;box-shadow:var(--shadow)}
-    .path-panel.active{display:block}
-    .path-panel h3{color:var(--uns-teal);font-size:24px;margin:0 0 8px}.path-panel>p{font-size:13px;color:var(--muted);margin:0}
-    .path-points{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}
-    .path-point{padding:13px;border:1px solid var(--line);background:#F8FBFD;border-radius:7px}
-    .path-point strong{display:block;font-size:12px;color:var(--uns-blue)}.path-point span{font-size:10.5px;color:var(--muted)}
-    .note{font-size:11px;background:#FFF8D8;border-left:4px solid var(--uns-yellow);padding:11px 12px;color:#645A2B;border-radius:4px}
+    .pathways {
+      background: linear-gradient(180deg, #0877D2 0%, #068EDB 100%);
+      color: #fff;
+      border-top: 5px solid var(--uns-yellow);
+      border-bottom: 5px solid var(--uns-yellow)
+    }
+
+    .pathways .section-title h2,
+    .pathways .section-title p {
+      color: #fff
+    }
+
+    .pathways .section-title p {
+      opacity: .86
+    }
+
+    .pathways .title-line {
+      background: var(--uns-yellow)
+    }
+
+    .path-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 24px;
+      align-items: start
+    }
+
+    .tab-list {
+      display: grid;
+      gap: 10px
+    }
+
+    .tab-btn {
+      border: 1px solid rgba(255, 255, 255, .28);
+      background: rgba(255, 255, 255, .09);
+      color: #fff;
+      border-radius: 7px;
+      text-align: left;
+      padding: 17px 16px;
+      cursor: pointer;
+      font-weight: 900
+    }
+
+    .tab-btn small {
+      display: block;
+      font-size: 10px;
+      margin-top: 4px;
+      opacity: .8;
+      font-weight: 600
+    }
+
+    .tab-btn.active {
+      background: #fff;
+      color: var(--uns-blue);
+      border-color: #fff;
+      box-shadow: 0 12px 30px rgba(0, 55, 100, .16)
+    }
+
+    .path-panel {
+      display: none;
+      background: #fff;
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: var(--shadow)
+    }
+
+    .path-panel.active {
+      display: block
+    }
+
+    .path-panel h3 {
+      color: var(--uns-teal);
+      font-size: 24px;
+      margin: 0 0 8px
+    }
+
+    .path-panel>p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .path-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 22px 0
+    }
+
+    .path-point {
+      padding: 13px;
+      border: 1px solid var(--line);
+      background: #F8FBFD;
+      border-radius: 7px
+    }
+
+    .path-point strong {
+      display: block;
+      font-size: 12px;
+      color: var(--uns-blue)
+    }
+
+    .path-point span {
+      font-size: 10.5px;
+      color: var(--muted)
+    }
+
+    .note {
+      font-size: 11px;
+      background: #FFF8D8;
+      border-left: 4px solid var(--uns-yellow);
+      padding: 11px 12px;
+      color: #645A2B;
+      border-radius: 4px
+    }
 
     /* --- SPMB information --- */
-    .spmb-info{background:#fff}
-    .spmb-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
-    .spmb-stat{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:10px;padding:21px 20px;background:#fff;box-shadow:0 5px 18px rgba(0,70,120,.045)}
-    .spmb-stat:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--uns-blue),var(--uns-cyan))}
-    .spmb-stat strong{display:block;color:var(--uns-blue);font-size:24px;line-height:1.1;margin-bottom:5px}.spmb-stat span{font-size:11px;color:var(--muted);font-weight:700}
-    .spmb-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
-    .info-card{border:1px solid var(--line);border-radius:10px;padding:25px;background:#F9FCFE}
-    .info-card h3{margin:0 0 7px;color:var(--uns-teal);font-size:20px}.info-card>p{margin:0 0 18px;color:var(--muted);font-size:12px}
-    .flow{display:grid;gap:0;counter-reset:step}
-    .flow-step{position:relative;padding:13px 12px 13px 52px;border-top:1px solid #DCE8F0;font-size:11px;color:#536777;min-height:48px}
-    .flow-step:first-child{border-top:0}.flow-step:before{counter-increment:step;content:counter(step);position:absolute;left:7px;top:10px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--uns-blue);color:#fff;font-weight:950;font-size:10px}
-    .flow-step strong{display:block;color:#174F70;font-size:11.5px}
-    .requirement-list{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-    .requirement{border:1px solid #DCE8F0;border-radius:7px;padding:12px;background:#fff;font-size:10.5px;color:var(--muted)}
-    .requirement strong{display:block;color:var(--uns-blue);font-size:11px;margin-bottom:2px}
-    .official-note{margin-top:20px;padding:15px 17px;background:#EEF8FD;border-left:4px solid var(--uns-blue);border-radius:5px;color:#456272;font-size:11px}
-    .official-note strong{color:var(--uns-teal)}
-    .source-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
-    .mini-link{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid #BED8E8;border-radius:4px;color:var(--uns-teal);font-size:10px;font-weight:850;background:#fff}
-    .mini-link:hover{background:#F1F8FC}
+    .spmb-info {
+      background: #fff
+    }
+
+    .spmb-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 24px
+    }
+
+    .spmb-stat {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 21px 20px;
+      background: #fff;
+      box-shadow: 0 5px 18px rgba(0, 70, 120, .045)
+    }
+
+    .spmb-stat:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--uns-blue), var(--uns-cyan))
+    }
+
+    .spmb-stat strong {
+      display: block;
+      color: var(--uns-blue);
+      font-size: 24px;
+      line-height: 1.1;
+      margin-bottom: 5px
+    }
+
+    .spmb-stat span {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700
+    }
+
+    .spmb-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start
+    }
+
+    .info-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 25px;
+      background: #F9FCFE
+    }
+
+    .info-card h3 {
+      margin: 0 0 7px;
+      color: var(--uns-teal);
+      font-size: 20px
+    }
+
+    .info-card>p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    .flow {
+      display: grid;
+      gap: 0;
+      counter-reset: step
+    }
+
+    .flow-step {
+      position: relative;
+      padding: 13px 12px 13px 52px;
+      border-top: 1px solid #DCE8F0;
+      font-size: 11px;
+      color: #536777;
+      min-height: 48px
+    }
+
+    .flow-step:first-child {
+      border-top: 0
+    }
+
+    .flow-step:before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--uns-blue);
+      color: #fff;
+      font-weight: 950;
+      font-size: 10px
+    }
+
+    .flow-step strong {
+      display: block;
+      color: #174F70;
+      font-size: 11.5px
+    }
+
+    .requirement-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px
+    }
+
+    .requirement {
+      border: 1px solid #DCE8F0;
+      border-radius: 7px;
+      padding: 12px;
+      background: #fff;
+      font-size: 10.5px;
+      color: var(--muted)
+    }
+
+    .requirement strong {
+      display: block;
+      color: var(--uns-blue);
+      font-size: 11px;
+      margin-bottom: 2px
+    }
+
+    .official-note {
+      margin-top: 20px;
+      padding: 15px 17px;
+      background: #EEF8FD;
+      border-left: 4px solid var(--uns-blue);
+      border-radius: 5px;
+      color: #456272;
+      font-size: 11px
+    }
+
+    .official-note strong {
+      color: var(--uns-teal)
+    }
+
+    .source-links {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: 15px
+    }
+
+    .mini-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 10px;
+      border: 1px solid #BED8E8;
+      border-radius: 4px;
+      color: var(--uns-teal);
+      font-size: 10px;
+      font-weight: 850;
+      background: #fff
+    }
+
+    .mini-link:hover {
+      background: #F1F8FC
+    }
 
     /* --- accreditation --- */
-    .accreditation{background:#fff}
-    .accredit-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px;align-items:stretch}
-    .accredit-main{position:relative;overflow:hidden;border-radius:12px;padding:30px;background:linear-gradient(145deg,#0877D2 0%,#049AD9 100%);color:#fff;box-shadow:0 14px 38px rgba(0,92,160,.16);border-bottom:5px solid var(--uns-yellow);display:flex;flex-direction:column;justify-content:space-between}
-    .accredit-main:after{content:"";position:absolute;width:190px;height:190px;border:34px solid rgba(255,255,255,.08);border-radius:50%;right:-72px;top:-70px}
-    .accredit-eyebrow{font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:#DDF4FF}
-    .accredit-grade{font-size:58px;line-height:.95;font-weight:950;letter-spacing:-.05em;color:var(--uns-yellow);margin:10px 0 8px}
-    .accredit-score{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:5px;background:rgba(255,255,255,.16);font-size:11px;font-weight:850;margin-bottom:19px;color:#fff}
-    .accredit-main h3{font-size:22px;margin:0 0 4px;font-weight:800;color:#fff}.accredit-main p{font-size:12px;color:#DDEFFA;margin:0 0 20px;max-width:500px}
-    .accredit-period{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:auto}
-    .accredit-period div{padding:14px;border:1px solid rgba(255,255,255,.22);border-radius:8px;background:rgba(255,255,255,.10)}
-    .accredit-period small{display:block;font-size:9.5px;opacity:.85;text-transform:uppercase;font-weight:800;letter-spacing:.03em}.accredit-period strong{display:block;font-size:13px;margin-top:3px;font-weight:800}
-    .accredit-detail{border:1px solid var(--line);border-radius:12px;padding:28px;background:#F9FCFE;box-shadow:0 6px 20px rgba(0,74,130,.04);display:flex;flex-direction:column;justify-content:space-between}
-    .accredit-detail h3{margin:0 0 4px;color:var(--uns-teal);font-size:22px;font-weight:800}.accredit-detail>p{margin:0 0 18px;color:var(--muted);font-size:12px}
-    .accredit-data{display:grid;gap:0;border-top:1px solid #DCE8F0}
-    .accredit-row{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid #DCE8F0;font-size:11.5px}
-    .accredit-row span{color:#71828E;font-weight:700}.accredit-row strong{color:#174F70;overflow-wrap:anywhere;font-weight:800}
-    .accredit-history{display:grid;grid-template-columns:1fr;gap:10px;margin-top:18px}
-    .history-item{background:#fff;border:1px solid #DCE8F0;border-radius:8px;padding:14px}
-    .history-item strong{display:block;color:var(--uns-blue);font-size:12.5px;font-weight:800}.history-item span{font-size:10.5px;color:var(--muted);margin-top:3px;display:block}
-    .accredit-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:20px}
+    .accreditation {
+      background: #fff
+    }
+
+    .accredit-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 20px;
+      align-items: stretch
+    }
+
+    .accredit-main {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      padding: 30px;
+      background: linear-gradient(145deg, #0877D2 0%, #049AD9 100%);
+      color: #fff;
+      box-shadow: 0 14px 38px rgba(0, 92, 160, .16);
+      border-bottom: 5px solid var(--uns-yellow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between
+    }
+
+    .accredit-main:after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border: 34px solid rgba(255, 255, 255, .08);
+      border-radius: 50%;
+      right: -72px;
+      top: -70px
+    }
+
+    .accredit-eyebrow {
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: #DDF4FF
+    }
+
+    .accredit-grade {
+      font-size: 58px;
+      line-height: .95;
+      font-weight: 950;
+      letter-spacing: -.05em;
+      color: var(--uns-yellow);
+      margin: 10px 0 8px
+    }
+
+    .accredit-score {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, .16);
+      font-size: 11px;
+      font-weight: 850;
+      margin-bottom: 19px;
+      color: #fff
+    }
+
+    .accredit-main h3 {
+      font-size: 22px;
+      margin: 0 0 4px;
+      font-weight: 800;
+      color: #fff
+    }
+
+    .accredit-main p {
+      font-size: 12px;
+      color: #DDEFFA;
+      margin: 0 0 20px;
+      max-width: 500px
+    }
+
+    .accredit-period {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: auto
+    }
+
+    .accredit-period div {
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .10)
+    }
+
+    .accredit-period small {
+      display: block;
+      font-size: 9.5px;
+      opacity: .85;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: .03em
+    }
+
+    .accredit-period strong {
+      display: block;
+      font-size: 13px;
+      margin-top: 3px;
+      font-weight: 800
+    }
+
+    .accredit-detail {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 28px;
+      background: #F9FCFE;
+      box-shadow: 0 6px 20px rgba(0, 74, 130, .04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between
+    }
+
+    .accredit-detail h3 {
+      margin: 0 0 4px;
+      color: var(--uns-teal);
+      font-size: 22px;
+      font-weight: 800
+    }
+
+    .accredit-detail>p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    .accredit-data {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid #DCE8F0
+    }
+
+    .accredit-row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid #DCE8F0;
+      font-size: 11.5px
+    }
+
+    .accredit-row span {
+      color: #71828E;
+      font-weight: 700
+    }
+
+    .accredit-row strong {
+      color: #174F70;
+      overflow-wrap: anywhere;
+      font-weight: 800
+    }
+
+    .accredit-history {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 18px
+    }
+
+    .history-item {
+      background: #fff;
+      border: 1px solid #DCE8F0;
+      border-radius: 8px;
+      padding: 14px
+    }
+
+    .history-item strong {
+      display: block;
+      color: var(--uns-blue);
+      font-size: 12.5px;
+      font-weight: 800
+    }
+
+    .history-item span {
+      font-size: 10.5px;
+      color: var(--muted);
+      margin-top: 3px;
+      display: block
+    }
+
+    .accredit-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px
+    }
 
     /* --- curriculum --- */
-    .curriculum-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
-    .curriculum-card{border:1px solid var(--line);border-radius:10px;padding:26px;background:#fff;box-shadow:0 5px 18px rgba(0,70,120,.045)}
-    .curriculum-card.blue{background:linear-gradient(155deg,var(--uns-blue),#075EA7);color:#fff;border-color:transparent}
-    .curriculum-card h3{font-size:21px;margin:0 0 9px;color:var(--uns-teal)}.curriculum-card.blue h3{color:#fff}
-    .curriculum-card>p{font-size:12px;color:var(--muted);margin:0 0 18px}.curriculum-card.blue>p{color:#D9F0FF}
-    .curr-list{display:grid;gap:0}
-    .curr-row{display:grid;grid-template-columns:38px 1fr;gap:11px;padding:13px 0;border-top:1px solid var(--line)}
-    .blue .curr-row{border-color:rgba(255,255,255,.16)}
-    .num{width:31px;height:31px;border-radius:5px;background:#E9F5FC;color:var(--uns-blue);display:grid;place-items:center;font-weight:900;font-size:11px}.blue .num{background:var(--uns-yellow);color:#17364B}
-    .curr-row strong{display:block;font-size:12px}.curr-row span{font-size:10.5px;color:var(--muted)}.blue .curr-row span{color:#D7ECF8}
-    .big-number{font-size:64px;font-weight:950;line-height:.95;color:var(--uns-yellow);letter-spacing:-.05em}.big-label{font-size:11px;font-weight:800;margin-top:7px;color:#DDF2FF}
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 20px
+    }
+
+    .curriculum-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 26px;
+      background: #fff;
+      box-shadow: 0 5px 18px rgba(0, 70, 120, .045)
+    }
+
+    .curriculum-card.blue {
+      background: linear-gradient(155deg, var(--uns-blue), #075EA7);
+      color: #fff;
+      border-color: transparent
+    }
+
+    .curriculum-card h3 {
+      font-size: 21px;
+      margin: 0 0 9px;
+      color: var(--uns-teal)
+    }
+
+    .curriculum-card.blue h3 {
+      color: #fff
+    }
+
+    .curriculum-card>p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 0 18px
+    }
+
+    .curriculum-card.blue>p {
+      color: #D9F0FF
+    }
+
+    .curr-list {
+      display: grid;
+      gap: 0
+    }
+
+    .curr-row {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 11px;
+      padding: 13px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .blue .curr-row {
+      border-color: rgba(255, 255, 255, .16)
+    }
+
+    .num {
+      width: 31px;
+      height: 31px;
+      border-radius: 5px;
+      background: #E9F5FC;
+      color: var(--uns-blue);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 11px
+    }
+
+    .blue .num {
+      background: var(--uns-yellow);
+      color: #17364B
+    }
+
+    .curr-row strong {
+      display: block;
+      font-size: 12px
+    }
+
+    .curr-row span {
+      font-size: 10.5px;
+      color: var(--muted)
+    }
+
+    .blue .curr-row span {
+      color: #D7ECF8
+    }
+
+    .big-number {
+      font-size: 64px;
+      font-weight: 950;
+      line-height: .95;
+      color: var(--uns-yellow);
+      letter-spacing: -.05em
+    }
+
+    .big-label {
+      font-size: 11px;
+      font-weight: 800;
+      margin-top: 7px;
+      color: #DDF2FF
+    }
 
     /* --- Expert UNS-inspired faculty block --- */
-    .faculty{background:#F5F9FC}
-    .expert-banner{background:#fff;border:1px solid #DCE7EF;border-radius:10px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;margin-bottom:24px;box-shadow:0 6px 20px rgba(0,74,130,.055)}
-    .expert-brand{display:flex;align-items:center;gap:14px}
-    .expert-mark{width:52px;height:52px;background:linear-gradient(135deg,var(--uns-blue),var(--uns-cyan));color:#fff;border-radius:8px;display:grid;place-items:center;font-weight:950;font-size:18px}
-    .expert-copy strong{display:block;color:var(--uns-teal);font-size:18px}.expert-copy span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
-    .expert-search{display:flex;min-width:400px;height:42px;border:1px solid #C7DAE7;border-radius:5px;overflow:hidden;background:#fff}
-    .expert-search span{flex:1;display:flex;align-items:center;padding:0 13px;color:#7C8992;font-size:11px}.expert-search b{width:48px;background:var(--uns-blue);color:#fff;display:grid;place-items:center}
-    .faculty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .person{background:#fff;border:1px solid var(--line);border-radius:9px;padding:19px;position:relative;overflow:hidden;transition:.18s ease}
-    .person:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--uns-blue),var(--uns-cyan))}
-    .person:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,73,132,.10)}
-    .person-head{display:flex;gap:12px;align-items:center;margin-bottom:12px}
-    .avatar{width:45px;height:45px;border-radius:50%;background:#E9F4FB;color:var(--uns-blue);border:2px solid #CFE7F5;display:grid;place-items:center;font-weight:950;font-size:12px;flex:0 0 auto}
-    .person h3{margin:0;color:#116F9A;font-size:13px;line-height:1.35}.person p{margin:5px 0 0;font-size:10.5px;color:var(--muted)}
-    .expert-chip{display:inline-flex;padding:5px 8px;border-radius:3px;background:#F2F8FC;color:#4B6C80;font-size:9px;font-weight:800;margin:3px 3px 0 0}
-    .faculty-cta{margin-top:22px;display:flex;justify-content:center}
+    .faculty {
+      background: #F5F9FC
+    }
+
+    .expert-banner {
+      background: #fff;
+      border: 1px solid #DCE7EF;
+      border-radius: 10px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 20px rgba(0, 74, 130, .055)
+    }
+
+    .expert-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .expert-mark {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--uns-blue), var(--uns-cyan));
+      color: #fff;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+      font-size: 18px
+    }
+
+    .expert-copy strong {
+      display: block;
+      color: var(--uns-teal);
+      font-size: 18px
+    }
+
+    .expert-copy span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 2px
+    }
+
+    .expert-search {
+      display: flex;
+      min-width: 400px;
+      height: 42px;
+      border: 1px solid #C7DAE7;
+      border-radius: 5px;
+      overflow: hidden;
+      background: #fff
+    }
+
+    .expert-search span {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 13px;
+      color: #7C8992;
+      font-size: 11px
+    }
+
+    .expert-search b {
+      width: 48px;
+      background: var(--uns-blue);
+      color: #fff;
+      display: grid;
+      place-items: center
+    }
+
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px
+    }
+
+    .person {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 19px;
+      position: relative;
+      overflow: hidden;
+      transition: .18s ease
+    }
+
+    .person:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--uns-blue), var(--uns-cyan))
+    }
+
+    .person:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 73, 132, .10)
+    }
+
+    .person-head {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px
+    }
+
+    .avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #E9F4FB;
+      color: var(--uns-blue);
+      border: 2px solid #CFE7F5;
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+      font-size: 12px;
+      flex: 0 0 auto
+    }
+
+    .person h3 {
+      margin: 0;
+      color: #116F9A;
+      font-size: 13px;
+      line-height: 1.35
+    }
+
+    .person p {
+      margin: 5px 0 0;
+      font-size: 10.5px;
+      color: var(--muted)
+    }
+
+    .expert-chip {
+      display: inline-flex;
+      padding: 5px 8px;
+      border-radius: 3px;
+      background: #F2F8FC;
+      color: #4B6C80;
+      font-size: 9px;
+      font-weight: 800;
+      margin: 3px 3px 0 0
+    }
+
+    .faculty-cta {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center
+    }
 
     /* --- CTA like UNS promo block --- */
-    .cta-section{padding:64px 0;background:#fff}
-    .cta-box{background:linear-gradient(90deg,#0875D0,#039DE0);color:#fff;border-radius:10px;padding:38px 42px;border-bottom:6px solid var(--uns-yellow);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
-    .cta-box h2{font-size:30px;line-height:1.18;margin:0 0 7px}.cta-box p{font-size:12.5px;margin:0;color:#EAF7FF;max-width:680px}.cta-actions{display:flex;gap:9px}
+    .cta-section {
+      padding: 64px 0;
+      background: #fff
+    }
+
+    .cta-box {
+      background: linear-gradient(90deg, #0875D0, #039DE0);
+      color: #fff;
+      border-radius: 10px;
+      padding: 38px 42px;
+      border-bottom: 6px solid var(--uns-yellow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center
+    }
+
+    .cta-box h2 {
+      font-size: 30px;
+      line-height: 1.18;
+      margin: 0 0 7px
+    }
+
+    .cta-box p {
+      font-size: 12.5px;
+      margin: 0;
+      color: #EAF7FF;
+      max-width: 680px
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 9px
+    }
 
     /* --- UNS dark footer pattern --- */
-    footer{
-      background:#181818;
-      color:#fff;
-      border-top:3px solid var(--uns-yellow);
-      padding:36px 0 20px;
-    }
-    .footer-portals{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:18px;
-      padding-bottom:28px;
-      border-bottom:1px solid rgba(255,255,255,.14);
-    }
-    .portal-item{
-      text-decoration:none;
-      color:#fff;
-      display:block;
-      transition:opacity .2s;
-    }
-    .portal-item:hover{opacity:.85}
-    .portal-item strong{
-      display:block;
-      font-size:20px;
-      font-weight:950;
-      color:#F5F5F5;
-      letter-spacing:-.02em;
-      line-height:1.1;
-    }
-    .portal-item span{
-      display:block;
-      font-size:8px;
-      font-weight:700;
-      color:#AFAFAF;
-      margin-top:4px;
-      letter-spacing:.04em;
-      text-transform:uppercase;
-    }
-    .foot-grid{
-      display:grid;
-      grid-template-columns:1.35fr .7fr .7fr;
-      gap:48px;
-      padding:30px 0 24px;
-      border-bottom:1px solid rgba(255,255,255,.14);
-    }
-    .foot-brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:14px;
-    }
-    .foot-logo-uns{
-      height:46px;
-      width:auto;
-      filter:brightness(0) invert(1);
-    }
-    .foot-brand-names strong{
-      display:block;
-      font-size:21px;
-      font-weight:900;
-      line-height:1;
-      color:#fff;
-    }
-    .foot-brand-names span{
-      display:block;
-      font-size:10px;
-      font-weight:700;
-      color:#fff;
-      margin-top:3px;
-      letter-spacing:.04em;
-    }
-    .foot-text{
-      font-size:11.5px;
-      line-height:1.6;
-      color:#C5C5C5;
-      max-width:440px;
-      margin:0;
-    }
-    .foot-title{
-      font-size:13px;
-      font-weight:900;
-      color:#fff;
-      margin-bottom:12px;
-    }
-    .foot-links{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      font-size:11px;
-      color:#D0D0D0;
-    }
-    .foot-links a{
-      color:#D0D0D0;
-      text-decoration:none;
-      transition:color .2s;
-    }
-    .foot-links a:hover{
-      color:var(--uns-yellow);
-    }
-    .copyright{
-      text-align:center;
-      padding-top:16px;
-      font-size:10px;
-      color:#BEBEBE;
+    footer {
+      background: #181818;
+      color: #fff;
+      border-top: 3px solid var(--uns-yellow);
+      padding: 36px 0 20px;
     }
 
-    .mobile-cta{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:100;background:var(--uns-yellow);color:#17364B;border-radius:6px;padding:12px 16px;text-align:center;font-weight:950;box-shadow:0 13px 35px rgba(0,0,0,.24)}
-
-    @media(max-width:1000px){
-      .header-links{display:none}.header-search{min-width:230px}
-      .program-menu{gap:26px}.program-nav .container{gap:24px}.hero-inner{grid-template-columns:1fr;gap:28px}.hero-card{max-width:650px}
-      .accredit-grid{grid-template-columns:1fr}
-      .highlight-grid{grid-template-columns:repeat(2,1fr)}.feature-grid,.faculty-grid{grid-template-columns:repeat(2,1fr)}
-      .spmb-summary{grid-template-columns:repeat(3,1fr)}.spmb-grid{grid-template-columns:1fr}
-      .path-grid{grid-template-columns:240px 1fr}.curriculum-grid{grid-template-columns:1fr}
-      .expert-banner{grid-template-columns:1fr}.expert-search{min-width:0;width:100%}
-      .cta-box{grid-template-columns:1fr}
-      .footer-portals{grid-template-columns:repeat(3,1fr)}
+    .footer-portals {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, .14);
     }
-    @media(max-width:720px){
-      .container{width:min(calc(100% - 24px),var(--max))}.utility-right{display:none}.utility-left{gap:12px}
-      .header-main{height:auto;padding:12px 0;flex-direction:column;align-items:flex-start;gap:14px}
-      .header-search-form{width:100%}
-      .brand-v-divider{height:28px}
-      .brand-text strong{font-size:14px}
-      .program-nav .container{height:auto;min-height:48px;padding:10px 0}.program-menu{display:none}.program-name{font-size:11px}.nav-cta{font-size:10px}
-      .hero-inner{padding:48px 0 56px}.hero h1{font-size:42px}.hero p{font-size:15px}.hero-actions{display:grid}.btn{width:100%}
-      .accredit-row{grid-template-columns:1fr;gap:3px}.accredit-history,.accredit-period{grid-template-columns:1fr}
-      section{padding:62px 0}.highlight-grid,.feature-grid,.faculty-grid,.path-points{grid-template-columns:1fr}
-      .path-grid{grid-template-columns:1fr}.tab-list{grid-template-columns:1fr 1fr}.path-panel{padding:22px}
-      .spmb-summary,.requirement-list{grid-template-columns:1fr}
-      .expert-banner{padding:16px}.expert-brand{align-items:flex-start}.expert-mark{width:46px;height:46px}.expert-search{height:40px}
-      .cta-box{padding:28px 22px}.cta-actions{display:grid}
-      .footer-portals{grid-template-columns:repeat(2,1fr)}
-      .foot-grid{grid-template-columns:1fr;gap:24px}
-      .copyright{text-align:center}
-      .mobile-cta{display:block}body{padding-bottom:70px}
+
+    .portal-item {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      transition: opacity .2s;
+    }
+
+    .portal-item:hover {
+      opacity: .85
+    }
+
+    .portal-item strong {
+      display: block;
+      font-size: 20px;
+      font-weight: 950;
+      color: #F5F5F5;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+    }
+
+    .portal-item span {
+      display: block;
+      font-size: 8px;
+      font-weight: 700;
+      color: #AFAFAF;
+      margin-top: 4px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1.35fr .7fr .7fr;
+      gap: 48px;
+      padding: 30px 0 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, .14);
+    }
+
+    .foot-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .foot-logo-uns {
+      height: 46px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .foot-brand-names strong {
+      display: block;
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1;
+      color: #fff;
+    }
+
+    .foot-brand-names span {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 3px;
+      letter-spacing: .04em;
+    }
+
+    .foot-text {
+      font-size: 11.5px;
+      line-height: 1.6;
+      color: #C5C5C5;
+      max-width: 440px;
+      margin: 0;
+    }
+
+    .foot-title {
+      font-size: 13px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .foot-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 11px;
+      color: #D0D0D0;
+    }
+
+    .foot-links a {
+      color: #D0D0D0;
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .foot-links a:hover {
+      color: var(--uns-yellow);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 16px;
+      font-size: 10px;
+      color: #BEBEBE;
+    }
+
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 100;
+      background: var(--uns-yellow);
+      color: #17364B;
+      border-radius: 6px;
+      padding: 12px 16px;
+      text-align: center;
+      font-weight: 950;
+      box-shadow: 0 13px 35px rgba(0, 0, 0, .24)
+    }
+
+    @media(max-width:1000px) {
+      .header-links {
+        display: none
+      }
+
+      .header-search {
+        min-width: 230px
+      }
+
+      .program-menu {
+        gap: 26px
+      }
+
+      .program-nav .container {
+        gap: 24px
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 28px
+      }
+
+      .hero-card {
+        max-width: 650px
+      }
+
+      .accredit-grid {
+        grid-template-columns: 1fr
+      }
+
+      .highlight-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .feature-grid,
+      .faculty-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .spmb-summary {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .spmb-grid {
+        grid-template-columns: 1fr
+      }
+
+      .path-grid {
+        grid-template-columns: 240px 1fr
+      }
+
+      .curriculum-grid {
+        grid-template-columns: 1fr
+      }
+
+      .expert-banner {
+        grid-template-columns: 1fr
+      }
+
+      .expert-search {
+        min-width: 0;
+        width: 100%
+      }
+
+      .cta-box {
+        grid-template-columns: 1fr
+      }
+
+      .footer-portals {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    @media(max-width:720px) {
+      .container {
+        width: min(calc(100% - 24px), var(--max))
+      }
+
+      .utility-right {
+        display: none
+      }
+
+      .utility-left {
+        gap: 12px
+      }
+
+      .header-main {
+        height: auto;
+        padding: 12px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px
+      }
+
+      .header-search-form {
+        width: 100%
+      }
+
+      .brand-v-divider {
+        height: 28px
+      }
+
+      .brand-text strong {
+        font-size: 14px
+      }
+
+      .program-nav .container {
+        height: auto;
+        min-height: 48px;
+        padding: 10px 0
+      }
+
+      .program-menu {
+        display: none
+      }
+
+      .program-name {
+        font-size: 11px
+      }
+
+      .nav-cta {
+        font-size: 10px
+      }
+
+      .hero-inner {
+        padding: 48px 0 56px
+      }
+
+      .hero h1 {
+        font-size: 42px
+      }
+
+      .hero p {
+        font-size: 15px
+      }
+
+      .hero-actions {
+        display: grid
+      }
+
+      .btn {
+        width: 100%
+      }
+
+      .accredit-row {
+        grid-template-columns: 1fr;
+        gap: 3px
+      }
+
+      .accredit-history,
+      .accredit-period {
+        grid-template-columns: 1fr
+      }
+
+      section {
+        padding: 62px 0
+      }
+
+      .highlight-grid,
+      .feature-grid,
+      .faculty-grid,
+      .path-points {
+        grid-template-columns: 1fr
+      }
+
+      .path-grid {
+        grid-template-columns: 1fr
+      }
+
+      .tab-list {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .path-panel {
+        padding: 22px
+      }
+
+      .spmb-summary,
+      .requirement-list {
+        grid-template-columns: 1fr
+      }
+
+      .expert-banner {
+        padding: 16px
+      }
+
+      .expert-brand {
+        align-items: flex-start
+      }
+
+      .expert-mark {
+        width: 46px;
+        height: 46px
+      }
+
+      .expert-search {
+        height: 40px
+      }
+
+      .cta-box {
+        padding: 28px 22px
+      }
+
+      .cta-actions {
+        display: grid
+      }
+
+      .footer-portals {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .foot-grid {
+        grid-template-columns: 1fr;
+        gap: 24px
+      }
+
+      .copyright {
+        text-align: center
+      }
+
+      .mobile-cta {
+        display: block
+      }
+
+      body {
+        padding-bottom: 70px
+      }
     }
 
     /* --- Poster-aligned information blocks --- */
-    .poster-summary{background:#fff}
-    .poster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .poster-card{border:1px solid var(--line);border-radius:12px;padding:24px 20px;background:#fff;box-shadow:0 5px 20px rgba(0,70,120,.05);border-top:5px solid var(--uns-yellow)}
-    .poster-card h3{margin:0 0 8px;color:var(--uns-teal);font-size:18px}.poster-card p{margin:0;color:var(--muted);font-size:12px}.poster-card strong{color:var(--uns-blue)}
-    .cooperation{background:#F9FBFD}.cooperation-box{background:linear-gradient(100deg,#0877D2,#00A8E8);color:#fff;border-radius:14px;padding:34px;border-bottom:6px solid var(--uns-yellow);display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.cooperation-box h3{font-size:28px;margin:0 0 8px}.cooperation-box p{margin:0;color:#EAF7FF}.cooperation-badge{background:var(--uns-yellow);color:#17364B;padding:13px 18px;border-radius:8px;font-weight:950;white-space:nowrap}
-    .faculty-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 22px}.faculty-stat{background:#fff;border:1px solid var(--line);border-radius:8px;padding:15px;text-align:center}.faculty-stat strong{display:block;font-size:24px;color:var(--uns-blue);line-height:1}.faculty-stat span{font-size:10px;color:var(--muted);font-weight:800}
-    .advantages{background:#fff}.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.adv-card{border-radius:12px;padding:28px;background:#FFF7C7;border:1px solid #F4DF69}.adv-card strong{display:block;font-size:38px;color:var(--uns-blue);line-height:1.05}.adv-card span{display:block;margin-top:8px;font-size:12px;color:#675C25;font-weight:800}
-    .graduate{background:#F5F9FC}.graduate-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:24px}.graduate-profile,.testimonial{background:#fff;border:1px solid var(--line);border-radius:12px;padding:27px;box-shadow:0 6px 20px rgba(0,74,130,.05)}.graduate-profile .portrait{width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--uns-blue),var(--uns-cyan));color:#fff;font-size:28px;font-weight:950;margin-bottom:17px}.graduate-profile h3,.testimonial h3{color:var(--uns-teal);margin:0 0 5px}.graduate-profile p,.testimonial p{font-size:12px;color:var(--muted);margin:0}.testimonials{display:grid;gap:14px}.quote-mark{font-size:40px;line-height:.6;color:var(--uns-yellow-2);font-weight:950}.quote-meta{margin-top:14px!important;color:var(--uns-blue)!important;font-weight:800}.social-panel{margin-top:20px;background:#0877D2;color:#fff;border-radius:12px;padding:24px}.social-panel h3{margin:0 0 13px}.social-list{display:flex;flex-wrap:wrap;gap:9px}.social-list a,.social-list span{padding:8px 11px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:5px;font-size:10px;font-weight:800}
-    @media(max-width:1000px){.poster-grid,.faculty-stats{grid-template-columns:repeat(2,1fr)}.graduate-grid{grid-template-columns:1fr}}
-    @media(max-width:720px){.poster-grid,.faculty-stats,.adv-grid{grid-template-columns:1fr}.cooperation-box{grid-template-columns:1fr}.cooperation-badge{white-space:normal}.graduate-profile,.testimonial{padding:21px}}
+    .poster-summary {
+      background: #fff
+    }
+
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px
+    }
+
+    .poster-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 24px 20px;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0, 70, 120, .05);
+      border-top: 5px solid var(--uns-yellow)
+    }
+
+    .poster-card h3 {
+      margin: 0 0 8px;
+      color: var(--uns-teal);
+      font-size: 18px
+    }
+
+    .poster-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    .poster-card strong {
+      color: var(--uns-blue)
+    }
+
+    .cooperation {
+      background: #F9FBFD
+    }
+
+    .cooperation-box {
+      background: linear-gradient(100deg, #0877D2, #00A8E8);
+      color: #fff;
+      border-radius: 14px;
+      padding: 34px;
+      border-bottom: 6px solid var(--uns-yellow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 25px;
+      align-items: center
+    }
+
+    .cooperation-box h3 {
+      font-size: 28px;
+      margin: 0 0 8px
+    }
+
+    .cooperation-box p {
+      margin: 0;
+      color: #EAF7FF
+    }
+
+    .cooperation-badge {
+      background: var(--uns-yellow);
+      color: #17364B;
+      padding: 13px 18px;
+      border-radius: 8px;
+      font-weight: 950;
+      white-space: nowrap
+    }
+
+    .faculty-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 0 0 22px
+    }
+
+    .faculty-stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center
+    }
+
+    .faculty-stat strong {
+      display: block;
+      font-size: 24px;
+      color: var(--uns-blue);
+      line-height: 1
+    }
+
+    .faculty-stat span {
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 800
+    }
+
+    .advantages {
+      background: #fff
+    }
+
+    .adv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    .adv-card {
+      border-radius: 12px;
+      padding: 28px;
+      background: #FFF7C7;
+      border: 1px solid #F4DF69
+    }
+
+    .adv-card strong {
+      display: block;
+      font-size: 38px;
+      color: var(--uns-blue);
+      line-height: 1.05
+    }
+
+    .adv-card span {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #675C25;
+      font-weight: 800
+    }
+
+    .graduate {
+      background: #F5F9FC
+    }
+
+    .graduate-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 24px
+    }
+
+    .graduate-profile,
+    .testimonial {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 27px;
+      box-shadow: 0 6px 20px rgba(0, 74, 130, .05)
+    }
+
+    .graduate-profile .portrait {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--uns-blue), var(--uns-cyan));
+      color: #fff;
+      font-size: 28px;
+      font-weight: 950;
+      margin-bottom: 17px
+    }
+
+    .graduate-profile h3,
+    .testimonial h3 {
+      color: var(--uns-teal);
+      margin: 0 0 5px
+    }
+
+    .graduate-profile p,
+    .testimonial p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .testimonials {
+      display: grid;
+      gap: 14px
+    }
+
+    .quote-mark {
+      font-size: 40px;
+      line-height: .6;
+      color: var(--uns-yellow-2);
+      font-weight: 950
+    }
+
+    .quote-meta {
+      margin-top: 14px !important;
+      color: var(--uns-blue) !important;
+      font-weight: 800
+    }
+
+    .social-panel {
+      margin-top: 20px;
+      background: #0877D2;
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px
+    }
+
+    .social-panel h3 {
+      margin: 0 0 13px
+    }
+
+    .social-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px
+    }
+
+    .social-list a,
+    .social-list span {
+      padding: 8px 11px;
+      background: rgba(255, 255, 255, .12);
+      border: 1px solid rgba(255, 255, 255, .25);
+      border-radius: 5px;
+      font-size: 10px;
+      font-weight: 800
+    }
+
+    @media(max-width:1000px) {
+
+      .poster-grid,
+      .faculty-stats {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .graduate-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:720px) {
+
+      .poster-grid,
+      .faculty-stats,
+      .adv-grid {
+        grid-template-columns: 1fr
+      }
+
+      .cooperation-box {
+        grid-template-columns: 1fr
+      }
+
+      .cooperation-badge {
+        white-space: normal
+      }
+
+      .graduate-profile,
+      .testimonial {
+        padding: 21px
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <nav class="program-nav" aria-label="Navigasi program studi">
@@ -429,7 +2029,8 @@
         <a href="#kurikulum">KURIKULUM</a>
         <a href="#dosen">DOSEN & KEPAKARAN</a>
       </div>
-      <a class="nav-cta" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">DAFTAR ↗</a>
+      <a class="nav-cta" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">DAFTAR
+        ↗</a>
     </div>
   </nav>
 
@@ -444,8 +2045,10 @@
           <span>Universitas Sebelas Maret - Surakarta</span>
         </div>
       </a>
-      <form class="header-search-form" action="https://expert.uns.ac.id/researchers" target="_blank" rel="noopener">
-        <input type="text" name="q" placeholder="Cari dosen / bidang kepakaran..." aria-label="Cari dosen atau bidang kepakaran" />
+      <form class="header-search-form" action="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106"
+        target="_blank" rel="noopener">
+        <input type="text" name="q" placeholder="Cari dosen / bidang kepakaran..."
+          aria-label="Cari dosen atau bidang kepakaran" />
         <button type="submit" aria-label="Cari">⌕</button>
       </form>
     </div>
@@ -458,9 +2061,11 @@
           <div class="breadcrumbs">FKIP UNS / Pascasarjana / Magister / Pendidikan Geografi</div>
           <div class="hero-kicker">Program Magister</div>
           <h1 id="hero-title">S2 Pendidikan <span>Geografi</span></h1>
-          <p>Kembangkan kompetensi sebagai pendidik ahli, peneliti, dan pengembang pendidikan geografi melalui kajian geospasial, kebumian, lingkungan, dan kebencanaan berbasis riset modern.</p>
+          <p>Kembangkan kompetensi sebagai pendidik ahli, peneliti, dan pengembang pendidikan geografi melalui kajian
+            geospasial, kebumian, lingkungan, dan kebencanaan berbasis riset modern.</p>
           <div class="hero-actions">
-            <a class="btn btn-yellow" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">DAFTAR SEKARANG →</a>
+            <a class="btn btn-yellow" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank"
+              rel="noopener">DAFTAR SEKARANG →</a>
             <a class="btn btn-outline" href="#jalur">LIHAT JALUR MASUK</a>
           </div>
         </div>
@@ -468,7 +2073,8 @@
         <aside class="hero-card" aria-label="Ringkasan S2 Pendidikan Geografi">
           <div class="hero-card-label">Pascasarjana FKIP</div>
           <h3>Pendidikan Geografi</h3>
-          <p>Program magister berorientasi pada analisis geospasial, pendidikan kebumian, lingkungan hidup, mitigasi bencana, riset, dan publikasi ilmiah.</p>
+          <p>Program magister berorientasi pada analisis geospasial, pendidikan kebumian, lingkungan hidup, mitigasi
+            bencana, riset, dan publikasi ilmiah.</p>
           <div class="hero-mini-grid">
             <div class="hero-mini"><strong>Unggul</strong><span>Akreditasi Program Studi</span></div>
             <div class="hero-mini"><strong>M.Pd.</strong><span>Gelar lulusan</span></div>
@@ -493,18 +2099,46 @@
 
     <section class="poster-summary" id="ringkasan-poster">
       <div class="container">
-        <div class="section-title"><h2>Profil Utama Program Studi</h2><div class="title-line"></div><p>Informasi inti S2 Pendidikan Geografi sebagaimana ditampilkan pada materi profil program studi.</p></div>
+        <div class="section-title">
+          <h2>Profil Utama Program Studi</h2>
+          <div class="title-line"></div>
+          <p>Informasi inti S2 Pendidikan Geografi sebagaimana ditampilkan pada materi profil program studi.</p>
+        </div>
         <div class="poster-grid">
-          <article class="poster-card"><h3>Core Study</h3><p><strong>Analisis Geospasial & Kebumian</strong> sebagai fondasi sains geografi dan pengembangan inovasi pembelajaran.</p></article>
-          <article class="poster-card"><h3>Kompetensi</h3><p>Penguatan kompetensi pada bidang <strong>Pendidikan Geografi & Lingkungan</strong> melalui riset dan pemetaan digital.</p></article>
-          <article class="poster-card"><h3>Peluang Karir</h3><p>Lulusan dipersiapkan menjadi <strong>Pendidik Ahli, Peneliti, & Pakar Geospasial</strong> yang unggul dan berdaya saing.</p></article>
-          <article class="poster-card"><h3>Fasilitas</h3><p>Didukung <strong>Laboratorium SIG, Penginderaan Jauh, & Kebencanaan</strong> untuk riset dan perkuliahan.</p></article>
+          <article class="poster-card">
+            <h3>Core Study</h3>
+            <p><strong>Analisis Geospasial & Kebumian</strong> sebagai fondasi sains geografi dan pengembangan inovasi
+              pembelajaran.</p>
+          </article>
+          <article class="poster-card">
+            <h3>Kompetensi</h3>
+            <p>Penguatan kompetensi pada bidang <strong>Pendidikan Geografi & Lingkungan</strong> melalui riset dan
+              pemetaan digital.</p>
+          </article>
+          <article class="poster-card">
+            <h3>Peluang Karir</h3>
+            <p>Lulusan dipersiapkan menjadi <strong>Pendidik Ahli, Peneliti, & Pakar Geospasial</strong> yang unggul dan
+              berdaya saing.</p>
+          </article>
+          <article class="poster-card">
+            <h3>Fasilitas</h3>
+            <p>Didukung <strong>Laboratorium SIG, Penginderaan Jauh, & Kebencanaan</strong> untuk riset dan perkuliahan.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="cooperation" id="mitra">
-      <div class="container"><div class="cooperation-box"><div><h3>Mitra Kerjasama</h3><p>Kerjasama nasional dan internasional dalam payung MOU Universitas dan Fakultas.</p></div><div class="cooperation-badge">Nasional & Internasional</div></div></div>
+      <div class="container">
+        <div class="cooperation-box">
+          <div>
+            <h3>Mitra Kerjasama</h3>
+            <p>Kerjasama nasional dan internasional dalam payung MOU Universitas dan Fakultas.</p>
+          </div>
+          <div class="cooperation-badge">Nasional & Internasional</div>
+        </div>
+      </div>
     </section>
 
     <section id="akreditasi" class="accreditation">
@@ -512,7 +2146,8 @@
         <div class="section-title">
           <h2>Akreditasi Program Studi</h2>
           <div class="title-line"></div>
-          <p>S2 Pendidikan Geografi FKIP UNS berstatus <strong>Unggul</strong>. Informasi akreditasi ditampilkan sebagai bagian utama landing page agar calon mahasiswa dapat memverifikasi mutu program sebelum mendaftar.</p>
+          <p>S2 Pendidikan Geografi FKIP UNS berstatus <strong>Unggul</strong> berdasarkan sertifikat akreditasi LAMDIK
+            terbaru.</p>
         </div>
         <div class="accredit-grid">
           <article class="accredit-main" aria-label="Status akreditasi saat ini">
@@ -534,7 +2169,8 @@
               <h3>Detail Sertifikat Akreditasi</h3>
               <p>Ringkasan status terbaru program studi dan riwayat akreditasi sebelumnya.</p>
               <div class="accredit-data">
-                <div class="accredit-row"><span>Lembaga Akreditasi</span><strong>Lembaga Akreditasi Mandiri Kependidikan (LAMDIK)</strong></div>
+                <div class="accredit-row"><span>Lembaga Akreditasi</span><strong>Lembaga Akreditasi Mandiri Kependidikan
+                    (LAMDIK)</strong></div>
                 <div class="accredit-row"><span>Nomor SK</span><strong>430/SK/LAMDIK/Ak/M/IV/2023</strong></div>
                 <div class="accredit-row"><span>Peringkat / Nilai</span><strong>UNGGUL</strong></div>
                 <div class="accredit-row"><span>Periode</span><strong>7 Juni 2023 – 6 Juni 2028</strong></div>
@@ -547,8 +2183,10 @@
               </div>
             </div>
             <div class="accredit-actions" style="margin-top:20px">
-              <a class="btn btn-blue" href="https://akademik.fkip.uns.ac.id/s2-pendidikan-geografi/" target="_blank" rel="noopener">AKREDITASI FKIP UNS ↗</a>
-              <a class="mini-link" href="https://layanan-lppmp.uns.ac.id/akreditasi/prodi/s-2-pendidikan-geografi" target="_blank" rel="noopener">Detail sertifikat UNS ↗</a>
+              <a class="btn btn-blue" href="https://akademik.fkip.uns.ac.id/s2-pendidikan-geografi/" target="_blank"
+                rel="noopener">AKREDITASI FKIP UNS ↗</a>
+              <a class="mini-link" href="https://layanan-lppmp.uns.ac.id/akreditasi/prodi/s-2-pendidikan-geografi"
+                target="_blank" rel="noopener">Detail sertifikat UNS ↗</a>
             </div>
           </article>
         </div>
@@ -560,13 +2198,15 @@
         <div class="section-title">
           <h2>S2 Pendidikan Geografi FKIP UNS</h2>
           <div class="title-line"></div>
-          <p>Mengembangkan pendidikan geografi yang unggul berbasis analisis geospasial, manajemen lingkungan, dan mitigasi bencana melalui pembelajaran abad-21.</p>
+          <p>Mengembangkan pendidikan geografi yang unggul berbasis analisis geospasial, manajemen lingkungan, dan
+            mitigasi bencana melalui pembelajaran abad-21.</p>
         </div>
         <div class="feature-grid">
           <article class="feature">
             <div class="feature-icon">01</div>
             <h3>Outcome-Based Education</h3>
-            <p>Kurikulum berorientasi pada capaian pembelajaran dan kompetensi lulusan jenjang Magister/KKNI Level 8.</p>
+            <p>Kurikulum berorientasi pada capaian pembelajaran dan kompetensi lulusan jenjang Magister/KKNI Level 8.
+            </p>
           </article>
           <article class="feature">
             <div class="feature-icon">02</div>
@@ -576,7 +2216,8 @@
           <article class="feature">
             <div class="feature-icon">03</div>
             <h3>Jejaring Akademik & Profesi</h3>
-            <p>Pengembangan program didukung kolaborasi dengan instansi kebumian, lembaga riset, dan asosiasi geografi.</p>
+            <p>Pengembangan program didukung kolaborasi dengan instansi kebumian, lembaga riset, dan asosiasi geografi.
+            </p>
           </article>
         </div>
       </div>
@@ -587,41 +2228,60 @@
         <div class="section-title">
           <h2>Jalur Masuk</h2>
           <div class="title-line"></div>
-          <p>Dua pola studi utama untuk S2 Pendidikan Geografi: Reguler dan Magister Jalur Penelitian (By Research). Ketersediaan jalur pada setiap gelombang mengikuti portal resmi SPMB UNS.</p>
+          <p>Dua pola studi utama untuk S2 Pendidikan Geografi: Reguler dan Magister Jalur Penelitian (By Research).
+            Ketersediaan jalur pada setiap gelombang mengikuti portal resmi SPMB UNS.</p>
         </div>
         <div class="path-grid">
           <div class="tab-list" role="tablist" aria-label="Pilihan jalur masuk">
-            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="reguler">REGULER<small>Perkuliahan terstruktur + riset tesis</small></button>
-            <button class="tab-btn" role="tab" aria-selected="false" data-tab="riset">BY RESEARCH<small>Riset, publikasi, dan bimbingan intensif</small></button>
+            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="reguler">REGULER<small>Perkuliahan
+                terstruktur + riset tesis</small></button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="riset">BY RESEARCH<small>Riset,
+                publikasi, dan bimbingan intensif</small></button>
           </div>
           <div>
             <article class="path-panel active" data-panel="reguler">
               <h3>Jalur Reguler</h3>
-              <p>Jalur seleksi Magister bagi calon mahasiswa yang menempuh pembelajaran terstruktur melalui mata kuliah, penguatan metodologi geografi, penelitian, dan penyelesaian tesis.</p>
+              <p>Jalur seleksi Magister bagi calon mahasiswa yang menempuh pembelajaran terstruktur melalui mata kuliah,
+                penguatan metodologi geografi, penelitian, dan penyelesaian tesis.</p>
               <div class="path-points">
-                <div class="path-point"><strong>Latar pendidikan</strong><span>Lulusan S-1 Pendidikan Geografi, Geografi, Saintek, atau rumpun kependidikan relevan.</span></div>
-                <div class="path-point"><strong>Acuan akademik</strong><span>Ijazah/transkrip S-1, rekomendasi akademik, dan dokumen pendukung SPMB.</span></div>
-                <div class="path-point"><strong>Seleksi</strong><span>Verifikasi dokumen dan tahapan seleksi/wawancara sesuai pengumuman gelombang.</span></div>
-                <div class="path-point"><strong>Pendaftaran</strong><span>Dilakukan secara online melalui portal resmi SPMB Universitas Sebelas Maret.</span></div>
+                <div class="path-point"><strong>Latar pendidikan</strong><span>Lulusan S-1 Pendidikan Geografi,
+                    Geografi, Saintek, atau rumpun kependidikan relevan.</span></div>
+                <div class="path-point"><strong>Acuan akademik</strong><span>Ijazah/transkrip S-1, rekomendasi akademik,
+                    dan dokumen pendukung SPMB.</span></div>
+                <div class="path-point"><strong>Seleksi</strong><span>Verifikasi dokumen dan tahapan seleksi/wawancara
+                    sesuai pengumuman gelombang.</span></div>
+                <div class="path-point"><strong>Pendaftaran</strong><span>Dilakukan secara online melalui portal resmi
+                    SPMB Universitas Sebelas Maret.</span></div>
               </div>
-              <div class="note">Nilai ambang, biaya pendaftaran, jadwal, dan dokumen yang diwajibkan dapat berubah menurut periode. Gunakan laman SPMB S2/S3 sebagai rujukan final sebelum mendaftar.</div>
+              <div class="note">Nilai ambang, biaya pendaftaran, jadwal, dan dokumen yang diwajibkan dapat berubah
+                menurut periode. Gunakan laman SPMB S2/S3 sebagai rujukan final sebelum mendaftar.</div>
               <div style="height:14px"></div>
-              <a class="btn btn-blue" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">DAFTAR JALUR REGULER ↗</a>
+              <a class="btn btn-blue" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank"
+                rel="noopener">DAFTAR JALUR REGULER ↗</a>
             </article>
             <article class="path-panel" data-panel="riset">
               <h3>Magister Jalur Penelitian / By Research</h3>
-              <p>Program Magister Jalur Penelitian lebih menitikberatkan pada riset mendalam di bidang geografi/kebencanaan dan publikasi karya ilmiah bereputasi.</p>
+              <p>Program Magister Jalur Penelitian lebih menitikberatkan pada riset mendalam di bidang
+                geografi/kebencanaan dan publikasi karya ilmiah bereputasi.</p>
               <div class="path-points">
-                <div class="path-point"><strong>Calon pembimbing</strong><span>Alur dimulai dengan menentukan calon dosen pembimbing dengan kepakaran yang relevan.</span></div>
-                <div class="path-point"><strong>Proposal tesis</strong><span>Menyiapkan draft proposal penelitian geografi dan memperoleh persetujuan calon pembimbing.</span></div>
-                <div class="path-point"><strong>Orientasi luaran</strong><span>Penelitian geospasial, publikasi ilmiah internasional/nasional bereputasi, dan tesis.</span></div>
-                <div class="path-point"><strong>Profil pendaftar</strong><span>Memiliki arah penelitian geografi yang jelas dan rekam jejak akademik/publikasi.</span></div>
+                <div class="path-point"><strong>Calon pembimbing</strong><span>Alur dimulai dengan menentukan calon
+                    dosen pembimbing dengan kepakaran yang relevan.</span></div>
+                <div class="path-point"><strong>Proposal tesis</strong><span>Menyiapkan draft proposal penelitian
+                    geografi dan memperoleh persetujuan calon pembimbing.</span></div>
+                <div class="path-point"><strong>Orientasi luaran</strong><span>Penelitian geospasial, publikasi ilmiah
+                    internasional/nasional bereputasi, dan tesis.</span></div>
+                <div class="path-point"><strong>Profil pendaftar</strong><span>Memiliki arah penelitian geografi yang
+                    jelas dan rekam jejak akademik/publikasi.</span></div>
               </div>
-              <div class="note"><strong>Acuan persyaratan jalur penelitian:</strong> Pendaftar menyiapkan ijazah S-1 bidang relevan, IPK minimal 3,00, dua rekomendasi akademik, rekomendasi calon pembimbing, serta draft proposal tesis.</div>
+              <div class="note"><strong>Acuan persyaratan jalur penelitian:</strong> Pendaftar menyiapkan ijazah S-1
+                bidang relevan, IPK minimal 3,00, dua rekomendasi akademik, rekomendasi calon pembimbing, serta draft
+                proposal tesis.</div>
               <div style="height:14px"></div>
               <div class="source-links">
-                <a class="btn btn-blue" href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3" target="_blank" rel="noopener">CEK JALUR S2/S3 ↗</a>
-                <a class="mini-link" href="https://expert.uns.ac.id/" target="_blank" rel="noopener">Cari calon pembimbing di Expert UNS ↗</a>
+                <a class="btn btn-blue" href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3" target="_blank"
+                  rel="noopener">CEK JALUR S2/S3 ↗</a>
+                <a class="mini-link" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank"
+                  rel="noopener">Cari calon pembimbing di Expert UNS ↗</a>
               </div>
             </article>
           </div>
@@ -648,11 +2308,16 @@
             <h3>Alur Pendaftaran</h3>
             <p>Proses dilakukan secara daring melalui SPMB UNS.</p>
             <div class="flow">
-              <div class="flow-step"><strong>Isi formulir online</strong>Dapatkan nomor pendaftaran SPMB Pascasarjana UNS.</div>
-              <div class="flow-step"><strong>Selesaikan pembayaran</strong>Ikuti nominal dan kanal pembayaran resmi.</div>
-              <div class="flow-step"><strong>Unggah dokumen</strong>Login dan unggah dokumen persyaratan yang ditentukan.</div>
-              <div class="flow-step"><strong>Verifikasi panitia</strong>Setelah diverifikasi, cetak Kartu Tanda Peserta.</div>
-              <div class="flow-step"><strong>Ikuti seleksi</strong>Ikuti ujian/wawancara sesuai jadwal yang ditetapkan.</div>
+              <div class="flow-step"><strong>Isi formulir online</strong>Dapatkan nomor pendaftaran SPMB Pascasarjana
+                UNS.</div>
+              <div class="flow-step"><strong>Selesaikan pembayaran</strong>Ikuti nominal dan kanal pembayaran resmi.
+              </div>
+              <div class="flow-step"><strong>Unggah dokumen</strong>Login dan unggah dokumen persyaratan yang
+                ditentukan.</div>
+              <div class="flow-step"><strong>Verifikasi panitia</strong>Setelah diverifikasi, cetak Kartu Tanda Peserta.
+              </div>
+              <div class="flow-step"><strong>Ikuti seleksi</strong>Ikuti ujian/wawancara sesuai jadwal yang ditetapkan.
+              </div>
             </div>
           </article>
 
@@ -660,23 +2325,31 @@
             <h3>Dokumen yang Perlu Disiapkan</h3>
             <p>Ringkasan dokumen umum pendaftaran Magister.</p>
             <div class="requirement-list">
-              <div class="requirement"><strong>Ijazah & transkrip S-1</strong>Bidang studi Pendidikan Geografi / Geografi / Relevan.</div>
-              <div class="requirement"><strong>Rekomendasi akademik</strong>Dua rekomendasi dari dosen/atasan akademik.</div>
-              <div class="requirement"><strong>Izin belajar</strong>Surat izin instansi bagi pendaftar yang bekerja.</div>
-              <div class="requirement"><strong>Kesehatan & pembiayaan</strong>Surat keterangan sehat & jaminan pembiayaan.</div>
+              <div class="requirement"><strong>Ijazah & transkrip S-1</strong>Bidang studi Pendidikan Geografi /
+                Geografi / Relevan.</div>
+              <div class="requirement"><strong>Rekomendasi akademik</strong>Dua rekomendasi dari dosen/atasan akademik.
+              </div>
+              <div class="requirement"><strong>Izin belajar</strong>Surat izin instansi bagi pendaftar yang bekerja.
+              </div>
+              <div class="requirement"><strong>Kesehatan & pembiayaan</strong>Surat keterangan sehat & jaminan
+                pembiayaan.</div>
               <div class="requirement"><strong>TPA/TBS</strong>Sertifikat TPA/TBS sesuai ketentuan gelombang.</div>
               <div class="requirement"><strong>Bahasa Inggris</strong>Sertifikat EAP/TOEFL yang diakui UNS.</div>
-              <div class="requirement"><strong>Khusus By Research</strong>Rekomendasi calon pembimbing & proposal tesis.</div>
+              <div class="requirement"><strong>Khusus By Research</strong>Rekomendasi calon pembimbing & proposal tesis.
+              </div>
               <div class="requirement"><strong>Portofolio Riset</strong>Daftar karya ilmiah/publikasi bila ada.</div>
             </div>
           </article>
         </div>
 
         <div class="official-note">
-          <strong>Catatan Resmi:</strong> Jadwal serta persyaratan yang bersifat dinamis dapat diakses langsung pada portal resmi SPMB UNS.
+          <strong>Catatan Resmi:</strong> Jadwal serta persyaratan yang bersifat dinamis dapat diakses langsung pada
+          portal resmi SPMB UNS.
           <div class="source-links">
-            <a class="mini-link" href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3" target="_blank" rel="noopener">Informasi Jalur S2/S3 ↗</a>
-            <a class="mini-link" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">Dashboard Pendaftaran ↗</a>
+            <a class="mini-link" href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3" target="_blank"
+              rel="noopener">Informasi Jalur S2/S3 ↗</a>
+            <a class="mini-link" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank"
+              rel="noopener">Dashboard Pendaftaran ↗</a>
           </div>
         </div>
       </div>
@@ -687,27 +2360,58 @@
         <div class="section-title">
           <h2>Kurikulum</h2>
           <div class="title-line"></div>
-          <p>Kurikulum dirancang untuk menguatkan kompetensi keilmuan geografi, metode pembelajaran geospasial, dan riset kebumian.</p>
+          <p>Kurikulum dirancang untuk menguatkan kompetensi keilmuan geografi, metode pembelajaran geospasial, dan
+            riset kebumian.</p>
         </div>
         <div class="curriculum-grid">
           <article class="curriculum-card">
             <h3>Struktur Pembelajaran</h3>
             <p>Detail mata kuliah dan kurikulum lengkap mengacu pada dokumen resmi prodi S2 Pendidikan Geografi.</p>
             <div class="curr-list">
-              <div class="curr-row"><div class="num">01</div><div><strong>Mata Kuliah Keahlian Geografi</strong><span>Filsafat geografi, teori spasial, dan metodologi penelitian geografi.</span></div></div>
-              <div class="curr-row"><div class="num">02</div><div><strong>SIG & Penginderaan Jauh</strong><span>Pemodelan spasial, analisis lingkungan, dan teknologi geospasial dalam pembelajaran.</span></div></div>
-              <div class="curr-row"><div class="num">03</div><div><strong>Kebencanaan & Lingkungan</strong><span>Studi mitigasi bencana, ekologi manusia, dan pembelajaran lingkungan hidup.</span></div></div>
-              <div class="curr-row"><div class="num">04</div><div><strong>Tesis & Publikasi</strong><span>Penelitian tesis dan kewajiban publikasi karya ilmiah bereputasi.</span></div></div>
+              <div class="curr-row">
+                <div class="num">01</div>
+                <div><strong>Mata Kuliah Keahlian Geografi</strong><span>Filsafat geografi, teori spasial, dan
+                    metodologi penelitian geografi.</span></div>
+              </div>
+              <div class="curr-row">
+                <div class="num">02</div>
+                <div><strong>SIG & Penginderaan Jauh</strong><span>Pemodelan spasial, analisis lingkungan, dan teknologi
+                    geospasial dalam pembelajaran.</span></div>
+              </div>
+              <div class="curr-row">
+                <div class="num">03</div>
+                <div><strong>Kebencanaan & Lingkungan</strong><span>Studi mitigasi bencana, ekologi manusia, dan
+                    pembelajaran lingkungan hidup.</span></div>
+              </div>
+              <div class="curr-row">
+                <div class="num">04</div>
+                <div><strong>Tesis & Publikasi</strong><span>Penelitian tesis dan kewajiban publikasi karya ilmiah
+                    bereputasi.</span></div>
+              </div>
             </div>
           </article>
           <article class="curriculum-card blue">
             <div class="big-number">36–42</div>
             <div class="big-label">SKS · ACUAN UMUM PROGRAM MAGISTER</div>
             <div class="curr-list" style="margin-top:25px">
-              <div class="curr-row"><div class="num">A</div><div><strong>KKNI Level 8</strong><span>Capaian pembelajaran jenjang Magister Geografi.</span></div></div>
-              <div class="curr-row"><div class="num">B</div><div><strong>Berbasis OBE</strong><span>Berorientasi pada ketercapaian kompetensi lulusan.</span></div></div>
-              <div class="curr-row"><div class="num">C</div><div><strong>Masa studi</strong><span>Dirancang selesai dalam 4 semester pada skema umum Pascasarjana UNS.</span></div></div>
-              <div class="curr-row"><div class="num">D</div><div><strong>Aplikasi Geospasial</strong><span>Mengintegrasikan teknologi SIG & Remote Sensing modern.</span></div></div>
+              <div class="curr-row">
+                <div class="num">A</div>
+                <div><strong>KKNI Level 8</strong><span>Capaian pembelajaran jenjang Magister Geografi.</span></div>
+              </div>
+              <div class="curr-row">
+                <div class="num">B</div>
+                <div><strong>Berbasis OBE</strong><span>Berorientasi pada ketercapaian kompetensi lulusan.</span></div>
+              </div>
+              <div class="curr-row">
+                <div class="num">C</div>
+                <div><strong>Masa studi</strong><span>Dirancang selesai dalam 4 semester pada skema umum Pascasarjana
+                    UNS.</span></div>
+              </div>
+              <div class="curr-row">
+                <div class="num">D</div>
+                <div><strong>Aplikasi Geospasial</strong><span>Mengintegrasikan teknologi SIG & Remote Sensing
+                    modern.</span></div>
+              </div>
             </div>
           </article>
         </div>
@@ -722,42 +2426,167 @@
           <p>Pakar dan pengajar S2 Pendidikan Geografi FKIP Universitas Sebelas Maret.</p>
         </div>
 
-        <a class="expert-banner" href="https://expert.uns.ac.id/" target="_blank" rel="noopener">
+        <a class="expert-banner" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank"
+          rel="noopener">
           <div class="expert-brand">
             <div class="expert-mark">E</div>
-            <div class="expert-copy"><strong>Expert UNS</strong><span>Temukan pakar, bidang keahlian, publikasi, dan rekam jejak penelitian Universitas Sebelas Maret.</span></div>
+            <div class="expert-copy"><strong>Expert UNS</strong><span>Temukan pakar, bidang keahlian, publikasi, dan
+                rekam jejak penelitian Universitas Sebelas Maret.</span></div>
           </div>
           <div class="expert-search"><span>Cari nama dosen geografi atau bidang kepakaran...</span><b>⌕</b></div>
         </a>
 
         <div class="faculty-grid">
-          <article class="person"><div class="person-head"><div class="avatar">CM</div><div><h3>Prof. Dr. Chatarina Muryani, M.Si.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Geografi Kebencanaan</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">NS</div><div><h3>Prof. Dr. Nunuk Suryani, M.Pd.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Teknologi Pendidikan</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">SG</div><div><h3>Prof. Dr. Drs. Sugiyanto, M.Si., M.Si.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Pembelajaran Geografi</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">SW</div><div><h3>Prof. Dr. Siswandari, M.Stat.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Statistika</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">RN</div><div><h3>Dr. Rita Noviani, S.Si., M.Sc.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Perencanaan Wilayah</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">PW</div><div><h3>Dr. Pipit Wijayanti, S.Si., M.Sc.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Hidrologi Karst</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">MG</div><div><h3>Dr. Mohammad Gamal R., M.Si.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Geografi Permukiman Kota</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">SP</div><div><h3>Dr. Singgih Prihadi, S.Pd., M.Pd.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Teknologi Pembelajaran Geografi</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">AH</div><div><h3>Dr. Agung Hidayat, S.Pd., M.Sc.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Geografi Lingkungan</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">NH</div><div><h3>Dr.rer.nat. Nurhadi, S.Ant., M.Hum.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Geografi Manusia</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">RU</div><div><h3>Dr. Rahning Utomowati, S.Si., M.Sc.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Geografi Lingkungan</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">SB</div><div><h3>Seno Budi Ajar, S.Pd., M.Si., Ph.D.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Geografi Budaya</span></article>
-          <article class="person"><div class="person-head"><div class="avatar">YH</div><div><h3>Yosafat Hermawan T., S.Sos., MA., Ph.D.</h3><p>Pengajar S2 Pendidikan Geografi</p></div></div><span class="expert-chip">Sosiologi Perkotaan & Kependudukan</span></article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">CM</div>
+              <div>
+                <h3>Prof. Dr. Chatarina Muryani, M.Si.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Geografi Kebencanaan</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">NS</div>
+              <div>
+                <h3>Prof. Dr. Nunuk Suryani, M.Pd.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Teknologi Pendidikan</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">SG</div>
+              <div>
+                <h3>Prof. Dr. Drs. Sugiyanto, M.Si., M.Si.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Pembelajaran Geografi</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">SW</div>
+              <div>
+                <h3>Prof. Dr. Siswandari, M.Stat.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Statistika</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">RN</div>
+              <div>
+                <h3>Dr. Rita Noviani, S.Si., M.Sc.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Perencanaan Wilayah</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">PW</div>
+              <div>
+                <h3>Dr. Pipit Wijayanti, S.Si., M.Sc.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Hidrologi Karst</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">MG</div>
+              <div>
+                <h3>Dr. Mohammad Gamal R., M.Si.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Geografi Permukiman Kota</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">SP</div>
+              <div>
+                <h3>Dr. Singgih Prihadi, S.Pd., M.Pd.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Teknologi Pembelajaran Geografi</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">AH</div>
+              <div>
+                <h3>Dr. Agung Hidayat, S.Pd., M.Sc.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Geografi Lingkungan</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">NH</div>
+              <div>
+                <h3>Dr.rer.nat. Nurhadi, S.Ant., M.Hum.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Geografi Manusia</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">RU</div>
+              <div>
+                <h3>Dr. Rahning Utomowati, S.Si., M.Sc.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Geografi Lingkungan</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">SB</div>
+              <div>
+                <h3>Seno Budi Ajar, S.Pd., M.Si., Ph.D.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Geografi Budaya</span>
+          </article>
+          <article class="person">
+            <div class="person-head">
+              <div class="avatar">YH</div>
+              <div>
+                <h3>Yosafat Hermawan T., S.Sos., MA., Ph.D.</h3>
+                <p>Pengajar S2 Pendidikan Geografi</p>
+              </div>
+            </div><span class="expert-chip">Sosiologi Perkotaan & Kependudukan</span>
+          </article>
         </div>
-        <div class="faculty-cta" style="margin-top:24px"><a class="btn btn-blue" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener">TELUSURI PROFIL DI EXPERT UNS ↗</a></div>
+        <div class="faculty-cta" style="margin-top:24px"><a class="btn btn-blue"
+            href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106"
+            target="_blank" rel="noopener">TELUSURI PROFIL DI EXPERT UNS ↗</a></div>
       </div>
     </section>
 
     <section class="advantages" id="keunggulan">
-      <div class="container"><div class="section-title"><h2>Keunggulan Prodi</h2><div class="title-line"></div><p>Ringkasan keunggulan program studi S2 Pendidikan Geografi FKIP UNS.</p></div><div class="adv-grid"><div class="adv-card"><strong>M.Pd.</strong><span>Gelar Magister Pendidikan setelah lulus.</span></div><div class="adv-card"><strong>3–6 Bulan</strong><span>Rata-rata masa tunggu kerja alumni.</span></div></div></div>
+      <div class="container">
+        <div class="section-title">
+          <h2>Keunggulan Prodi</h2>
+          <div class="title-line"></div>
+          <p>Ringkasan keunggulan program studi S2 Pendidikan Geografi FKIP UNS.</p>
+        </div>
+        <div class="adv-grid">
+          <div class="adv-card"><strong>M.Pd.</strong><span>Gelar Magister Pendidikan setelah lulus.</span></div>
+          <div class="adv-card"><strong>3–6 Bulan</strong><span>Rata-rata masa tunggu kerja alumni.</span></div>
+        </div>
+      </div>
     </section>
 
     <section class="cta-section">
       <div class="container">
         <div class="cta-box">
-          <div><h2>Siap melanjutkan studi di S2 Pendidikan Geografi?</h2><p>Periksa jadwal, persyaratan, dan jalur yang sedang dibuka melalui SPMB UNS. Pendaftaran dilakukan pada portal resmi calon mahasiswa.</p></div>
-          <div class="cta-actions"><a class="btn btn-yellow" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">DAFTAR SEKARANG →</a><a class="btn btn-outline" href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3" target="_blank" rel="noopener">INFO SPMB S2/S3</a></div>
+          <div>
+            <h2>Siap melanjutkan studi di S2 Pendidikan Geografi?</h2>
+            <p>Periksa jadwal, persyaratan, dan jalur yang sedang dibuka melalui SPMB UNS. Pendaftaran dilakukan pada
+              portal resmi calon mahasiswa.</p>
+          </div>
+          <div class="cta-actions"><a class="btn btn-yellow" href="https://spmb.uns.ac.id/pendaftar/dashboard/index"
+              target="_blank" rel="noopener">DAFTAR SEKARANG →</a><a class="btn btn-outline"
+              href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3" target="_blank" rel="noopener">INFO SPMB
+              S2/S3</a></div>
         </div>
       </div>
     </section>
@@ -778,7 +2607,8 @@
           <strong>SPMB</strong>
           <span>PENERIMAAN MAHASISWA BARU</span>
         </a>
-        <a class="portal-item" href="https://expert.uns.ac.id/" target="_blank" rel="noopener">
+        <a class="portal-item" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank"
+          rel="noopener">
           <strong>EXPERT</strong>
           <span>PORTAL KEPAKARAN UNS</span>
         </a>
@@ -795,14 +2625,16 @@
             </div>
           </div>
           <p class="foot-text">
-            S2 Pendidikan Geografi · Pascasarjana FKIP Universitas Sebelas Maret. Jl. Ir. Sutami 36A Kentingan, Jebres, Surakarta, Jawa Tengah.
+            S2 Pendidikan Geografi · Pascasarjana FKIP Universitas Sebelas Maret. Jl. Ir. Sutami 36A Kentingan, Jebres,
+            Surakarta, Jawa Tengah.
           </p>
         </div>
         <div>
           <div class="foot-title">Layanan Sistem</div>
           <div class="foot-links">
             <a href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">SPMB UNS</a>
-            <a href="https://expert.uns.ac.id/" target="_blank" rel="noopener">Expert UNS</a>
+            <a href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener">Expert
+              UNS</a>
             <a href="https://geografi.fkip.uns.ac.id/" target="_blank" rel="noopener">Website Prodi</a>
           </div>
         </div>
@@ -824,16 +2656,18 @@
     </div>
   </footer>
 
-  <a class="mobile-cta" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">DAFTAR S2 PENDIDIKAN GEOGRAFI →</a>
+  <a class="mobile-cta" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">DAFTAR S2
+    PENDIDIKAN GEOGRAFI →</a>
 
   <script>
     const buttons = document.querySelectorAll('[data-tab]');
     const panels = document.querySelectorAll('[data-panel]');
     buttons.forEach(btn => btn.addEventListener('click', () => {
       const key = btn.dataset.tab;
-      buttons.forEach(b => { const active = b === btn; b.classList.toggle('active',active); b.setAttribute('aria-selected',String(active)); });
-      panels.forEach(p => p.classList.toggle('active',p.dataset.panel === key));
+      buttons.forEach(b => { const active = b === btn; b.classList.toggle('active', active); b.setAttribute('aria-selected', String(active)); });
+      panels.forEach(p => p.classList.toggle('active', p.dataset.panel === key));
     }));
   </script>
 </body>
+
 </html>
