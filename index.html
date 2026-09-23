@@ -1,333 +1,354 @@
 <!doctype html>
 <html lang="id">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0074D6" />
-  <meta name="description"
-    content="Program Studi Magister (S2) Pendidikan Geografi FKIP Universitas Sebelas Maret (UNS) — Terakreditasi Unggul dengan fokus kajian lingkungan, kebencanaan, dan analisis geospasial." />
-  <title>S2 Pendidikan Geografi | Pascasarjana FKIP UNS</title>
+  <meta name="description" content="Program Studi S2 Pendidikan Geografi FKIP Universitas Sebelas Maret (UNS) — profil program studi, akreditasi, jalur masuk, kurikulum, dosen dan keahlian, alumni, serta pendaftaran." />
+  <title>S2 Pendidikan Geografi | FKIP UNS</title>
+
   <style>
     :root {
-      /* Palet mengikuti pola visual portal UNS saat ini: blue–cyan, yellow accent, dark footer */
-      --uns-blue: #0074D6;
-      --uns-blue-2: #009BDD;
-      --uns-blue-3: #005AA8;
-      --uns-cyan: #00A8E8;
-      --uns-yellow: #FFDE35;
-      --uns-yellow-2: #F5C91F;
-      --uns-teal: #047EA9;
-      --ink: #1A1A1A;
-      --muted: #677585;
-      --line: #E5ECF2;
-      --soft: #F5F9FC;
-      --white: #FFFFFF;
-      --footer: #1A1A1A;
-      --shadow: 0 12px 32px rgba(0, 73, 132, .12);
+      --uns-blue: #0074d6;
+      --uns-blue-dark: #075ea7;
+      --uns-cyan: #00a8e8;
+      --uns-teal: #047ea9;
+      --uns-yellow: #ffde35;
+      --uns-yellow-dark: #f5c91f;
+      --ink: #17212b;
+      --muted: #667684;
+      --line: #e2ebf1;
+      --soft: #f5f9fc;
+      --white: #ffffff;
+      --footer: #171717;
+      --orange: #f58220;
+      --shadow: 0 16px 40px rgba(0, 83, 145, .12);
+      --radius: 16px;
       --max: 1180px;
-      --radius: 14px;
     }
 
-    * {
-      box-sizing: border-box
-    }
-
-    html {
-      scroll-behavior: smooth
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: "Poppins", "Segoe UI", Arial, sans-serif;
       color: var(--ink);
       background: #fff;
-      line-height: 1.6;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none
-    }
-
-    button,
-    input {
-      font: inherit
-    }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    img { max-width: 100%; display: block; }
 
     .container {
       width: min(calc(100% - 36px), var(--max));
-      margin-inline: auto
+      margin-inline: auto;
     }
 
-    /* --- UNS-style utility bar --- */
-    .utility {
-      background: #008BBE;
-      color: #fff;
-      font-size: 11px;
-      font-weight: 700;
-      border-bottom: 1px solid rgba(255, 255, 255, .24);
+    .section { padding: 82px 0; }
+    .section-soft { background: var(--soft); }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
     }
 
-    .utility-inner {
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px
+    .section-heading.left {
+      max-width: none;
+      margin-left: 0;
+      text-align: left;
     }
 
-    .utility-left,
-    .utility-right {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      white-space: nowrap
-    }
-
-    .utility a {
-      opacity: .96
-    }
-
-    .utility a:hover {
-      opacity: .78
-    }
-
-    .id-badge {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 5px
+      gap: 8px;
+      color: var(--uns-blue);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
     }
 
-    .id-dot {
-      width: 13px;
-      height: 8px;
-      border-radius: 1px;
-      background: linear-gradient(#ef3340 0 50%, #fff 50%)
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 4px;
+      background: var(--uns-yellow);
+      border-radius: 999px;
     }
 
-    /* --- Main blue header --- */
-    .site-header {
-      background: #0062B1;
-      color: #fff;
-      position: relative;
-      z-index: 40;
-    }
-
-    .header-main {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px
-    }
-
-    .brand-group {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: #fff
-    }
-
-    .brand-logo-uns {
-      height: 44px;
-      width: auto;
-      filter: brightness(0) invert(1);
-      display: block
-    }
-
-    .brand-logo-diktisaintek {
-      height: 42px;
-      width: auto;
-      filter: brightness(0) invert(1);
-      display: block
-    }
-
-    .brand-v-divider {
-      width: 1px;
-      height: 38px;
-      background: rgba(255, 255, 255, .35);
-      margin: 0 4px
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column
-    }
-
-    .brand-text strong {
-      display: block;
-      font-size: 16px;
-      font-weight: 800;
+    .section-heading h2 {
+      margin: 9px 0 10px;
+      color: var(--uns-teal);
+      font-size: clamp(30px, 4vw, 42px);
       line-height: 1.15;
-      letter-spacing: .02em;
-      color: #fff
+      letter-spacing: -.03em;
     }
 
-    .brand-text span {
-      display: block;
-      font-size: 11px;
-      opacity: .92;
-      margin-top: 3px;
-      color: #fff;
-      font-weight: 400
-    }
-
-    .header-search-form {
-      display: flex;
-      align-items: center;
-      background: #fff;
-      border-radius: 4px;
-      overflow: hidden;
-      height: 36px;
-      width: 290px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
-    }
-
-    .header-search-form input {
-      flex: 1;
-      border: none;
-      outline: none;
-      padding: 0 12px;
-      font-size: 11px;
-      color: #333;
-      font-family: inherit;
-    }
-
-    .header-search-form input::placeholder {
-      color: #7B8791
-    }
-
-    .header-search-form button {
-      width: 36px;
-      height: 100%;
-      background: #0090D0;
-      border: none;
-      color: #fff;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
       font-size: 14px;
-      transition: background .2s;
     }
 
-    .header-search-form button:hover {
-      background: #007db8
+    .source-note {
+      margin-top: 14px;
+      font-size: 11px;
+      color: #70818d;
     }
 
-    /* --- Program nav --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 11px 17px;
+      border: 1px solid transparent;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 900;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 80, 140, .14);
+    }
+
+    .btn-yellow { background: var(--uns-yellow); color: #15354a; }
+    .btn-blue { background: var(--uns-blue); color: #fff; }
+    .btn-outline { border-color: rgba(255,255,255,.72); color: #fff; background: rgba(255,255,255,.06); }
+    .btn-light { background: #fff; color: var(--uns-blue); border-color: #cfe1ed; }
+
+    /* --- Header & Nav: desain awal --- */
     .program-nav {
+      background: #0084C7;
+      color: #fff;
       position: sticky;
       top: 0;
-      z-index: 45;
-      background: #0090D0;
-      color: #fff;
-      border-bottom: 3px solid var(--uns-yellow);
-      box-shadow: 0 4px 16px rgba(0, 70, 120, .08);
+      z-index: 1000;
+      box-shadow: 0 4px 16px rgba(0, 60, 110, .18);
     }
 
-    .program-nav .container {
-      height: 52px;
+    .program-nav .nav-inner {
+      height: 54px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px
+      gap: 20px;
     }
 
     .program-name {
       font-size: 13.5px;
       font-weight: 900;
-      letter-spacing: .05em;
+      letter-spacing: .04em;
       white-space: nowrap;
-      color: #fff
+      color: #fff;
     }
 
     .program-menu {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 36px;
+      margin-left: 0;
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: .03em
+      letter-spacing: .04em;
     }
 
     .program-menu a {
       color: #fff;
-      transition: .18s ease
+      transition: color .15s ease;
     }
 
-    .program-menu a:hover {
-      color: var(--uns-yellow)
-    }
+    .program-menu a:hover { color: var(--uns-yellow); }
 
     .nav-cta {
-      padding: 8px 20px;
+      padding: 9px 20px;
       white-space: nowrap;
-      background: var(--uns-yellow);
+      background: #FFDE35;
       color: #183143;
       border-radius: 4px;
       font-weight: 900;
-      font-size: 12px;
-      transition: .18s ease
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: background .15s ease, transform .15s ease;
     }
 
     .nav-cta:hover {
-      background: #f5cb1a;
-      transform: translateY(-1px)
+      background: #f5c91f;
+      transform: translateY(-1px);
     }
 
-    /* --- Hero --- */
+    .header-yellow-line {
+      height: 4px;
+      background: #FFDE35;
+      width: 100%;
+      position: sticky;
+      top: 54px;
+      z-index: 1000;
+    }
+
+    .site-header {
+      background: #0073C6;
+      color: #fff;
+      position: relative;
+      z-index: 40;
+      padding: 16px 0;
+    }
+
+    .header-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .header-brand-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .logo-uns {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-diktisaintek {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .header-v-divider {
+      width: 1px;
+      height: 36px;
+      background: rgba(255, 255, 255, .4);
+      margin: 0 4px;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: .02em;
+      color: #fff;
+    }
+
+    .brand-copy span {
+      display: block;
+      font-size: 11.5px;
+      opacity: .92;
+      margin-top: 2px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .header-search-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-search {
+      display: flex;
+      width: 290px;
+      height: 36px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #fff;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .header-search input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 0 14px;
+      font-size: 11.5px;
+      color: #333;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .header-search input::placeholder { color: #7B8791; }
+
+    .header-search button {
+      width: 38px;
+      height: 100%;
+      border: none;
+      background: #0096D2;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    /* HERO */
     .hero {
       position: relative;
       overflow: hidden;
       color: #fff;
       background:
-        linear-gradient(90deg, rgba(0, 116, 214, .96), rgba(0, 168, 232, .82)),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, .28), transparent 28%);
-      min-height: 470px;
+        radial-gradient(circle at 85% 10%, rgba(255,255,255,.23), transparent 25%),
+        linear-gradient(120deg, #0069c1 0%, #008fd2 55%, #00a8e8 100%);
     }
 
-    .hero:before {
+    .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      opacity: .16;
+      opacity: .13;
       background-image:
-        linear-gradient(rgba(255, 255, 255, .18) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, .18) 1px, transparent 1px);
-      background-size: 84px 84px;
-      mask-image: linear-gradient(90deg, #000, transparent 85%);
+        linear-gradient(rgba(255,255,255,.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 1px);
+      background-size: 78px 78px;
     }
 
-    .hero:after {
-      content: "UNS";
+    .hero::after {
+      content: "GEO";
       position: absolute;
-      right: 5%;
-      bottom: -78px;
-      font-size: 250px;
+      right: 2%;
+      bottom: -70px;
+      color: rgba(255,255,255,.055);
+      font-size: clamp(110px, 18vw, 240px);
       font-weight: 950;
-      color: rgba(255, 255, 255, .055);
-      line-height: 1;
       letter-spacing: -.08em;
+      line-height: 1;
     }
 
     .hero-inner {
       position: relative;
       z-index: 2;
       display: grid;
-      grid-template-columns: 1.12fr .88fr;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 54px;
       align-items: center;
-      gap: 58px;
-      padding: 70px 0 74px
+      padding: 72px 0 76px;
     }
 
     .breadcrumbs {
+      margin-bottom: 17px;
       font-size: 11px;
       font-weight: 700;
-      opacity: .88;
-      margin-bottom: 16px
+      color: #d9f2ff;
     }
 
     .hero-kicker {
@@ -337,1181 +358,845 @@
       font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: .08em
+      letter-spacing: .09em;
     }
 
-    .hero-kicker:before {
+    .hero-kicker::before {
       content: "";
       width: 34px;
       height: 4px;
-      background: var(--uns-yellow)
+      background: var(--uns-yellow);
+      border-radius: 999px;
     }
 
     .hero h1 {
-      font-size: clamp(44px, 6vw, 70px);
-      line-height: 1.03;
-      margin: 13px 0 18px;
-      letter-spacing: -.04em;
-      max-width: 720px
+      max-width: 760px;
+      margin: 12px 0 18px;
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.02;
+      letter-spacing: -.05em;
     }
 
-    .hero h1 span {
-      color: var(--uns-yellow)
-    }
+    .hero h1 span { color: var(--uns-yellow); }
 
-    .hero p {
-      font-size: 17px;
-      max-width: 690px;
-      color: #EAF7FF;
-      margin: 0 0 29px
+    .hero-copy {
+      max-width: 720px;
+      margin: 0 0 28px;
+      color: #e9f7ff;
+      font-size: 16px;
     }
 
     .hero-actions {
       display: flex;
-      gap: 11px;
-      flex-wrap: wrap
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 12px 17px;
-      border-radius: 5px;
-      font-weight: 900;
-      font-size: 12px;
-      border: 1px solid transparent;
-      transition: .18s ease
-    }
-
-    .btn:hover {
-      transform: translateY(-2px)
-    }
-
-    .btn-yellow {
-      background: var(--uns-yellow);
-      color: #17364B
-    }
-
-    .btn-outline {
-      border-color: rgba(255, 255, 255, .72);
-      color: #fff;
-      background: rgba(255, 255, 255, .06)
-    }
-
-    .btn-blue {
-      background: var(--uns-blue);
-      color: #fff
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .hero-card {
-      background: rgba(255, 255, 255, .96);
+      background: rgba(255,255,255,.97);
       color: var(--ink);
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 22px 55px rgba(0, 57, 105, .22);
+      border-radius: 15px;
+      padding: 26px;
       border-top: 6px solid var(--uns-yellow);
+      box-shadow: 0 26px 60px rgba(0, 56, 104, .24);
     }
 
     .hero-card-label {
-      font-size: 11px;
-      font-weight: 900;
       color: var(--uns-teal);
+      font-size: 10px;
+      font-weight: 950;
+      letter-spacing: .1em;
       text-transform: uppercase;
-      letter-spacing: .08em
     }
 
     .hero-card h3 {
-      margin: 7px 0 10px;
-      font-size: 25px;
-      color: #087CAF;
-      line-height: 1.2
+      margin: 7px 0 9px;
+      color: #087caf;
+      font-size: 24px;
+      line-height: 1.22;
     }
 
     .hero-card p {
+      margin: 0 0 18px;
       color: var(--muted);
-      font-size: 13px;
-      margin: 0 0 20px
+      font-size: 12px;
     }
 
     .hero-mini-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px
+      gap: 9px;
     }
 
     .hero-mini {
       padding: 13px;
-      background: #F2F8FC;
-      border-radius: 8px;
-      border: 1px solid #DCEBF3
+      border: 1px solid #dceaf2;
+      border-radius: 9px;
+      background: #f2f8fc;
     }
 
     .hero-mini strong {
       display: block;
       color: var(--uns-blue);
-      font-size: 17px
+      font-size: 17px;
+      line-height: 1.1;
     }
 
     .hero-mini span {
-      font-size: 10px;
+      display: block;
+      margin-top: 4px;
       color: var(--muted);
-      font-weight: 700
+      font-size: 9.5px;
+      font-weight: 750;
     }
 
-    .accred {
-      margin-top: 13px;
+    .accred-chip {
+      margin-top: 12px;
       padding: 11px 12px;
-      border-radius: 8px;
-      background: #FFF8CD;
-      border-left: 4px solid var(--uns-yellow-2);
-      font-size: 11px;
-      color: #5F5320;
-      font-weight: 700
+      border-left: 4px solid var(--uns-yellow-dark);
+      border-radius: 7px;
+      background: #fff8cd;
+      color: #5d5323;
+      font-size: 10.5px;
+      font-weight: 800;
     }
 
-    /* --- shared sections --- */
-    section {
-      padding: 78px 0
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 38px
-    }
-
-    .section-title.left {
-      text-align: left
-    }
-
-    .section-title h2 {
-      margin: 0;
-      color: var(--uns-teal);
-      font-size: clamp(28px, 3.2vw, 39px);
-      line-height: 1.15
-    }
-
-    .title-line {
-      width: 74px;
-      height: 4px;
-      background: var(--uns-yellow);
-      margin: 11px auto 0
-    }
-
-    .left .title-line {
-      margin-left: 0
-    }
-
-    .section-title p {
-      max-width: 720px;
-      margin: 16px auto 0;
-      color: var(--muted);
-      font-size: 14px
-    }
-
-    .left p {
-      margin-left: 0
-    }
-
-    /* --- promotion highlights --- */
+    /* HIGHLIGHTS */
     .highlights {
+      padding: 48px 0;
       background: #fff;
-      padding-top: 62px
     }
 
     .highlight-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px
+      gap: 15px;
     }
 
     .highlight {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 23px 20px;
-      background: #fff;
-      box-shadow: 0 5px 20px rgba(0, 70, 120, .05);
       position: relative;
-      overflow: hidden
+      overflow: hidden;
+      padding: 22px 20px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: #fff;
+      box-shadow: 0 6px 20px rgba(0,70,120,.05);
     }
 
-    .highlight:before {
+    .highlight::before {
       content: "";
       position: absolute;
-      left: 0;
-      top: 0;
+      inset: 0 auto 0 0;
       width: 5px;
-      height: 100%;
-      background: var(--uns-yellow)
+      background: var(--uns-yellow);
     }
 
     .highlight strong {
       display: block;
       color: var(--uns-blue);
-      font-size: 25px;
-      line-height: 1.15
+      font-size: 24px;
+      line-height: 1.1;
     }
 
     .highlight span {
-      font-size: 11px;
-      color: var(--muted);
-      font-weight: 700
-    }
-
-    /* --- profile cards --- */
-    .about {
-      background: #F9FBFD
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px
-    }
-
-    .feature {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 25px 23px;
-      box-shadow: 0 5px 18px rgba(0, 70, 120, .045)
-    }
-
-    .feature-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 7px;
-      background: linear-gradient(135deg, var(--uns-blue), var(--uns-cyan));
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-weight: 900;
-      margin-bottom: 17px;
-      box-shadow: 0 7px 18px rgba(0, 116, 214, .18)
-    }
-
-    .feature h3 {
-      font-size: 17px;
-      color: var(--uns-teal);
-      margin: 0 0 7px
-    }
-
-    .feature p {
-      font-size: 12.5px;
-      color: var(--muted);
-      margin: 0
-    }
-
-    /* --- admission pathways --- */
-    .pathways {
-      background: linear-gradient(180deg, #0877D2 0%, #068EDB 100%);
-      color: #fff;
-      border-top: 5px solid var(--uns-yellow);
-      border-bottom: 5px solid var(--uns-yellow)
-    }
-
-    .pathways .section-title h2,
-    .pathways .section-title p {
-      color: #fff
-    }
-
-    .pathways .section-title p {
-      opacity: .86
-    }
-
-    .pathways .title-line {
-      background: var(--uns-yellow)
-    }
-
-    .path-grid {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 24px;
-      align-items: start
-    }
-
-    .tab-list {
-      display: grid;
-      gap: 10px
-    }
-
-    .tab-btn {
-      border: 1px solid rgba(255, 255, 255, .28);
-      background: rgba(255, 255, 255, .09);
-      color: #fff;
-      border-radius: 7px;
-      text-align: left;
-      padding: 17px 16px;
-      cursor: pointer;
-      font-weight: 900
-    }
-
-    .tab-btn small {
       display: block;
-      font-size: 10px;
-      margin-top: 4px;
-      opacity: .8;
-      font-weight: 600
-    }
-
-    .tab-btn.active {
-      background: #fff;
-      color: var(--uns-blue);
-      border-color: #fff;
-      box-shadow: 0 12px 30px rgba(0, 55, 100, .16)
-    }
-
-    .path-panel {
-      display: none;
-      background: #fff;
-      color: var(--ink);
-      border-radius: 10px;
-      padding: 28px;
-      box-shadow: var(--shadow)
-    }
-
-    .path-panel.active {
-      display: block
-    }
-
-    .path-panel h3 {
-      color: var(--uns-teal);
-      font-size: 24px;
-      margin: 0 0 8px
-    }
-
-    .path-panel>p {
-      font-size: 13px;
+      margin-top: 5px;
       color: var(--muted);
-      margin: 0
+      font-size: 10.5px;
+      font-weight: 750;
     }
 
-    .path-points {
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .about-card,
+    .info-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(0,70,120,.05);
+    }
+
+    .about-card.emphasis {
+      background: linear-gradient(150deg, #0777d1, #00a1df);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .about-card h3,
+    .info-card h3 {
+      margin: 0 0 11px;
+      color: var(--uns-teal);
+      font-size: 21px;
+    }
+
+    .about-card.emphasis h3 { color: #fff; }
+    .about-card p, .info-card p { margin: 0; color: var(--muted); font-size: 12.5px; }
+    .about-card.emphasis p { color: #e8f7ff; }
+
+    .identity-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
-      margin: 22px 0
+      margin-top: 20px;
     }
 
-    .path-point {
+    .identity-item {
       padding: 13px;
-      border: 1px solid var(--line);
-      background: #F8FBFD;
-      border-radius: 7px
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 9px;
+      background: rgba(255,255,255,.08);
     }
 
-    .path-point strong {
+    .identity-item small {
       display: block;
+      color: #d8f0fb;
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .identity-item strong {
+      display: block;
+      margin-top: 3px;
       font-size: 12px;
-      color: var(--uns-blue)
     }
 
-    .path-point span {
-      font-size: 10.5px;
-      color: var(--muted)
-    }
-
-    .note {
-      font-size: 11px;
-      background: #FFF8D8;
-      border-left: 4px solid var(--uns-yellow);
-      padding: 11px 12px;
-      color: #645A2B;
-      border-radius: 4px
-    }
-
-    /* --- SPMB information --- */
-    .spmb-info {
-      background: #fff
-    }
-
-    .spmb-summary {
+    .list-clean {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-bottom: 24px
+      gap: 9px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
     }
 
-    .spmb-stat {
+    .list-clean li {
       position: relative;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 21px 20px;
-      background: #fff;
-      box-shadow: 0 5px 18px rgba(0, 70, 120, .045)
+      padding-left: 23px;
+      color: #526773;
+      font-size: 12px;
     }
 
-    .spmb-stat:after {
-      content: "";
+    .list-clean li::before {
+      content: "✓";
       position: absolute;
       left: 0;
-      right: 0;
-      bottom: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--uns-blue), var(--uns-cyan))
-    }
-
-    .spmb-stat strong {
-      display: block;
+      top: 0;
       color: var(--uns-blue);
-      font-size: 24px;
-      line-height: 1.1;
-      margin-bottom: 5px
-    }
-
-    .spmb-stat span {
-      font-size: 11px;
-      color: var(--muted);
-      font-weight: 700
-    }
-
-    .spmb-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      align-items: start
-    }
-
-    .info-card {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 25px;
-      background: #F9FCFE
-    }
-
-    .info-card h3 {
-      margin: 0 0 7px;
-      color: var(--uns-teal);
-      font-size: 20px
-    }
-
-    .info-card>p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 12px
-    }
-
-    .flow {
-      display: grid;
-      gap: 0;
-      counter-reset: step
-    }
-
-    .flow-step {
-      position: relative;
-      padding: 13px 12px 13px 52px;
-      border-top: 1px solid #DCE8F0;
-      font-size: 11px;
-      color: #536777;
-      min-height: 48px
-    }
-
-    .flow-step:first-child {
-      border-top: 0
-    }
-
-    .flow-step:before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 7px;
-      top: 10px;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--uns-blue);
-      color: #fff;
       font-weight: 950;
-      font-size: 10px
     }
 
-    .flow-step strong {
-      display: block;
-      color: #174F70;
-      font-size: 11.5px
-    }
-
-    .requirement-list {
+    /* PROFILE CARDS */
+    .profile-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 9px
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
 
-    .requirement {
-      border: 1px solid #DCE8F0;
-      border-radius: 7px;
-      padding: 12px;
+    .profile-card {
+      padding: 24px 20px;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--uns-yellow);
+      border-radius: 13px;
       background: #fff;
-      font-size: 10.5px;
-      color: var(--muted)
+      box-shadow: 0 6px 20px rgba(0,70,120,.05);
     }
 
-    .requirement strong {
-      display: block;
-      color: var(--uns-blue);
-      font-size: 11px;
-      margin-bottom: 2px
-    }
-
-    .official-note {
-      margin-top: 20px;
-      padding: 15px 17px;
-      background: #EEF8FD;
-      border-left: 4px solid var(--uns-blue);
-      border-radius: 5px;
-      color: #456272;
-      font-size: 11px
-    }
-
-    .official-note strong {
-      color: var(--uns-teal)
-    }
-
-    .source-links {
-      display: flex;
-      gap: 9px;
-      flex-wrap: wrap;
-      margin-top: 15px
-    }
-
-    .mini-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 10px;
-      border: 1px solid #BED8E8;
-      border-radius: 4px;
+    .profile-card h3 {
+      margin: 0 0 8px;
       color: var(--uns-teal);
-      font-size: 10px;
-      font-weight: 850;
-      background: #fff
+      font-size: 18px;
     }
 
-    .mini-link:hover {
-      background: #F1F8FC
+    .profile-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11.5px;
     }
 
-    /* --- accreditation --- */
-    .accreditation {
-      background: #fff
-    }
-
-    .accredit-grid {
+    /* CURRICULUM */
+    .curriculum-wrap {
       display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 20px;
-      align-items: stretch
+      grid-template-columns: 1.05fr .95fr;
+      gap: 22px;
+      align-items: start;
     }
 
-    .accredit-main {
-      position: relative;
+    .curr-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
       overflow: hidden;
-      border-radius: 12px;
-      padding: 30px;
-      background: linear-gradient(145deg, #0877D2 0%, #049AD9 100%);
+      box-shadow: 0 8px 24px rgba(0,70,120,.05);
+    }
+
+    .curr-head {
+      padding: 23px 25px;
+      background: linear-gradient(110deg, #0674cf, #00a3df);
       color: #fff;
-      box-shadow: 0 14px 38px rgba(0, 92, 160, .16);
-      border-bottom: 5px solid var(--uns-yellow);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between
     }
 
-    .accredit-main:after {
-      content: "";
-      position: absolute;
-      width: 190px;
-      height: 190px;
-      border: 34px solid rgba(255, 255, 255, .08);
-      border-radius: 50%;
-      right: -72px;
-      top: -70px
+    .curr-head strong {
+      display: block;
+      font-size: 25px;
+      line-height: 1.15;
     }
 
-    .accredit-eyebrow {
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-      color: #DDF4FF
-    }
-
-    .accredit-grade {
-      font-size: 58px;
-      line-height: .95;
-      font-weight: 950;
-      letter-spacing: -.05em;
-      color: var(--uns-yellow);
-      margin: 10px 0 8px
-    }
-
-    .accredit-score {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 6px 12px;
-      border-radius: 5px;
-      background: rgba(255, 255, 255, .16);
+    .curr-head span {
+      display: block;
+      margin-top: 5px;
+      color: #def4ff;
       font-size: 11px;
-      font-weight: 850;
-      margin-bottom: 19px;
-      color: #fff
     }
 
-    .accredit-main h3 {
-      font-size: 22px;
-      margin: 0 0 4px;
-      font-weight: 800;
-      color: #fff
-    }
-
-    .accredit-main p {
-      font-size: 12px;
-      color: #DDEFFA;
-      margin: 0 0 20px;
-      max-width: 500px
-    }
-
-    .accredit-period {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: auto
-    }
-
-    .accredit-period div {
-      padding: 14px;
-      border: 1px solid rgba(255, 255, 255, .22);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, .10)
-    }
-
-    .accredit-period small {
-      display: block;
-      font-size: 9.5px;
-      opacity: .85;
-      text-transform: uppercase;
-      font-weight: 800;
-      letter-spacing: .03em
-    }
-
-    .accredit-period strong {
-      display: block;
-      font-size: 13px;
-      margin-top: 3px;
-      font-weight: 800
-    }
-
-    .accredit-detail {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 28px;
-      background: #F9FCFE;
-      box-shadow: 0 6px 20px rgba(0, 74, 130, .04);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between
-    }
-
-    .accredit-detail h3 {
-      margin: 0 0 4px;
-      color: var(--uns-teal);
-      font-size: 22px;
-      font-weight: 800
-    }
-
-    .accredit-detail>p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 12px
-    }
-
-    .accredit-data {
-      display: grid;
-      gap: 0;
-      border-top: 1px solid #DCE8F0
-    }
-
-    .accredit-row {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 14px;
-      padding: 12px 0;
-      border-bottom: 1px solid #DCE8F0;
-      font-size: 11.5px
-    }
-
-    .accredit-row span {
-      color: #71828E;
-      font-weight: 700
-    }
-
-    .accredit-row strong {
-      color: #174F70;
-      overflow-wrap: anywhere;
-      font-weight: 800
-    }
-
-    .accredit-history {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 18px
-    }
-
-    .history-item {
-      background: #fff;
-      border: 1px solid #DCE8F0;
-      border-radius: 8px;
-      padding: 14px
-    }
-
-    .history-item strong {
-      display: block;
-      color: var(--uns-blue);
-      font-size: 12.5px;
-      font-weight: 800
-    }
-
-    .history-item span {
-      font-size: 10.5px;
-      color: var(--muted);
-      margin-top: 3px;
-      display: block
-    }
-
-    .accredit-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 20px
-    }
-
-    /* --- curriculum --- */
-    .curriculum-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 20px
-    }
-
-    .curriculum-card {
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 26px;
-      background: #fff;
-      box-shadow: 0 5px 18px rgba(0, 70, 120, .045)
-    }
-
-    .curriculum-card.blue {
-      background: linear-gradient(155deg, var(--uns-blue), #075EA7);
-      color: #fff;
-      border-color: transparent
-    }
-
-    .curriculum-card h3 {
-      font-size: 21px;
-      margin: 0 0 9px;
-      color: var(--uns-teal)
-    }
-
-    .curriculum-card.blue h3 {
-      color: #fff
-    }
-
-    .curriculum-card>p {
-      font-size: 12px;
-      color: var(--muted);
-      margin: 0 0 18px
-    }
-
-    .curriculum-card.blue>p {
-      color: #D9F0FF
-    }
-
-    .curr-list {
-      display: grid;
-      gap: 0
-    }
+    .curr-body { padding: 10px 25px 24px; }
 
     .curr-row {
       display: grid;
       grid-template-columns: 38px 1fr;
       gap: 11px;
-      padding: 13px 0;
-      border-top: 1px solid var(--line)
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
     }
 
-    .blue .curr-row {
-      border-color: rgba(255, 255, 255, .16)
-    }
+    .curr-row:first-child { border-top: 0; }
 
     .num {
-      width: 31px;
-      height: 31px;
-      border-radius: 5px;
-      background: #E9F5FC;
-      color: var(--uns-blue);
+      width: 32px;
+      height: 32px;
       display: grid;
       place-items: center;
-      font-weight: 900;
-      font-size: 11px
-    }
-
-    .blue .num {
-      background: var(--uns-yellow);
-      color: #17364B
+      border-radius: 6px;
+      background: #eaf5fb;
+      color: var(--uns-blue);
+      font-size: 11px;
+      font-weight: 950;
     }
 
     .curr-row strong {
       display: block;
-      font-size: 12px
+      color: #174f70;
+      font-size: 12px;
     }
 
     .curr-row span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
       font-size: 10.5px;
-      color: var(--muted)
     }
 
-    .blue .curr-row span {
-      color: #D7ECF8
+    .cluster-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 11px;
     }
 
-    .big-number {
-      font-size: 64px;
+    .cluster {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #f9fcfe;
+    }
+
+    .cluster h4 {
+      margin: 0 0 5px;
+      color: var(--uns-teal);
+      font-size: 13px;
+    }
+
+    .cluster p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    .curr-note {
+      margin-top: 15px;
+      padding: 13px 14px;
+      border-left: 4px solid var(--uns-yellow-dark);
+      border-radius: 6px;
+      background: #fff8d8;
+      color: #655b2a;
+      font-size: 10.5px;
+    }
+
+    /* ACCREDITATION */
+    .accredit-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 22px;
+    }
+
+    .accredit-main {
+      position: relative;
+      overflow: hidden;
+      padding: 31px;
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, #0877d2, #049ad9);
+      color: #fff;
+      border-bottom: 6px solid var(--uns-yellow);
+      box-shadow: 0 16px 38px rgba(0,92,160,.16);
+    }
+
+    .accredit-main::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border: 34px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      right: -75px;
+      top: -72px;
+    }
+
+    .accredit-eyebrow {
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #dff5ff;
+    }
+
+    .accredit-grade {
+      margin: 10px 0 8px;
+      color: var(--uns-yellow);
+      font-size: 57px;
       font-weight: 950;
       line-height: .95;
-      color: var(--uns-yellow);
-      letter-spacing: -.05em
+      letter-spacing: -.05em;
     }
 
-    .big-label {
+    .accredit-score {
+      display: inline-flex;
+      padding: 6px 9px;
+      border-radius: 6px;
+      background: rgba(255,255,255,.13);
+      font-size: 10px;
+      font-weight: 850;
+    }
+
+    .accredit-main p {
+      margin: 17px 0 0;
+      color: #e0f3fc;
+      font-size: 11.5px;
+    }
+
+    .accredit-detail {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #f9fcfe;
+    }
+
+    .accredit-detail h3 {
+      margin: 0 0 4px;
+      color: var(--uns-teal);
+      font-size: 21px;
+    }
+
+    .accredit-detail > p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 11.5px;
+    }
+
+    .accredit-data { border-top: 1px solid #dbe7ee; }
+
+    .accredit-row {
+      display: grid;
+      grid-template-columns: 155px 1fr;
+      gap: 14px;
+      padding: 11px 0;
+      border-bottom: 1px solid #dbe7ee;
       font-size: 11px;
-      font-weight: 800;
-      margin-top: 7px;
-      color: #DDF2FF
     }
 
-    /* --- Expert UNS-inspired faculty block --- */
-    .faculty {
-      background: #F5F9FC
+    .accredit-row span { color: #71818c; font-weight: 700; }
+    .accredit-row strong { color: #174f70; overflow-wrap: anywhere; }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
     }
 
-    .expert-banner {
-      background: #fff;
-      border: 1px solid #DCE7EF;
-      border-radius: 10px;
-      padding: 20px;
+    /* COOPERATION */
+    .cooperation-box {
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 22px;
+      gap: 25px;
       align-items: center;
-      margin-bottom: 24px;
-      box-shadow: 0 6px 20px rgba(0, 74, 130, .055)
-    }
-
-    .expert-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px
-    }
-
-    .expert-mark {
-      width: 52px;
-      height: 52px;
-      background: linear-gradient(135deg, var(--uns-blue), var(--uns-cyan));
+      padding: 35px;
+      border-radius: var(--radius);
+      background: linear-gradient(100deg, #0877d2, #00a8e8);
       color: #fff;
-      border-radius: 8px;
-      display: grid;
-      place-items: center;
+      border-bottom: 6px solid var(--uns-yellow);
+    }
+
+    .cooperation-box h3 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .cooperation-box p {
+      margin: 0;
+      color: #eaf7ff;
+      font-size: 13px;
+    }
+
+    .cooperation-badge {
+      padding: 13px 17px;
+      border-radius: 9px;
+      background: var(--uns-yellow);
+      color: #17364b;
+      font-size: 12px;
       font-weight: 950;
-      font-size: 18px
+      white-space: nowrap;
     }
 
-    .expert-copy strong {
-      display: block;
-      color: var(--uns-teal);
-      font-size: 18px
+    /* FACULTY / EXPERTISE */
+    .management-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+      margin-bottom: 22px;
     }
 
-    .expert-copy span {
+    .management-card {
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: #fff;
+    }
+
+    .management-card small {
       display: block;
       color: var(--muted);
-      font-size: 11px;
-      margin-top: 2px
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
     }
 
-    .expert-search {
-      display: flex;
-      min-width: 400px;
-      height: 42px;
-      border: 1px solid #C7DAE7;
-      border-radius: 5px;
-      overflow: hidden;
-      background: #fff
-    }
-
-    .expert-search span {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      padding: 0 13px;
-      color: #7C8992;
-      font-size: 11px
-    }
-
-    .expert-search b {
-      width: 48px;
-      background: var(--uns-blue);
-      color: #fff;
-      display: grid;
-      place-items: center
+    .management-card strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--uns-teal);
+      font-size: 14px;
     }
 
     .faculty-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px
+      gap: 14px;
     }
 
     .person {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 9px;
-      padding: 19px;
       position: relative;
       overflow: hidden;
-      transition: .18s ease
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      transition: transform .18s ease, box-shadow .18s ease;
     }
 
-    .person:before {
+    .person::before {
       content: "";
       position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
+      inset: 0 0 auto 0;
       height: 4px;
-      background: linear-gradient(90deg, var(--uns-blue), var(--uns-cyan))
+      background: linear-gradient(90deg, var(--uns-blue), var(--uns-cyan));
     }
 
     .person:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0, 73, 132, .10)
+      box-shadow: 0 12px 30px rgba(0,73,132,.1);
     }
 
     .person-head {
       display: flex;
-      gap: 12px;
       align-items: center;
-      margin-bottom: 12px
+      gap: 12px;
     }
 
     .avatar {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background: #E9F4FB;
-      color: var(--uns-blue);
-      border: 2px solid #CFE7F5;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 auto;
       display: grid;
       place-items: center;
+      border: 2px solid #cfe7f5;
+      border-radius: 50%;
+      background: #e9f4fb;
+      color: var(--uns-blue);
+      font-size: 11px;
       font-weight: 950;
-      font-size: 12px;
-      flex: 0 0 auto
     }
 
     .person h3 {
       margin: 0;
-      color: #116F9A;
+      color: #116f9a;
       font-size: 13px;
-      line-height: 1.35
+      line-height: 1.3;
     }
 
     .person p {
-      margin: 5px 0 0;
-      font-size: 10.5px;
-      color: var(--muted)
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 10px;
     }
 
-    .expert-chip {
-      display: inline-flex;
-      padding: 5px 8px;
-      border-radius: 3px;
-      background: #F2F8FC;
-      color: #4B6C80;
-      font-size: 9px;
-      font-weight: 800;
-      margin: 3px 3px 0 0
+    /* CAREER & FACILITIES */
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
     }
 
-    .faculty-cta {
-      margin-top: 22px;
-      display: flex;
-      justify-content: center
+    .feature-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 7px 22px rgba(0,70,120,.05);
     }
 
-    /* --- CTA like UNS promo block --- */
-    .cta-section {
-      padding: 64px 0;
-      background: #fff
+    .feature-card h3 {
+      margin: 0 0 12px;
+      color: var(--uns-teal);
+      font-size: 21px;
     }
 
-    .cta-box {
-      background: linear-gradient(90deg, #0875D0, #039DE0);
+    /* ALUMNI */
+    .graduate-grid {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .graduate-profile,
+    .testimonial {
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 7px 22px rgba(0,70,120,.05);
+    }
+
+    .portrait {
+      width: 84px;
+      height: 84px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--uns-blue), var(--uns-cyan));
       color: #fff;
-      border-radius: 10px;
-      padding: 38px 42px;
-      border-bottom: 6px solid var(--uns-yellow);
+      font-size: 27px;
+      font-weight: 950;
+    }
+
+    .graduate-profile h3,
+    .testimonial h3 {
+      margin: 0 0 5px;
+      color: var(--uns-teal);
+    }
+
+    .graduate-profile p,
+    .testimonial p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11.5px;
+    }
+
+    .testimonials {
+      display: grid;
+      gap: 14px;
+    }
+
+    .quote-mark {
+      color: var(--uns-yellow-dark);
+      font-size: 38px;
+      font-weight: 950;
+      line-height: .65;
+    }
+
+    .quote-meta {
+      margin-top: 13px !important;
+      color: var(--uns-blue) !important;
+      font-weight: 800;
+    }
+
+    /* ADMISSION */
+    .admission-box {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 28px;
-      align-items: center
-    }
-
-    .cta-box h2 {
-      font-size: 30px;
-      line-height: 1.18;
-      margin: 0 0 7px
-    }
-
-    .cta-box p {
-      font-size: 12.5px;
-      margin: 0;
-      color: #EAF7FF;
-      max-width: 680px
-    }
-
-    .cta-actions {
-      display: flex;
-      gap: 9px
-    }
-
-    /* --- UNS dark footer pattern --- */
-    footer {
-      background: #181818;
+      align-items: center;
+      padding: 38px 42px;
+      border-radius: var(--radius);
+      background: linear-gradient(90deg, #0875d0, #039de0);
       color: #fff;
-      border-top: 3px solid var(--uns-yellow);
-      padding: 36px 0 20px;
+      border-bottom: 6px solid var(--uns-yellow);
+    }
+
+    .admission-box h2 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    .admission-box p {
+      max-width: 720px;
+      margin: 0;
+      color: #eaf7ff;
+      font-size: 12.5px;
+    }
+
+    .admission-actions {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+    /* --- Footer: desain awal --- */
+    footer {
+      background: #1A1A1A;
+      color: #fff;
+      position: relative;
+      padding-bottom: 24px;
+    }
+
+    .footer-yellow-line {
+      height: 4px;
+      background: #FFDE35;
+      width: 100%;
+      margin-bottom: 38px;
+    }
+
+    .footer-container {
+      width: min(calc(100% - 36px), var(--max));
+      margin-inline: auto;
     }
 
     .footer-portals {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid rgba(255, 255, 255, .14);
+      gap: 20px;
+      padding-bottom: 35px;
+      margin-bottom: 35px;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
     }
 
-    .portal-item {
-      text-decoration: none;
-      color: #fff;
-      display: block;
-      transition: opacity .2s;
-    }
-
-    .portal-item:hover {
-      opacity: .85
-    }
-
-    .portal-item strong {
-      display: block;
-      font-size: 20px;
-      font-weight: 950;
-      color: #F5F5F5;
-      letter-spacing: -.02em;
-      line-height: 1.1;
-    }
-
-    .portal-item span {
-      display: block;
-      font-size: 8px;
-      font-weight: 700;
-      color: #AFAFAF;
-      margin-top: 4px;
+    .portal {
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFFFFF;
       letter-spacing: .04em;
+      text-decoration: none;
+      transition: color .15s ease;
+    }
+
+    .portal:hover { color: #FFDE35; }
+
+    .portal small {
+      display: block;
+      font-size: 9px;
+      font-weight: 700;
+      color: #8E8E8E;
+      margin-top: 4px;
+      letter-spacing: .03em;
       text-transform: uppercase;
+      line-height: 1.35;
     }
 
     .foot-grid {
       display: grid;
-      grid-template-columns: 1.35fr .7fr .7fr;
+      grid-template-columns: 1.8fr 1fr 1fr;
       gap: 48px;
-      padding: 30px 0 24px;
-      border-bottom: 1px solid rgba(255, 255, 255, .14);
+      align-items: start;
+      padding-bottom: 30px;
     }
 
     .foot-brand {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
+      gap: 14px;
     }
 
-    .foot-logo-uns {
-      height: 46px;
+    .foot-mark {
+      height: 48px;
       width: auto;
       filter: brightness(0) invert(1);
+      object-fit: contain;
     }
 
-    .foot-brand-names strong {
+    .foot-brand-text strong {
       display: block;
-      font-size: 21px;
+      font-size: 18px;
       font-weight: 900;
-      line-height: 1;
+      line-height: 1.1;
       color: #fff;
+      letter-spacing: .02em;
     }
 
-    .foot-brand-names span {
+    .foot-brand-text span {
       display: block;
       font-size: 10px;
       font-weight: 700;
-      color: #fff;
-      margin-top: 3px;
+      color: #8E8E8E;
+      margin-top: 2px;
       letter-spacing: .04em;
     }
 
-    .foot-text {
+    .foot-address {
       font-size: 11.5px;
+      color: #A0A0A0;
       line-height: 1.6;
-      color: #C5C5C5;
-      max-width: 440px;
-      margin: 0;
+      margin-top: 14px;
+      max-width: 430px;
     }
 
     .foot-title {
-      font-size: 13px;
-      font-weight: 900;
-      color: #fff;
-      margin-bottom: 12px;
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+      letter-spacing: .02em;
     }
 
     .foot-links {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      font-size: 11px;
-      color: #D0D0D0;
     }
 
     .foot-links a {
-      color: #D0D0D0;
+      font-size: 11.5px;
+      color: #A0A0A0;
       text-decoration: none;
-      transition: color .2s;
+      transition: color .15s ease;
     }
 
-    .foot-links a:hover {
-      color: var(--uns-yellow);
-    }
+    .foot-links a:hover { color: #FFDE35; }
 
     .copyright {
       text-align: center;
-      padding-top: 16px;
-      font-size: 10px;
-      color: #BEBEBE;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding-top: 20px;
+      font-size: 10.5px;
+      color: #777777;
     }
 
     .mobile-cta {
@@ -1527,761 +1212,1357 @@
       padding: 12px 16px;
       text-align: center;
       font-weight: 950;
-      box-shadow: 0 13px 35px rgba(0, 0, 0, .24)
+      box-shadow: 0 13px 35px rgba(0, 0, 0, .24);
     }
 
-    @media(max-width:1000px) {
-      .header-links {
-        display: none
-      }
+    /* ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
 
-      .header-search {
-        min-width: 230px
-      }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
 
-      .program-menu {
-        gap: 26px
-      }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
 
-      .program-nav .container {
-        gap: 24px
-      }
+    @media (max-width: 1000px) {
+      .program-menu { gap: 20px; }
+      .program-nav .nav-inner { gap: 16px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 30px; }
+      .hero-card { max-width: 700px; }
+      .highlight-grid { grid-template-columns: repeat(2, 1fr); }
+      .profile-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid, .curriculum-wrap, .accredit-grid, .graduate-grid { grid-template-columns: 1fr; }
+      .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-portals { grid-template-columns: repeat(3, 1fr); }
+      .foot-grid { grid-template-columns: 1fr 1fr; }
+      .admission-box { grid-template-columns: 1fr; }
+    }
 
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 28px
-      }
+    @media (max-width: 720px) {
+      .container { width: min(calc(100% - 24px), var(--max)); }
+      .header-main { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .header-search-wrapper { width: 100%; }
+      .header-search { width: 100%; }
+      .brand-copy strong { font-size: 14px; }
+      .brand-copy span { font-size: 10px; }
+      .program-nav .nav-inner { height: auto; min-height: 48px; padding: 10px 0; }
+      .program-menu { display: none; }
+      .program-name { font-size: 11px; }
+      .nav-cta { font-size: 11px; }
+      .hero-inner { padding: 50px 0 58px; }
+      .hero h1 { font-size: 42px; }
+      .hero-copy { font-size: 14px; }
+      .hero-actions { display: grid; }
+      .hero-actions .btn { width: 100%; }
+      .highlight-grid, .profile-grid, .faculty-grid, .two-col, .cluster-grid, .management-grid, .identity-grid { grid-template-columns: 1fr; }
+      .cooperation-box { grid-template-columns: 1fr; padding: 28px; }
+      .cooperation-badge { white-space: normal; }
+      .accredit-row { grid-template-columns: 1fr; gap: 2px; }
+      .section { padding: 64px 0; }
+      .admission-box { padding: 29px 22px; }
+      .admission-actions { display: grid; }
+      .footer-portals { grid-template-columns: repeat(2, 1fr); }
+      .foot-grid { grid-template-columns: 1fr; gap: 25px; }
+      .mobile-cta { display: block; }
+      body { padding-bottom: 70px; }
+    }
+  
+    /* --- Jalur Masuk: mempertahankan pola template umum awal --- */
+    .pathways {
+      background: linear-gradient(180deg, #0877D2 0%, #068EDB 100%);
+      color: #fff;
+      border-top: 5px solid var(--uns-yellow);
+      border-bottom: 5px solid var(--uns-yellow);
+    }
 
-      .hero-card {
-        max-width: 650px
-      }
+    .pathways .section-heading h2,
+    .pathways .section-heading p,
+    .pathways .eyebrow {
+      color: #fff;
+    }
 
-      .accredit-grid {
-        grid-template-columns: 1fr
-      }
+    .pathways .eyebrow::before {
+      background: var(--uns-yellow);
+    }
 
-      .highlight-grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
+    .path-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
 
+    .tab-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .tab-btn {
+      border: 1px solid rgba(255,255,255,.28);
+      background: rgba(255,255,255,.09);
+      color: #fff;
+      border-radius: 7px;
+      text-align: left;
+      padding: 17px 16px;
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    .tab-btn small {
+      display: block;
+      margin-top: 4px;
+      font-size: 10px;
+      opacity: .8;
+      font-weight: 600;
+    }
+
+    .tab-btn.active {
+      background: #fff;
+      color: var(--uns-blue);
+      border-color: #fff;
+      box-shadow: 0 12px 30px rgba(0,55,100,.16);
+    }
+
+    .path-panel {
+      display: none;
+      background: #fff;
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .path-panel.active { display: block; }
+
+    .path-panel h3 {
+      margin: 0 0 8px;
+      color: var(--uns-teal);
+      font-size: 24px;
+    }
+
+    .path-panel > p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .path-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 22px 0;
+    }
+
+    .path-point {
+      padding: 13px;
+      border: 1px solid var(--line);
+      background: #F8FBFD;
+      border-radius: 7px;
+    }
+
+    .path-point strong {
+      display: block;
+      color: var(--uns-blue);
+      font-size: 12px;
+    }
+
+    .path-point span {
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+
+    .note {
+      padding: 11px 12px;
+      border-left: 4px solid var(--uns-yellow);
+      border-radius: 4px;
+      background: #FFF8D8;
+      color: #645A2B;
+      font-size: 11px;
+    }
+
+    .source-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 15px;
+    }
+
+    .mini-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 10px;
+      border: 1px solid #BED8E8;
+      border-radius: 4px;
+      background: #fff;
+      color: var(--uns-teal);
+      font-size: 10px;
+      font-weight: 850;
+    }
+
+    .mini-link:hover { background: #F1F8FC; }
+
+    /* --- Informasi SPMB: bagian umum template awal --- */
+    .spmb-info { background: #fff; }
+
+    .spmb-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .flow {
+      display: grid;
+      counter-reset: step;
+    }
+
+    .flow-step {
+      position: relative;
+      min-height: 48px;
+      padding: 13px 12px 13px 52px;
+      border-top: 1px solid #DCE8F0;
+      color: #536777;
+      font-size: 11px;
+    }
+
+    .flow-step:first-child { border-top: 0; }
+
+    .flow-step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--uns-blue);
+      color: #fff;
+      font-weight: 950;
+      font-size: 10px;
+    }
+
+    .flow-step strong {
+      display: block;
+      color: #174F70;
+      font-size: 11.5px;
+    }
+
+    .requirement-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+    }
+
+    .requirement {
+      padding: 12px;
+      border: 1px solid #DCE8F0;
+      border-radius: 7px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    .requirement strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--uns-blue);
+      font-size: 11px;
+    }
+
+    .official-note {
+      margin-top: 20px;
+      padding: 15px 17px;
+      border-left: 4px solid var(--uns-blue);
+      border-radius: 5px;
+      background: #EEF8FD;
+      color: #456272;
+      font-size: 11px;
+    }
+
+    .official-note strong { color: var(--uns-teal); }
+
+
+    @media (max-width:1000px) {
+      .path-grid { grid-template-columns: 240px 1fr; }
+      .spmb-grid { grid-template-columns: 1fr; }
+      .advantage-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width:720px) {
+      .path-grid { grid-template-columns: 1fr; }
+      .tab-list { grid-template-columns: 1fr 1fr; }
+      .path-panel { padding: 22px; }
+      .path-points, .requirement-list { grid-template-columns: 1fr; }
+    }
+
+  
+    /* === FIX: card profil agar tidak tampil sebagai teks polos === */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 25px 23px;
+      box-shadow: 0 5px 18px rgba(0, 70, 120, .045);
+    }
+
+    .feature-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, var(--uns-blue), var(--uns-cyan));
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 17px;
+      box-shadow: 0 7px 18px rgba(0, 116, 214, .18);
+    }
+
+    .feature h3 {
+      font-size: 17px;
+      color: var(--uns-teal);
+      margin: 0 0 7px;
+    }
+
+    .feature p {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* === FIX: banner Expert UNS agar mengikuti desain awal === */
+    .expert-banner {
+      background: #fff;
+      border: 1px solid #DCE7EF;
+      border-radius: 10px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 20px rgba(0, 74, 130, .055);
+    }
+
+    .expert-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .expert-mark {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--uns-blue), var(--uns-cyan));
+      color: #fff;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+      font-size: 18px;
+      flex: 0 0 auto;
+    }
+
+    .expert-copy strong {
+      display: block;
+      color: var(--uns-teal);
+      font-size: 18px;
+    }
+
+    .expert-copy span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .expert-search {
+      display: flex;
+      min-width: 400px;
+      height: 42px;
+      border: 1px solid #C7DAE7;
+      border-radius: 5px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .expert-search span {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 13px;
+      color: #7C8992;
+      font-size: 11px;
+    }
+
+    .expert-search b {
+      width: 48px;
+      background: var(--uns-blue);
+      color: #fff;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Rapikan kartu kepakaran */
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .person {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 19px;
+      position: relative;
+      overflow: hidden;
+      transition: .18s ease;
+    }
+
+    .person::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--uns-blue), var(--uns-cyan));
+    }
+
+    .person:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 73, 132, .10);
+    }
+
+    .person-head {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #E9F4FB;
+      color: var(--uns-blue);
+      border: 2px solid #CFE7F5;
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+      font-size: 12px;
+      flex: 0 0 auto;
+    }
+
+    .person h3 {
+      margin: 0;
+      color: #116F9A;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .person p {
+      margin: 5px 0 0;
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1000px) {
       .feature-grid,
       .faculty-grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
-
-      .spmb-summary {
-        grid-template-columns: repeat(3, 1fr)
-      }
-
-      .spmb-grid {
-        grid-template-columns: 1fr
-      }
-
-      .path-grid {
-        grid-template-columns: 240px 1fr
-      }
-
-      .curriculum-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .expert-banner {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
 
       .expert-search {
         min-width: 0;
-        width: 100%
-      }
-
-      .cta-box {
-        grid-template-columns: 1fr
-      }
-
-      .footer-portals {
-        grid-template-columns: repeat(3, 1fr)
+        width: 100%;
       }
     }
 
-    @media(max-width:720px) {
-      .container {
-        width: min(calc(100% - 24px), var(--max))
-      }
-
-      .utility-right {
-        display: none
-      }
-
-      .utility-left {
-        gap: 12px
-      }
-
-      .header-main {
-        height: auto;
-        padding: 12px 0;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px
-      }
-
-      .header-search-form {
-        width: 100%
-      }
-
-      .brand-v-divider {
-        height: 28px
-      }
-
-      .brand-text strong {
-        font-size: 14px
-      }
-
-      .program-nav .container {
-        height: auto;
-        min-height: 48px;
-        padding: 10px 0
-      }
-
-      .program-menu {
-        display: none
-      }
-
-      .program-name {
-        font-size: 11px
-      }
-
-      .nav-cta {
-        font-size: 10px
-      }
-
-      .hero-inner {
-        padding: 48px 0 56px
-      }
-
-      .hero h1 {
-        font-size: 42px
-      }
-
-      .hero p {
-        font-size: 15px
-      }
-
-      .hero-actions {
-        display: grid
-      }
-
-      .btn {
-        width: 100%
-      }
-
-      .accredit-row {
-        grid-template-columns: 1fr;
-        gap: 3px
-      }
-
-      .accredit-history,
-      .accredit-period {
-        grid-template-columns: 1fr
-      }
-
-      section {
-        padding: 62px 0
-      }
-
-      .highlight-grid,
+    @media (max-width: 720px) {
       .feature-grid,
-      .faculty-grid,
-      .path-points {
-        grid-template-columns: 1fr
-      }
-
-      .path-grid {
-        grid-template-columns: 1fr
-      }
-
-      .tab-list {
-        grid-template-columns: 1fr 1fr
-      }
-
-      .path-panel {
-        padding: 22px
-      }
-
-      .spmb-summary,
-      .requirement-list {
-        grid-template-columns: 1fr
+      .faculty-grid {
+        grid-template-columns: 1fr;
       }
 
       .expert-banner {
-        padding: 16px
+        padding: 16px;
       }
 
       .expert-brand {
-        align-items: flex-start
+        align-items: flex-start;
       }
 
       .expert-mark {
         width: 46px;
-        height: 46px
+        height: 46px;
       }
 
       .expert-search {
-        height: 40px
-      }
-
-      .cta-box {
-        padding: 28px 22px
-      }
-
-      .cta-actions {
-        display: grid
-      }
-
-      .footer-portals {
-        grid-template-columns: repeat(2, 1fr)
-      }
-
-      .foot-grid {
-        grid-template-columns: 1fr;
-        gap: 24px
-      }
-
-      .copyright {
-        text-align: center
-      }
-
-      .mobile-cta {
-        display: block
-      }
-
-      body {
-        padding-bottom: 70px
+        height: 40px;
       }
     }
 
-    /* --- Poster-aligned information blocks --- */
-    .poster-summary {
-      background: #fff
-    }
-
-    .poster-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px
-    }
-
-    .poster-card {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 24px 20px;
+  
+    /* =========================================================
+       KURIKULUM - struktur mengikuti referensi visual
+       ========================================================= */
+    .curriculum-section {
       background: #fff;
-      box-shadow: 0 5px 20px rgba(0, 70, 120, .05);
-      border-top: 5px solid var(--uns-yellow)
+      overflow: hidden;
     }
 
-    .poster-card h3 {
-      margin: 0 0 8px;
-      color: var(--uns-teal);
-      font-size: 18px
+    .curriculum-grid-ref {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 24px;
+      align-items: stretch;
     }
 
-    .poster-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 12px
-    }
-
-    .poster-card strong {
-      color: var(--uns-blue)
-    }
-
-    .cooperation {
-      background: #F9FBFD
-    }
-
-    .cooperation-box {
-      background: linear-gradient(100deg, #0877D2, #00A8E8);
-      color: #fff;
+    .curriculum-card-ref {
       border-radius: 14px;
+      min-height: 100%;
+      transition: transform .28s ease, box-shadow .28s ease;
+    }
+
+    .curriculum-card-ref:hover {
+      transform: translateY(-5px);
+    }
+
+    .curriculum-card-light {
       padding: 34px;
-      border-bottom: 6px solid var(--uns-yellow);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 25px;
-      align-items: center
-    }
-
-    .cooperation-box h3 {
-      font-size: 28px;
-      margin: 0 0 8px
-    }
-
-    .cooperation-box p {
-      margin: 0;
-      color: #EAF7FF
-    }
-
-    .cooperation-badge {
-      background: var(--uns-yellow);
-      color: #17364B;
-      padding: 13px 18px;
-      border-radius: 8px;
-      font-weight: 950;
-      white-space: nowrap
-    }
-
-    .faculty-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin: 0 0 22px
-    }
-
-    .faculty-stat {
       background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 15px;
-      text-align: center
+      border: 1px solid #DDE7EF;
+      box-shadow: 0 8px 28px rgba(0, 70, 120, .06);
     }
 
-    .faculty-stat strong {
-      display: block;
+    .curriculum-card-light:hover {
+      box-shadow: 0 18px 45px rgba(0, 70, 120, .12);
+    }
+
+    .curriculum-card-heading {
+      padding-bottom: 22px;
+      border-bottom: 1px solid #DDE7EF;
+    }
+
+    .curriculum-card-heading h3 {
+      margin: 0 0 10px;
+      color: var(--uns-teal);
       font-size: 24px;
-      color: var(--uns-blue);
-      line-height: 1
+      line-height: 1.2;
     }
 
-    .faculty-stat span {
-      font-size: 10px;
+    .curriculum-card-heading p {
+      margin: 0;
       color: var(--muted);
-      font-weight: 800
-    }
-
-    .advantages {
-      background: #fff
-    }
-
-    .adv-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px
-    }
-
-    .adv-card {
-      border-radius: 12px;
-      padding: 28px;
-      background: #FFF7C7;
-      border: 1px solid #F4DF69
-    }
-
-    .adv-card strong {
-      display: block;
-      font-size: 38px;
-      color: var(--uns-blue);
-      line-height: 1.05
-    }
-
-    .adv-card span {
-      display: block;
-      margin-top: 8px;
       font-size: 12px;
-      color: #675C25;
-      font-weight: 800
+      line-height: 1.7;
     }
 
-    .graduate {
-      background: #F5F9FC
-    }
-
-    .graduate-grid {
+    .curriculum-list-ref {
       display: grid;
-      grid-template-columns: .75fr 1.25fr;
-      gap: 24px
     }
 
-    .graduate-profile,
-    .testimonial {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 27px;
-      box-shadow: 0 6px 20px rgba(0, 74, 130, .05)
+    .curriculum-item-ref {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 18px 0;
+      border-bottom: 1px solid #E3ECF2;
+      opacity: 0;
+      transform: translateX(-16px);
     }
 
-    .graduate-profile .portrait {
-      width: 82px;
-      height: 82px;
-      border-radius: 50%;
+    .visible .curriculum-item-ref {
+      animation: slideInLeft .55s ease forwards;
+    }
+
+    .visible .curriculum-item-ref:nth-child(1) { animation-delay: .08s; }
+    .visible .curriculum-item-ref:nth-child(2) { animation-delay: .16s; }
+    .visible .curriculum-item-ref:nth-child(3) { animation-delay: .24s; }
+    .visible .curriculum-item-ref:nth-child(4) { animation-delay: .32s; }
+
+    .curriculum-item-ref:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .curriculum-num-ref {
+      width: 38px;
+      height: 38px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--uns-blue), var(--uns-cyan));
-      color: #fff;
-      font-size: 28px;
+      border-radius: 7px;
+      background: #E9F5FC;
+      color: var(--uns-blue);
+      font-size: 11px;
       font-weight: 950;
-      margin-bottom: 17px
+      transition: transform .2s ease, background .2s ease;
     }
 
-    .graduate-profile h3,
-    .testimonial h3 {
-      color: var(--uns-teal);
-      margin: 0 0 5px
+    .curriculum-item-ref:hover .curriculum-num-ref {
+      transform: scale(1.08) rotate(-2deg);
+      background: #DDF1FC;
     }
 
-    .graduate-profile p,
-    .testimonial p {
-      font-size: 12px;
+    .curriculum-item-ref strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #152C3B;
+      font-size: 13px;
+    }
+
+    .curriculum-item-ref span {
+      display: block;
       color: var(--muted);
-      margin: 0
+      font-size: 10.5px;
+      line-height: 1.65;
     }
 
-    .testimonials {
-      display: grid;
-      gap: 14px
-    }
-
-    .quote-mark {
-      font-size: 40px;
-      line-height: .6;
-      color: var(--uns-yellow-2);
-      font-weight: 950
-    }
-
-    .quote-meta {
-      margin-top: 14px !important;
-      color: var(--uns-blue) !important;
-      font-weight: 800
-    }
-
-    .social-panel {
-      margin-top: 20px;
-      background: #0877D2;
+    .curriculum-card-blue {
+      padding: 38px 34px 30px;
       color: #fff;
-      border-radius: 12px;
-      padding: 24px
+      background:
+        radial-gradient(circle at 90% 10%, rgba(255,255,255,.12), transparent 30%),
+        linear-gradient(145deg, #0877D2 0%, #075EA7 100%);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 16px 38px rgba(0, 92, 160, .16);
+      position: relative;
+      overflow: hidden;
     }
 
-    .social-panel h3 {
-      margin: 0 0 13px
+    .curriculum-card-blue::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 240px;
+      height: 240px;
+      border: 38px solid rgba(255,255,255,.05);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
-    .social-list {
+    .curriculum-card-blue:hover {
+      box-shadow: 0 22px 52px rgba(0, 92, 160, .24);
+    }
+
+    .curriculum-big-value {
+      position: relative;
+      z-index: 1;
+      color: var(--uns-yellow);
+      font-size: clamp(48px, 5vw, 72px);
+      line-height: .95;
+      font-weight: 950;
+      letter-spacing: -.05em;
+      opacity: 0;
+      transform: translateY(14px);
+    }
+
+    .visible .curriculum-big-value {
+      animation: fadeUpStrong .6s ease .08s forwards;
+    }
+
+    .curriculum-big-label {
+      position: relative;
+      z-index: 1;
+      margin-top: 10px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid rgba(255,255,255,.18);
+      color: #DDF2FF;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .03em;
+    }
+
+    .curriculum-blue-list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+    }
+
+    .curriculum-blue-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,.16);
+      opacity: 0;
+      transform: translateX(16px);
+    }
+
+    .visible .curriculum-blue-item {
+      animation: slideInRight .55s ease forwards;
+    }
+
+    .visible .curriculum-blue-item:nth-child(1) { animation-delay: .12s; }
+    .visible .curriculum-blue-item:nth-child(2) { animation-delay: .20s; }
+    .visible .curriculum-blue-item:nth-child(3) { animation-delay: .28s; }
+    .visible .curriculum-blue-item:nth-child(4) { animation-delay: .36s; }
+
+    .curriculum-blue-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .curriculum-letter {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      background: var(--uns-yellow);
+      color: #17364B;
+      font-size: 11px;
+      font-weight: 950;
+      transition: transform .2s ease;
+    }
+
+    .curriculum-blue-item:hover .curriculum-letter {
+      transform: scale(1.08) rotate(2deg);
+    }
+
+    .curriculum-blue-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .curriculum-blue-item span {
+      display: block;
+      color: #D7ECF8;
+      font-size: 10.5px;
+      line-height: 1.65;
+    }
+
+    /* =========================================================
+       ANIMASI HALUS UNTUK SELURUH LANDING PAGE
+       ========================================================= */
+    @keyframes fadeUpStrong {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-18px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(18px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .feature,
+    .profile-card,
+    .person,
+    .highlight,
+    .graduate-profile,
+    .testimonial,
+    .info-card,
+    .advantage-card {
+      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+    }
+
+    .feature:hover,
+    .profile-card:hover,
+    .person:hover,
+    .highlight:hover,
+    .graduate-profile:hover,
+    .testimonial:hover,
+    .info-card:hover,
+    .advantage-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(0, 73, 132, .10);
+    }
+
+    .btn {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -75%;
+      width: 45%;
+      height: 200%;
+      background: rgba(255,255,255,.22);
+      transform: rotate(18deg);
+      transition: left .45s ease;
+    }
+
+    .btn:hover::after {
+      left: 125%;
+    }
+
+    .program-menu a {
+      position: relative;
+    }
+
+    .program-menu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: -7px;
+      height: 2px;
+      background: var(--uns-yellow);
+      transition: right .2s ease;
+    }
+
+    .program-menu a:hover::after {
+      right: 0;
+    }
+
+    @media (max-width: 1000px) {
+      .curriculum-grid-ref {
+        grid-template-columns: 1fr;
+      }
+
+      .curriculum-card-blue {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .curriculum-card-light,
+      .curriculum-card-blue {
+        padding: 24px 20px;
+      }
+
+      .curriculum-item-ref,
+      .curriculum-blue-item {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+      }
+
+      .curriculum-big-value {
+        font-size: 50px;
+      }
+
+      .curriculum-card-heading h3 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .curriculum-item-ref,
+      .curriculum-blue-item {
+        grid-template-columns: 1fr;
+      }
+
+      .curriculum-num-ref,
+      .curriculum-letter {
+        margin-bottom: 2px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .curriculum-item-ref,
+      .curriculum-blue-item,
+      .curriculum-big-value {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+      }
+
+      .btn::after {
+        display: none;
+      }
+    }
+
+  
+    /* === S2 Pendidikan Geografi: tambahan tanpa mengubah desain utama template === */
+    .program-menu a {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .program-menu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background: var(--uns-yellow);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .22s ease;
+    }
+
+    .program-menu a:hover::after,
+    .program-menu a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .btn {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      inset: -40% auto -40% -65%;
+      width: 42%;
+      transform: skewX(-20deg);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.42), transparent);
+      transition: left .5s ease;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .btn:hover::after,
+    .btn:focus-visible::after {
+      left: 125%;
+    }
+
+    .highlight,
+    .feature,
+    .profile-card,
+    .info-card,
+    .path-point,
+    .feature-card,
+    .graduate-profile,
+    .testimonial,
+    .person,
+    .management-card {
+      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+    }
+
+    .highlight:hover,
+    .feature:hover,
+    .profile-card:hover,
+    .info-card:hover,
+    .path-point:hover,
+    .feature-card:hover,
+    .graduate-profile:hover,
+    .testimonial:hover,
+    .management-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(0, 73, 132, .10);
+    }
+
+    .profile-card.media-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .profile-card.media-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profile-card.media-card .media-copy {
+      padding: 20px;
+    }
+
+    .cooperation-list {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: #eaf7ff;
+      font-size: 12px;
+    }
+
+    .cooperation-list li {
+      margin: 6px 0;
+    }
+
+    .person-expertise {
+      margin-top: 7px !important;
+      font-weight: 800;
+      color: #4f6c7d !important;
+    }
+
+    .graduate-photo {
+      width: 100%;
+      max-width: 260px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 11px;
+      margin-bottom: 17px;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 22px rgba(0,70,120,.08);
+    }
+
+    .graduate-role {
+      display: block;
+      margin-top: 6px;
+      color: #647783;
+      font-size: 10.5px;
+      font-weight: 700;
+    }
+
+    .source-actions {
       display: flex;
+      gap: 9px;
       flex-wrap: wrap;
-      gap: 9px
+      margin-top: 18px;
     }
 
-    .social-list a,
-    .social-list span {
-      padding: 8px 11px;
-      background: rgba(255, 255, 255, .12);
-      border: 1px solid rgba(255, 255, 255, .25);
-      border-radius: 5px;
-      font-size: 10px;
-      font-weight: 800
+    .stagger > * {
+      opacity: 0;
+      transform: translateY(12px);
     }
 
-    @media(max-width:1000px) {
-
-      .poster-grid,
-      .faculty-stats {
-        grid-template-columns: repeat(2, 1fr)
-      }
-
-      .graduate-grid {
-        grid-template-columns: 1fr
-      }
+    .stagger.visible > * {
+      animation: staggerFade .5s ease forwards;
     }
 
-    @media(max-width:720px) {
+    .stagger.visible > *:nth-child(1) { animation-delay: .05s; }
+    .stagger.visible > *:nth-child(2) { animation-delay: .11s; }
+    .stagger.visible > *:nth-child(3) { animation-delay: .17s; }
+    .stagger.visible > *:nth-child(4) { animation-delay: .23s; }
+    .stagger.visible > *:nth-child(5) { animation-delay: .29s; }
+    .stagger.visible > *:nth-child(6) { animation-delay: .35s; }
+    .stagger.visible > *:nth-child(7) { animation-delay: .41s; }
+    .stagger.visible > *:nth-child(8) { animation-delay: .47s; }
+    .stagger.visible > *:nth-child(9) { animation-delay: .53s; }
+    .stagger.visible > *:nth-child(10) { animation-delay: .59s; }
+    .stagger.visible > *:nth-child(11) { animation-delay: .65s; }
+    .stagger.visible > *:nth-child(12) { animation-delay: .71s; }
+    .stagger.visible > *:nth-child(13) { animation-delay: .77s; }
 
-      .poster-grid,
-      .faculty-stats,
-      .adv-grid {
-        grid-template-columns: 1fr
-      }
-
-      .cooperation-box {
-        grid-template-columns: 1fr
-      }
-
-      .cooperation-badge {
-        white-space: normal
-      }
-
-      .graduate-profile,
-      .testimonial {
-        padding: 21px
-      }
+    @keyframes staggerFade {
+      to { opacity: 1; transform: none; }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .program-menu a::after { transition: none !important; }
+      .btn::after { display: none !important; }
+      .stagger > * { opacity: 1 !important; transform: none !important; animation: none !important; }
+    }
+
+  
+    .foot-col-brand,
+    .foot-col-links {
+      min-width: 0;
+    }
+
   </style>
 </head>
 
+
+
 <body>
 
+  <!-- HEADER / NAVBAR: struktur visual dipertahankan dari template -->
   <nav class="program-nav" aria-label="Navigasi program studi">
-    <div class="container">
+    <div class="container nav-inner">
       <div class="program-name">S2 PENDIDIKAN GEOGRAFI</div>
       <div class="program-menu">
         <a href="#profil">PROFIL</a>
-        <a href="#jalur">JALUR MASUK</a>
-        <a href="#akreditasi">AKREDITASI</a>
         <a href="#kurikulum">KURIKULUM</a>
-        <a href="#dosen">DOSEN & KEPAKARAN</a>
+        <a href="#akreditasi">AKREDITASI</a>
+        <a href="#kepakaran">DOSEN &amp; KEAHLIAN</a>
+        <a href="#alumni">ALUMNI</a>
       </div>
-      <a class="nav-cta" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">DAFTAR
-        ↗</a>
+      <a class="nav-cta" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">DAFTAR ↗</a>
     </div>
   </nav>
+  <div class="header-yellow-line"></div>
 
   <header class="site-header">
     <div class="container header-main">
-      <a class="brand-group" href="#top" aria-label="Pascasarjana FKIP UNS">
-        <img class="brand-logo-uns" src="assets/logo-uns.png" alt="Logo UNS" />
-        <img class="brand-logo-diktisaintek" src="assets/logo_diktisaintek.png" alt="Logo Diktisaintek Berdampak" />
-        <div class="brand-v-divider"></div>
-        <div class="brand-text">
-          <strong>PASCASARJANA FKIP</strong>
-          <span>Universitas Sebelas Maret - Surakarta</span>
-        </div>
-      </a>
-      <form class="header-search-form" action="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106"
-        target="_blank" rel="noopener">
-        <input type="text" name="q" placeholder="Cari dosen / bidang kepakaran..."
-          aria-label="Cari dosen atau bidang kepakaran" />
-        <button type="submit" aria-label="Cari">⌕</button>
-      </form>
+      <div class="header-brand-left">
+        <a class="brand" href="#top" aria-label="Pascasarjana FKIP UNS">
+          <img class="logo-uns" src="assets/logo-uns.png" alt="Logo Universitas Sebelas Maret" />
+          <img class="logo-diktisaintek" src="assets/logo_diktisaintek.png" alt="Logo Diktisaintek Berdampak" />
+          <div class="header-v-divider"></div>
+          <div class="brand-copy">
+            <strong>PASCASARJANA FKIP</strong>
+            <span>Universitas Sebelas Maret - Surakarta</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="header-search-wrapper">
+        <a class="header-search" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener"
+          aria-label="Cari dosen dan bidang keahlian di Expert UNS">
+          <input type="text" readonly placeholder="Cari dosen / bidang keahlian..." tabindex="-1" />
+          <button type="button" aria-label="Cari">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </a>
+      </div>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
+
+    <!-- HERO -->
+    <section class="hero">
       <div class="container hero-inner">
-        <div>
-          <div class="breadcrumbs">FKIP UNS / Pascasarjana / Magister / Pendidikan Geografi</div>
+        <div class="reveal">
+          <div class="breadcrumbs">FKIP UNS / Program Magister / Pendidikan Geografi</div>
           <div class="hero-kicker">Program Magister</div>
-          <h1 id="hero-title">S2 Pendidikan <span>Geografi</span></h1>
-          <p>Kembangkan kompetensi sebagai pendidik ahli, peneliti, dan pengembang pendidikan geografi melalui kajian
-            geospasial, kebumian, lingkungan, dan kebencanaan berbasis riset modern.</p>
+          <h1>S2 Pendidikan <span>Geografi</span></h1>
+          <p class="hero-copy">
+            Fokus studi pada <strong>Pendidikan Geografi</strong> dan <strong>Ilmu Geografi</strong>,
+            dengan core study Pendidikan Geografi Lingkungan dan Kebencanaan.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn btn-yellow" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank"
-              rel="noopener">DAFTAR SEKARANG →</a>
+            <a class="btn btn-yellow" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">DAFTAR SEKARANG →</a>
             <a class="btn btn-outline" href="#jalur">LIHAT JALUR MASUK</a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Ringkasan S2 Pendidikan Geografi">
-          <div class="hero-card-label">Pascasarjana FKIP</div>
-          <h3>Pendidikan Geografi</h3>
-          <p>Program magister berorientasi pada analisis geospasial, pendidikan kebumian, lingkungan hidup, mitigasi
-            bencana, riset, dan publikasi ilmiah.</p>
+        <aside class="hero-card reveal" aria-label="Ringkasan program studi">
+          <div class="hero-card-label">S2 Pendidikan Geografi</div>
+          <h3>Pendidikan Geografi &amp; Ilmu Geografi</h3>
+          <p>
+            Core study: <strong>Pendidikan Geografi Lingkungan dan Kebencanaan</strong>.<br>
+            Kompetensi: <strong>Analisis Geospasial</strong>.
+          </p>
+
           <div class="hero-mini-grid">
             <div class="hero-mini"><strong>Unggul</strong><span>Akreditasi Program Studi</span></div>
-            <div class="hero-mini"><strong>M.Pd.</strong><span>Gelar lulusan</span></div>
-            <div class="hero-mini"><strong>3–6 Bulan</strong><span>Rata-rata masa tunggu kerja</span></div>
-            <div class="hero-mini"><strong>4 smt</strong><span>Rancangan masa studi</span></div>
+            <div class="hero-mini"><strong>M.Pd.</strong><span>Gelar yang didapatkan</span></div>
+            <div class="hero-mini"><strong>2 Tahun</strong><span>Panjang studi</span></div>
+            <div class="hero-mini"><strong>3–6 Bulan</strong><span>Rata-rata masa tunggu kerja alumni</span></div>
           </div>
-          <div class="accred">★ Terakreditasi Unggul LAMDIK berlaku 07 Juni 2023 s/d 06 Juni 2028</div>
+
+          <div class="accred-chip">
+            ★ LAM DIK · UNGGUL (371) · 7 Juni 2023–6 Juni 2028
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="highlights" aria-label="Ringkasan program">
+    <!-- HIGHLIGHT -->
+    <section class="highlights" aria-label="Ringkasan utama">
       <div class="container">
-        <div class="highlight-grid">
-          <div class="highlight"><strong>Unggul</strong><span>Akreditasi LAMDIK</span></div>
+        <div class="highlight-grid stagger reveal">
+          <div class="highlight"><strong>Unggul</strong><span>Akreditasi Program Studi</span></div>
           <div class="highlight"><strong>M.Pd.</strong><span>Gelar yang didapatkan</span></div>
-          <div class="highlight"><strong>2 Tahun</strong><span>Panjang studi program</span></div>
-          <div class="highlight"><strong>3–6 Bulan</strong><span>Rata-rata masa tunggu kerja</span></div>
+          <div class="highlight"><strong>2 Tahun</strong><span>Panjang studi</span></div>
+          <div class="highlight"><strong>3–6 Bulan</strong><span>Rata-rata masa tunggu kerja alumni</span></div>
         </div>
       </div>
     </section>
 
-    <section class="poster-summary" id="ringkasan-poster">
+    <!-- AKREDITASI -->
+    <section id="akreditasi" class="section">
       <div class="container">
-        <div class="section-title">
-          <h2>Profil Utama Program Studi</h2>
-          <div class="title-line"></div>
-          <p>Informasi inti S2 Pendidikan Geografi sebagaimana ditampilkan pada materi profil program studi.</p>
-        </div>
-        <div class="poster-grid">
-          <article class="poster-card">
-            <h3>Core Study</h3>
-            <p><strong>Analisis Geospasial & Kebumian</strong> sebagai fondasi sains geografi dan pengembangan inovasi
-              pembelajaran.</p>
-          </article>
-          <article class="poster-card">
-            <h3>Kompetensi</h3>
-            <p>Penguatan kompetensi pada bidang <strong>Pendidikan Geografi & Lingkungan</strong> melalui riset dan
-              pemetaan digital.</p>
-          </article>
-          <article class="poster-card">
-            <h3>Peluang Karir</h3>
-            <p>Lulusan dipersiapkan menjadi <strong>Pendidik Ahli, Peneliti, & Pakar Geospasial</strong> yang unggul dan
-              berdaya saing.</p>
-          </article>
-          <article class="poster-card">
-            <h3>Fasilitas</h3>
-            <p>Didukung <strong>Laboratorium SIG, Penginderaan Jauh, & Kebencanaan</strong> untuk riset dan perkuliahan.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cooperation" id="mitra">
-      <div class="container">
-        <div class="cooperation-box">
-          <div>
-            <h3>Mitra Kerjasama</h3>
-            <p>Kerjasama nasional dan internasional dalam payung MOU Universitas dan Fakultas.</p>
-          </div>
-          <div class="cooperation-badge">Nasional & Internasional</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="akreditasi" class="accreditation">
-      <div class="container">
-        <div class="section-title">
+        <div class="section-heading">
+          <span class="eyebrow">Akreditasi</span>
           <h2>Akreditasi Program Studi</h2>
-          <div class="title-line"></div>
-          <p>S2 Pendidikan Geografi FKIP UNS berstatus <strong>Unggul</strong> berdasarkan sertifikat akreditasi LAMDIK
-            terbaru.</p>
+          <p>
+            S2 Pendidikan Geografi Universitas Sebelas Maret memperoleh peringkat
+            <strong>UNGGUL</strong> dari LAM DIK.
+          </p>
         </div>
+
         <div class="accredit-grid">
-          <article class="accredit-main" aria-label="Status akreditasi saat ini">
-            <div>
-              <div class="accredit-eyebrow">STATUS AKREDITASI SAAT INI</div>
-              <div class="accredit-grade">UNGGUL</div>
-              <div class="accredit-score">LAMDIK</div>
-              <h3>S2 Pendidikan Geografi</h3>
-              <p>Fakultas Keguruan dan Ilmu Pendidikan - Universitas Sebelas Maret</p>
-            </div>
-            <div class="accredit-period">
-              <div><small>BERLAKU MULAI</small><strong>7 Juni 2023</strong></div>
-              <div><small>BERLAKU SAMPAI</small><strong>6 Juni 2028</strong></div>
-            </div>
+          <article class="accredit-main reveal">
+            <div class="accredit-eyebrow">Status Akreditasi Saat Ini</div>
+            <div class="accredit-grade">UNGGUL</div>
+            <div class="accredit-score">LAM DIK · 371</div>
+            <p>
+              Program Studi S-2 Pendidikan Geografi · Fakultas Keguruan dan Ilmu Pendidikan ·
+              Universitas Sebelas Maret.
+            </p>
           </article>
 
-          <article class="accredit-detail">
-            <div>
-              <h3>Detail Sertifikat Akreditasi</h3>
-              <p>Ringkasan status terbaru program studi dan riwayat akreditasi sebelumnya.</p>
-              <div class="accredit-data">
-                <div class="accredit-row"><span>Lembaga Akreditasi</span><strong>Lembaga Akreditasi Mandiri Kependidikan
-                    (LAMDIK)</strong></div>
-                <div class="accredit-row"><span>Nomor SK</span><strong>430/SK/LAMDIK/Ak/M/IV/2023</strong></div>
-                <div class="accredit-row"><span>Peringkat / Nilai</span><strong>UNGGUL</strong></div>
-                <div class="accredit-row"><span>Periode</span><strong>7 Juni 2023 – 6 Juni 2028</strong></div>
+          <article class="accredit-detail reveal">
+            <h3>Detail Sertifikat Akreditasi</h3>
+            <div class="accredit-data">
+              <div class="accredit-row">
+                <span>Lembaga</span>
+                <strong>LAM DIK</strong>
               </div>
-              <div class="accredit-history">
-                <div class="history-item">
-                  <strong>LAMDIK</strong>
-                  <span>430/SK/LAMDIK/Ak/M/IV/2023 · 7 Juni 2023 – 6 Juni 2028</span>
-                </div>
+              <div class="accredit-row">
+                <span>No. Sertifikat</span>
+                <strong>430/SK/LAM-DIK/Ak/M/IV/2023</strong>
+              </div>
+              <div class="accredit-row">
+                <span>Nilai</span>
+                <strong>UNGGUL (371)</strong>
+              </div>
+              <div class="accredit-row">
+                <span>Masa Berlaku</span>
+                <strong>7 Juni 2023 – 6 Juni 2028</strong>
               </div>
             </div>
-            <div class="accredit-actions" style="margin-top:20px">
-              <a class="btn btn-blue" href="https://akademik.fkip.uns.ac.id/s2-pendidikan-geografi/" target="_blank"
-                rel="noopener">AKREDITASI FKIP UNS ↗</a>
-              <a class="mini-link" href="https://layanan-lppmp.uns.ac.id/akreditasi/prodi/s-2-pendidikan-geografi"
-                target="_blank" rel="noopener">Detail sertifikat UNS ↗</a>
+
+            <div class="action-row">
+              <a class="btn btn-blue" href="https://akademik.fkip.uns.ac.id/s2-pendidikan-geografi/" target="_blank" rel="noopener">
+                AKADEMIK FKIP UNS ↗
+              </a>
+              <a class="btn btn-light" href="https://layanan-lppmp.uns.ac.id/akreditasi/prodi/s-2-pendidikan-geografi" target="_blank" rel="noopener">
+                DETAIL SERTIFIKAT UNS ↗
+              </a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="profil" class="about">
+    <!-- PROFIL -->
+    <section id="profil" class="section section-soft">
       <div class="container">
-        <div class="section-title">
-          <h2>S2 Pendidikan Geografi FKIP UNS</h2>
-          <div class="title-line"></div>
-          <p>Mengembangkan pendidikan geografi yang unggul berbasis analisis geospasial, manajemen lingkungan, dan
-            mitigasi bencana melalui pembelajaran abad-21.</p>
+        <div class="section-heading">
+          <span class="eyebrow">Profil Program Studi</span>
+          <h2>Pendidikan Geografi, Lingkungan &amp; Analisis Geospasial</h2>
+          <p>
+            Fokus studi, core study, kompetensi, dan potret kegiatan program studi.
+          </p>
         </div>
-        <div class="feature-grid">
-          <article class="feature">
-            <div class="feature-icon">01</div>
-            <h3>Outcome-Based Education</h3>
-            <p>Kurikulum berorientasi pada capaian pembelajaran dan kompetensi lulusan jenjang Magister/KKNI Level 8.
-            </p>
+
+        <div class="profile-grid stagger reveal">
+          <article class="profile-card">
+            <h3>Fokus Studi</h3>
+            <p><strong>Pendidikan Geografi</strong> dan <strong>Ilmu Geografi</strong>.</p>
           </article>
-          <article class="feature">
-            <div class="feature-icon">02</div>
-            <h3>Riset & Publikasi Geospasial</h3>
-            <p>Penguatan riset pendidikan geografi, sains lingkungan, SIG, penginderaan jauh, dan studi kebencanaan.</p>
+
+          <article class="profile-card">
+            <h3>Core Study</h3>
+            <p><strong>Pendidikan Geografi Lingkungan dan Kebencanaan</strong>.</p>
           </article>
-          <article class="feature">
-            <div class="feature-icon">03</div>
-            <h3>Jejaring Akademik & Profesi</h3>
-            <p>Pengembangan program didukung kolaborasi dengan instansi kebumian, lembaga riset, dan asosiasi geografi.
-            </p>
+
+          <article class="profile-card">
+            <h3>Kompetensi</h3>
+            <p><strong>Analisis Geospasial</strong>.</p>
+          </article>
+
+          <article class="profile-card media-card">
+            <div class="media-copy">
+              <h3>Keunggulan Prodi</h3>
+              <p>Dokumentasi kegiatan Program Studi S2 Pendidikan Geografi.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="jalur" class="pathways">
+    <!-- JALUR MASUK: struktur umum dari template -->
+    <section id="jalur" class="section pathways">
       <div class="container">
-        <div class="section-title">
+        <div class="section-heading">
+          <span class="eyebrow">Penerimaan Mahasiswa</span>
           <h2>Jalur Masuk</h2>
-          <div class="title-line"></div>
-          <p>Dua pola studi utama untuk S2 Pendidikan Geografi: Reguler dan Magister Jalur Penelitian (By Research).
-            Ketersediaan jalur pada setiap gelombang mengikuti portal resmi SPMB UNS.</p>
+          <p>
+            Informasi jalur masuk mengikuti ketentuan dan gelombang yang sedang dibuka
+            pada portal resmi SPMB Universitas Sebelas Maret.
+          </p>
         </div>
+
         <div class="path-grid">
           <div class="tab-list" role="tablist" aria-label="Pilihan jalur masuk">
-            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="reguler">REGULER<small>Perkuliahan
-                terstruktur + riset tesis</small></button>
-            <button class="tab-btn" role="tab" aria-selected="false" data-tab="riset">BY RESEARCH<small>Riset,
-                publikasi, dan bimbingan intensif</small></button>
+            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="reguler">
+              REGULER
+              <small>Perkuliahan terstruktur + riset tesis</small>
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="riset">
+              BY RESEARCH
+              <small>Riset, publikasi, dan bimbingan intensif</small>
+            </button>
           </div>
+
           <div>
             <article class="path-panel active" data-panel="reguler">
               <h3>Jalur Reguler</h3>
-              <p>Jalur seleksi Magister bagi calon mahasiswa yang menempuh pembelajaran terstruktur melalui mata kuliah,
-                penguatan metodologi geografi, penelitian, dan penyelesaian tesis.</p>
-              <div class="path-points">
-                <div class="path-point"><strong>Latar pendidikan</strong><span>Lulusan S-1 Pendidikan Geografi,
-                    Geografi, Saintek, atau rumpun kependidikan relevan.</span></div>
-                <div class="path-point"><strong>Acuan akademik</strong><span>Ijazah/transkrip S-1, rekomendasi akademik,
-                    dan dokumen pendukung SPMB.</span></div>
-                <div class="path-point"><strong>Seleksi</strong><span>Verifikasi dokumen dan tahapan seleksi/wawancara
-                    sesuai pengumuman gelombang.</span></div>
-                <div class="path-point"><strong>Pendaftaran</strong><span>Dilakukan secara online melalui portal resmi
-                    SPMB Universitas Sebelas Maret.</span></div>
+              <p>
+                Jalur seleksi Magister bagi calon mahasiswa yang menempuh pembelajaran
+                terstruktur melalui mata kuliah, penguatan metodologi, penelitian, dan penyelesaian tesis.
+              </p>
+              <div class="path-points stagger reveal">
+                <div class="path-point">
+                  <strong>Latar pendidikan</strong>
+                  <span>Lulusan S-1 pada bidang yang relevan dan memenuhi ketentuan program studi.</span>
+                </div>
+                <div class="path-point">
+                  <strong>Acuan akademik</strong>
+                  <span>Persyaratan umum SPMB Magister memuat ijazah/transkrip, rekomendasi, dan dokumen pendukung.</span>
+                </div>
+                <div class="path-point">
+                  <strong>Seleksi</strong>
+                  <span>Verifikasi dokumen dan tahapan seleksi/wawancara mengikuti pengumuman gelombang.</span>
+                </div>
+                <div class="path-point">
+                  <strong>Pendaftaran</strong>
+                  <span>Dilakukan secara daring melalui portal SPMB Universitas Sebelas Maret.</span>
+                </div>
               </div>
-              <div class="note">Nilai ambang, biaya pendaftaran, jadwal, dan dokumen yang diwajibkan dapat berubah
-                menurut periode. Gunakan laman SPMB S2/S3 sebagai rujukan final sebelum mendaftar.</div>
+              <div class="note">
+                Jadwal, biaya, nilai ambang, dan dokumen yang diwajibkan dapat berubah.
+                Gunakan portal SPMB UNS sebagai rujukan final.
+              </div>
               <div style="height:14px"></div>
-              <a class="btn btn-blue" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank"
-                rel="noopener">DAFTAR JALUR REGULER ↗</a>
+              <a class="btn btn-blue" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">BUKA SPMB UNS ↗</a>
             </article>
+
             <article class="path-panel" data-panel="riset">
               <h3>Magister Jalur Penelitian / By Research</h3>
-              <p>Program Magister Jalur Penelitian lebih menitikberatkan pada riset mendalam di bidang
-                geografi/kebencanaan dan publikasi karya ilmiah bereputasi.</p>
-              <div class="path-points">
-                <div class="path-point"><strong>Calon pembimbing</strong><span>Alur dimulai dengan menentukan calon
-                    dosen pembimbing dengan kepakaran yang relevan.</span></div>
-                <div class="path-point"><strong>Proposal tesis</strong><span>Menyiapkan draft proposal penelitian
-                    geografi dan memperoleh persetujuan calon pembimbing.</span></div>
-                <div class="path-point"><strong>Orientasi luaran</strong><span>Penelitian geospasial, publikasi ilmiah
-                    internasional/nasional bereputasi, dan tesis.</span></div>
-                <div class="path-point"><strong>Profil pendaftar</strong><span>Memiliki arah penelitian geografi yang
-                    jelas dan rekam jejak akademik/publikasi.</span></div>
+              <p>
+                Jalur penelitian menitikberatkan kegiatan riset, publikasi karya ilmiah,
+                tesis, dan bimbingan akademik sesuai ketentuan UNS.
+              </p>
+              <div class="path-points stagger reveal">
+                <div class="path-point">
+                  <strong>Calon pembimbing</strong>
+                  <span>Menentukan calon dosen pembimbing yang relevan dengan topik penelitian.</span>
+                </div>
+                <div class="path-point">
+                  <strong>Proposal tesis</strong>
+                  <span>Menyiapkan draft proposal penelitian sesuai ketentuan jalur.</span>
+                </div>
+                <div class="path-point">
+                  <strong>Orientasi luaran</strong>
+                  <span>Penelitian, publikasi ilmiah, tesis, dan diseminasi hasil penelitian.</span>
+                </div>
+                <div class="path-point">
+                  <strong>Kepakaran</strong>
+                  <span>Calon pembimbing dapat ditelusuri melalui portal Expert UNS.</span>
+                </div>
               </div>
-              <div class="note"><strong>Acuan persyaratan jalur penelitian:</strong> Pendaftar menyiapkan ijazah S-1
-                bidang relevan, IPK minimal 3,00, dua rekomendasi akademik, rekomendasi calon pembimbing, serta draft
-                proposal tesis.</div>
-              <div style="height:14px"></div>
+              <div class="note">
+                Persyaratan dan ketersediaan jalur penelitian mengikuti periode SPMB yang sedang dibuka.
+              </div>
               <div class="source-links">
-                <a class="btn btn-blue" href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3" target="_blank"
-                  rel="noopener">CEK JALUR S2/S3 ↗</a>
-                <a class="mini-link" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank"
-                  rel="noopener">Cari calon pembimbing di Expert UNS ↗</a>
+                <a class="btn btn-blue" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">CEK SPMB UNS ↗</a>
+                <a class="mini-link" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener">
+                  Cari calon pembimbing di Expert UNS ↗
+                </a>
               </div>
             </article>
           </div>
@@ -2289,385 +2570,413 @@
       </div>
     </section>
 
-    <section id="spmb" class="spmb-info">
+    <!-- INFORMASI SPMB: struktur umum dari template -->
+    <section id="spmb" class="section spmb-info">
       <div class="container">
-        <div class="section-title">
+        <div class="section-heading">
+          <span class="eyebrow">Informasi Umum</span>
           <h2>Informasi SPMB Pascasarjana UNS</h2>
-          <div class="title-line"></div>
-          <p>Ringkasan informasi pendaftaran calon mahasiswa baru S2 Pendidikan Geografi Universitas Sebelas Maret.</p>
-        </div>
-
-        <div class="spmb-summary">
-          <div class="spmb-stat"><strong>36–42 SKS</strong><span>Beban studi Program Magister UNS</span></div>
-          <div class="spmb-stat"><strong>4 Semester</strong><span>Rancangan penyelesaian studi Magister</span></div>
-          <div class="spmb-stat"><strong>2 Periode</strong><span>Gelombang pendaftaran per tahun akademik</span></div>
+          <p>
+            Jadwal, gelombang, biaya, dan persyaratan mengikuti informasi pada portal resmi SPMB UNS.
+          </p>
         </div>
 
         <div class="spmb-grid">
-          <article class="info-card">
+          <article class="info-card reveal">
             <h3>Alur Pendaftaran</h3>
-            <p>Proses dilakukan secara daring melalui SPMB UNS.</p>
-            <div class="flow">
-              <div class="flow-step"><strong>Isi formulir online</strong>Dapatkan nomor pendaftaran SPMB Pascasarjana
-                UNS.</div>
-              <div class="flow-step"><strong>Selesaikan pembayaran</strong>Ikuti nominal dan kanal pembayaran resmi.
-              </div>
-              <div class="flow-step"><strong>Unggah dokumen</strong>Login dan unggah dokumen persyaratan yang
-                ditentukan.</div>
-              <div class="flow-step"><strong>Verifikasi panitia</strong>Setelah diverifikasi, cetak Kartu Tanda Peserta.
-              </div>
-              <div class="flow-step"><strong>Ikuti seleksi</strong>Ikuti ujian/wawancara sesuai jadwal yang ditetapkan.
-              </div>
+            <p>Proses pendaftaran dilakukan secara daring melalui SPMB UNS.</p>
+            <div class="flow stagger reveal">
+              <div class="flow-step"><strong>Isi formulir online</strong>Lengkapi data pendaftaran pada portal SPMB UNS.</div>
+              <div class="flow-step"><strong>Selesaikan pembayaran</strong>Ikuti nominal dan kanal pembayaran pada periode yang dibuka.</div>
+              <div class="flow-step"><strong>Unggah dokumen</strong>Unggah dokumen persyaratan melalui sistem pendaftaran.</div>
+              <div class="flow-step"><strong>Verifikasi panitia</strong>Data dan dokumen diverifikasi sesuai prosedur.</div>
+              <div class="flow-step"><strong>Ikuti seleksi</strong>Ikuti tahapan seleksi sesuai jalur dan jadwal yang ditetapkan.</div>
             </div>
           </article>
 
-          <article class="info-card">
+          <article class="info-card reveal">
             <h3>Dokumen yang Perlu Disiapkan</h3>
-            <p>Ringkasan dokumen umum pendaftaran Magister.</p>
-            <div class="requirement-list">
-              <div class="requirement"><strong>Ijazah & transkrip S-1</strong>Bidang studi Pendidikan Geografi /
-                Geografi / Relevan.</div>
-              <div class="requirement"><strong>Rekomendasi akademik</strong>Dua rekomendasi dari dosen/atasan akademik.
-              </div>
-              <div class="requirement"><strong>Izin belajar</strong>Surat izin instansi bagi pendaftar yang bekerja.
-              </div>
-              <div class="requirement"><strong>Kesehatan & pembiayaan</strong>Surat keterangan sehat & jaminan
-                pembiayaan.</div>
-              <div class="requirement"><strong>TPA/TBS</strong>Sertifikat TPA/TBS sesuai ketentuan gelombang.</div>
-              <div class="requirement"><strong>Bahasa Inggris</strong>Sertifikat EAP/TOEFL yang diakui UNS.</div>
-              <div class="requirement"><strong>Khusus By Research</strong>Rekomendasi calon pembimbing & proposal tesis.
-              </div>
-              <div class="requirement"><strong>Portofolio Riset</strong>Daftar karya ilmiah/publikasi bila ada.</div>
+            <p>Daftar final mengikuti jalur dan gelombang SPMB.</p>
+            <div class="requirement-list stagger reveal">
+              <div class="requirement"><strong>Ijazah &amp; transkrip S-1</strong>Sesuai persyaratan program studi.</div>
+              <div class="requirement"><strong>Rekomendasi akademik</strong>Mengikuti ketentuan SPMB.</div>
+              <div class="requirement"><strong>Dokumen identitas</strong>Disiapkan sesuai formulir pendaftaran.</div>
+              <div class="requirement"><strong>Dokumen pendukung</strong>Mengikuti jalur dan periode yang dipilih.</div>
             </div>
           </article>
         </div>
 
-        <div class="official-note">
-          <strong>Catatan Resmi:</strong> Jadwal serta persyaratan yang bersifat dinamis dapat diakses langsung pada
-          portal resmi SPMB UNS.
+        <div class="official-note reveal">
+          <strong>Catatan:</strong>
+          Gunakan portal resmi SPMB UNS sebagai rujukan final untuk jadwal,
+          biaya, persyaratan, serta jalur yang sedang dibuka.
           <div class="source-links">
-            <a class="mini-link" href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3" target="_blank"
-              rel="noopener">Informasi Jalur S2/S3 ↗</a>
-            <a class="mini-link" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank"
-              rel="noopener">Dashboard Pendaftaran ↗</a>
+            <a class="mini-link"
+              href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3"
+              target="_blank" rel="noopener">Informasi Jalur S2/S3 ↗</a>
+            <a class="mini-link"
+              href="https://spmb.uns.ac.id/pendaftar/dashboard/index"
+              target="_blank" rel="noopener">Dashboard Pendaftaran ↗</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="kurikulum">
+    <!-- KURIKULUM: struktur dua kartu dipertahankan; isi hanya dari poster -->
+    <section id="kurikulum" class="section curriculum-section">
       <div class="container">
-        <div class="section-title">
+        <div class="section-heading">
+          <span class="eyebrow">Kurikulum</span>
           <h2>Kurikulum</h2>
-          <div class="title-line"></div>
-          <p>Kurikulum dirancang untuk menguatkan kompetensi keilmuan geografi, metode pembelajaran geospasial, dan
-            riset kebumian.</p>
-        </div>
-        <div class="curriculum-grid">
-          <article class="curriculum-card">
-            <h3>Struktur Pembelajaran</h3>
-            <p>Detail mata kuliah dan kurikulum lengkap mengacu pada dokumen resmi prodi S2 Pendidikan Geografi.</p>
-            <div class="curr-list">
-              <div class="curr-row">
-                <div class="num">01</div>
-                <div><strong>Mata Kuliah Keahlian Geografi</strong><span>Filsafat geografi, teori spasial, dan
-                    metodologi penelitian geografi.</span></div>
-              </div>
-              <div class="curr-row">
-                <div class="num">02</div>
-                <div><strong>SIG & Penginderaan Jauh</strong><span>Pemodelan spasial, analisis lingkungan, dan teknologi
-                    geospasial dalam pembelajaran.</span></div>
-              </div>
-              <div class="curr-row">
-                <div class="num">03</div>
-                <div><strong>Kebencanaan & Lingkungan</strong><span>Studi mitigasi bencana, ekologi manusia, dan
-                    pembelajaran lingkungan hidup.</span></div>
-              </div>
-              <div class="curr-row">
-                <div class="num">04</div>
-                <div><strong>Tesis & Publikasi</strong><span>Penelitian tesis dan kewajiban publikasi karya ilmiah
-                    bereputasi.</span></div>
-              </div>
-            </div>
-          </article>
-          <article class="curriculum-card blue">
-            <div class="big-number">36–42</div>
-            <div class="big-label">SKS · ACUAN UMUM PROGRAM MAGISTER</div>
-            <div class="curr-list" style="margin-top:25px">
-              <div class="curr-row">
-                <div class="num">A</div>
-                <div><strong>KKNI Level 8</strong><span>Capaian pembelajaran jenjang Magister Geografi.</span></div>
-              </div>
-              <div class="curr-row">
-                <div class="num">B</div>
-                <div><strong>Berbasis OBE</strong><span>Berorientasi pada ketercapaian kompetensi lulusan.</span></div>
-              </div>
-              <div class="curr-row">
-                <div class="num">C</div>
-                <div><strong>Masa studi</strong><span>Dirancang selesai dalam 4 semester pada skema umum Pascasarjana
-                    UNS.</span></div>
-              </div>
-              <div class="curr-row">
-                <div class="num">D</div>
-                <div><strong>Aplikasi Geospasial</strong><span>Mengintegrasikan teknologi SIG & Remote Sensing
-                    modern.</span></div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="dosen" class="faculty">
-      <div class="container">
-        <div class="section-title">
-          <h2>Dosen & Kepakaran</h2>
-          <div class="title-line"></div>
-          <p>Pakar dan pengajar S2 Pendidikan Geografi FKIP Universitas Sebelas Maret.</p>
-        </div>
-
-        <a class="expert-banner" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank"
-          rel="noopener">
-          <div class="expert-brand">
-            <div class="expert-mark">E</div>
-            <div class="expert-copy"><strong>Expert UNS</strong><span>Temukan pakar, bidang keahlian, publikasi, dan
-                rekam jejak penelitian Universitas Sebelas Maret.</span></div>
-          </div>
-          <div class="expert-search"><span>Cari nama dosen geografi atau bidang kepakaran...</span><b>⌕</b></div>
-        </a>
-
-        <div class="faculty-grid">
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">CM</div>
-              <div>
-                <h3>Prof. Dr. Chatarina Muryani, M.Si.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Geografi Kebencanaan</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">NS</div>
-              <div>
-                <h3>Prof. Dr. Nunuk Suryani, M.Pd.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Teknologi Pendidikan</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">SG</div>
-              <div>
-                <h3>Prof. Dr. Drs. Sugiyanto, M.Si., M.Si.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Pembelajaran Geografi</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">SW</div>
-              <div>
-                <h3>Prof. Dr. Siswandari, M.Stat.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Statistika</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">RN</div>
-              <div>
-                <h3>Dr. Rita Noviani, S.Si., M.Sc.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Perencanaan Wilayah</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">PW</div>
-              <div>
-                <h3>Dr. Pipit Wijayanti, S.Si., M.Sc.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Hidrologi Karst</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">MG</div>
-              <div>
-                <h3>Dr. Mohammad Gamal R., M.Si.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Geografi Permukiman Kota</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">SP</div>
-              <div>
-                <h3>Dr. Singgih Prihadi, S.Pd., M.Pd.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Teknologi Pembelajaran Geografi</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">AH</div>
-              <div>
-                <h3>Dr. Agung Hidayat, S.Pd., M.Sc.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Geografi Lingkungan</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">NH</div>
-              <div>
-                <h3>Dr.rer.nat. Nurhadi, S.Ant., M.Hum.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Geografi Manusia</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">RU</div>
-              <div>
-                <h3>Dr. Rahning Utomowati, S.Si., M.Sc.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Geografi Lingkungan</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">SB</div>
-              <div>
-                <h3>Seno Budi Ajar, S.Pd., M.Si., Ph.D.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Geografi Budaya</span>
-          </article>
-          <article class="person">
-            <div class="person-head">
-              <div class="avatar">YH</div>
-              <div>
-                <h3>Yosafat Hermawan T., S.Sos., MA., Ph.D.</h3>
-                <p>Pengajar S2 Pendidikan Geografi</p>
-              </div>
-            </div><span class="expert-chip">Sosiologi Perkotaan & Kependudukan</span>
-          </article>
-        </div>
-        <div class="faculty-cta" style="margin-top:24px"><a class="btn btn-blue"
-            href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106"
-            target="_blank" rel="noopener">TELUSURI PROFIL DI EXPERT UNS ↗</a></div>
-      </div>
-    </section>
-
-    <section class="advantages" id="keunggulan">
-      <div class="container">
-        <div class="section-title">
-          <h2>Keunggulan Prodi</h2>
-          <div class="title-line"></div>
-          <p>Ringkasan keunggulan program studi S2 Pendidikan Geografi FKIP UNS.</p>
-        </div>
-        <div class="adv-grid">
-          <div class="adv-card"><strong>M.Pd.</strong><span>Gelar Magister Pendidikan setelah lulus.</span></div>
-          <div class="adv-card"><strong>3–6 Bulan</strong><span>Rata-rata masa tunggu kerja alumni.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-box">
-          <div>
-            <h2>Siap melanjutkan studi di S2 Pendidikan Geografi?</h2>
-            <p>Periksa jadwal, persyaratan, dan jalur yang sedang dibuka melalui SPMB UNS. Pendaftaran dilakukan pada
-              portal resmi calon mahasiswa.</p>
-          </div>
-          <div class="cta-actions"><a class="btn btn-yellow" href="https://spmb.uns.ac.id/pendaftar/dashboard/index"
-              target="_blank" rel="noopener">DAFTAR SEKARANG →</a><a class="btn btn-outline"
-              href="https://spmb.uns.ac.id/jalur-masuk/jenjang?jenjang=s2-s3" target="_blank" rel="noopener">INFO SPMB
-              S2/S3</a></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-portals">
-        <a class="portal-item" href="https://uns.ac.id/" target="_blank" rel="noopener">
-          <strong>UNS</strong>
-          <span>UNIVERSITAS SEBELAS MARET</span>
-        </a>
-        <a class="portal-item" href="https://fkip.uns.ac.id/" target="_blank" rel="noopener">
-          <strong>FKIP</strong>
-          <span>FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</span>
-        </a>
-        <a class="portal-item" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">
-          <strong>SPMB</strong>
-          <span>PENERIMAAN MAHASISWA BARU</span>
-        </a>
-        <a class="portal-item" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank"
-          rel="noopener">
-          <strong>EXPERT</strong>
-          <span>PORTAL KEPAKARAN UNS</span>
-        </a>
-        <a class="portal-item" href="https://s2geo.fkip.uns.ac.id/" target="_blank" rel="noopener">
-          <strong>PRODI</strong>
-          <span>PENDIDIKAN GEOGRAFI</span>
-        </a>
-      </div>
-      <div class="foot-grid">
-        <div>
-          <div class="foot-brand">
-            <img class="foot-logo-uns" src="assets/logo-uns.png" alt="Logo UNS" />
-            <div class="foot-brand-names">
-            </div>
-          </div>
-          <p class="foot-text">
-            S2 Pendidikan Geografi · Pascasarjana FKIP Universitas Sebelas Maret. Jl. Ir. Sutami 36A Kentingan, Jebres,
-            Surakarta, Jawa Tengah.
+          <p>
+            Fokus studi, core study, kompetensi, dan peluang karir S2 Pendidikan Geografi.
           </p>
         </div>
-        <div>
+
+        <div class="curriculum-grid-ref">
+          <article class="curriculum-card-ref curriculum-card-light reveal">
+            <div class="curriculum-card-heading">
+              <h3>Struktur Pembelajaran</h3>
+            </div>
+
+            <div class="curriculum-list-ref stagger reveal">
+              <div class="curriculum-item-ref">
+                <div class="curriculum-num-ref">01</div>
+                <div>
+                  <strong>Pendidikan Geografi</strong>
+                  <span>Bagian dari fokus studi program.</span>
+                </div>
+              </div>
+
+              <div class="curriculum-item-ref">
+                <div class="curriculum-num-ref">02</div>
+                <div>
+                  <strong>Ilmu Geografi</strong>
+                  <span>Bagian dari fokus studi program.</span>
+                </div>
+              </div>
+
+              <div class="curriculum-item-ref">
+                <div class="curriculum-num-ref">03</div>
+                <div>
+                  <strong>Pendidikan Geografi Lingkungan dan Kebencanaan</strong>
+                  <span>Core study program.</span>
+                </div>
+              </div>
+
+              <div class="curriculum-item-ref">
+                <div class="curriculum-num-ref">04</div>
+                <div>
+                  <strong>Analisis Geospasial</strong>
+                  <span>Kompetensi program.</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="curriculum-card-ref curriculum-card-blue reveal">
+            <div class="curriculum-big-value">2 Tahun</div>
+            <div class="curriculum-big-label">PANJANG STUDI</div>
+
+            <div class="curriculum-blue-list stagger reveal">
+              <div class="curriculum-blue-item">
+                <div class="curriculum-letter">A</div>
+                <div>
+                  <strong>Pengembang Media Pembelajaran Geografi</strong>
+                </div>
+              </div>
+
+              <div class="curriculum-blue-item">
+                <div class="curriculum-letter">B</div>
+                <div>
+                  <strong>Calon Pendidik Geografi</strong>
+                </div>
+              </div>
+
+              <div class="curriculum-blue-item">
+                <div class="curriculum-letter">C</div>
+                <div>
+                  <strong>Pengembang Pendidikan Kebencanaan dan Lingkungan Hidup</strong>
+                </div>
+              </div>
+
+              <div class="curriculum-blue-item">
+                <div class="curriculum-letter">D</div>
+                <div>
+                  <strong>Peneliti Bidang Pendidikan Geografi</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PELUANG KARIR & FASILITAS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Karir &amp; Fasilitas</span>
+          <h2>Peluang Karir dan Fasilitas</h2>
+          <p>Informasi peluang karir dan fasilitas S2 Pendidikan Geografi.</p>
+        </div>
+
+        <div class="two-col">
+          <article class="feature-card reveal">
+            <h3>Peluang Karir</h3>
+            <ul class="list-clean stagger reveal">
+              <li>Pengembang Media Pembelajaran Geografi</li>
+              <li>Calon Pendidik Geografi</li>
+              <li>Pengembang Pendidikan Kebencanaan dan Lingkungan Hidup</li>
+              <li>Peneliti Bidang Pendidikan Geografi</li>
+            </ul>
+          </article>
+
+          <article class="feature-card reveal">
+            <h3>Fasilitas</h3>
+            <ul class="list-clean stagger reveal">
+              <li>Ruang kelas untuk kelompok kecil (maksimal 20 mahasiswa)</li>
+              <li>Ruangan ber-AC</li>
+              <li>Proyektor LCD</li>
+              <li>Fasilitas WIFI</li>
+              <li>Perpustakaan</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MITRA KERJASAMA -->
+    <section class="section" id="mitra">
+      <div class="container">
+        <div class="cooperation-box reveal">
+          <div>
+            <h3>Mitra Kerjasama</h3>
+            <ul class="cooperation-list stagger reveal">
+              <li>Badan Penelitian dan Pengembangan dan Perbukuan</li>
+              <li>Pertamina (Persero) Sungai II Pakning</li>
+              <li>National Changhua University of Education</li>
+              <li>Dan lain-lain</li>
+            </ul>
+          </div>
+          <div class="cooperation-badge">Kolaborasi Nasional &amp; Internasional</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PENGAJAR & KEAHLIAN -->
+    <section id="kepakaran" class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Pengajar &amp; Keahlian</span>
+          <h2>Pengajar &amp; Keahlian</h2>
+        </div>
+
+        <a class="expert-banner" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener">
+          <div class="expert-brand">
+            <div class="expert-mark">E</div>
+            <div class="expert-copy">
+              <strong>Expert UNS</strong>
+              <span>Telusuri profil peneliti, publikasi, dan bidang kepakaran Universitas Sebelas Maret.</span>
+            </div>
+          </div>
+          <div class="expert-search">
+            <span>Cari nama dosen atau bidang kepakaran...</span><b>⌕</b>
+          </div>
+        </a>
+
+        <div class="faculty-grid stagger reveal">
+          <article class="person"><div class="person-head"><div class="avatar">CM</div><div><h3>Prof. Dr. Chatarina Muryani, M.Si.</h3><p class="person-expertise">Geografi Kebencanaan</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">NS</div><div><h3>Prof. Dr. Nunuk Suryani, M.Pd.</h3><p class="person-expertise">Teknologi Pendidikan</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">SG</div><div><h3>Prof. Dr. Drs. Sugiyanto, M.Si., M.Si.</h3><p class="person-expertise">Pembelajaran Geografi</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">SW</div><div><h3>Prof. Dr. Siswandari, M.Stat.</h3><p class="person-expertise">Statistika</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">RN</div><div><h3>Dr. Rita Noviani, S.Si., M.Sc.</h3><p class="person-expertise">Perencanaan Wilayah</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">PW</div><div><h3>Dr. Pipit Wijayanti, S.Si., M.Sc.</h3><p class="person-expertise">Hidrologi Karst</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">MG</div><div><h3>Dr. Mohammad Gamal R., M.Si.</h3><p class="person-expertise">Geografi Permukiman Kota</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">SP</div><div><h3>Dr. Singgih Prihadi, S.Pd., M.Pd.</h3><p class="person-expertise">Teknologi Pembelajaran Geografi</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">AH</div><div><h3>Dr. Agung Hidayat, S.Pd., M.Sc.</h3><p class="person-expertise">Geografi Lingkungan</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">NH</div><div><h3>Dr.rer.nat Nurhadi, S.Ant., M.Hum.</h3><p class="person-expertise">Geografi Manusia</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">RU</div><div><h3>Dr. Rahning Utomowati, S.Si., M.Sc.</h3><p class="person-expertise">Geografi Lingkungan</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">SB</div><div><h3>Seno Budi Ajar, S.Pd., M.Si., Ph.D.</h3><p class="person-expertise">Geografi Budaya</p></div></div></article>
+          <article class="person"><div class="person-head"><div class="avatar">YH</div><div><h3>Yosafat Hermawan T., S.Sos., MA., Ph.D.</h3><p class="person-expertise">Sosiologi Perkotaan &amp; Kependudukan</p></div></div></article>
+        </div>
+
+        <div class="action-row" style="justify-content:center; margin-top:24px;">
+          <a class="btn btn-blue" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener">
+            TELUSURI EXPERT UNS ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALUMNI & TESTIMONI -->
+    <section id="alumni" class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Alumni &amp; Testimoni</span>
+          <h2>Potret Lulusan &amp; Pengalaman Belajar</h2>
+          <p>Lulusan terbaik, testimoni alumni, dan testimoni mahasiswa S2 Pendidikan Geografi.</p>
+        </div>
+
+        <div class="graduate-grid">
+          <article class="graduate-profile reveal">
+            <div class="portrait">DA</div>
+            <h3>Diah Ainurrohmah</h3>
+            <p><strong>Potret Lulusan Terbaik</strong></p>
+          </article>
+
+          <div class="testimonials">
+            <article class="testimonial reveal">
+              <div class="quote-mark">“</div>
+              <h3>Testimoni Alumni — Diah Ainurrohmah (2019)</h3>
+              <p>
+                Studi di Pendidikan Geografi UNS mengajarkan saya menjadi pendidik sekaligus peneliti.
+                Melalui bimbingan dosen, saya berhasil menerbitkan jurnal internasional pertama setelah
+                beberapa kali ditolak. Pengalaman itu menumbuhkan minat saya pada penelitian dan penulisan,
+                dan kini saya aktif menulis di jurnal internasional bereputasi dan berkarier sebagai
+                peneliti di bidang geografi manusia.
+              </p>
+              <p class="quote-meta">
+                Diah Ainurrohmah — Alumni
+                <span class="graduate-role">Junior Reseacher di Prospect Riset Madani (PT Arjuna Wijaya Karya)</span>
+              </p>
+            </article>
+
+            <article class="testimonial reveal">
+              <div class="quote-mark">“</div>
+              <h3>Testimoni Mahasiswa — Ike Fitri Samsiyah (2024)</h3>
+              <p>
+                Studi di Magister Pendidikan Geografi UNS memberi saya pengalaman berharga melalui
+                pembelajaran yang memadukan teori, penelitian, dan praktik lapangan. Bimbingan dosen
+                yang inspiratif serta lingkungan akademik yang kondusif memperluas wawasan dan
+                keterampilan saya dalam bidang pendidikan dan penelitian geografi.
+              </p>
+              <p class="quote-meta">Ike Fitri Samsiyah — Mahasiswa</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-soft" id="pendaftaran">
+      <div class="container">
+        <div class="admission-box reveal">
+          <div>
+            <h2>Siap melanjutkan studi di S2 Pendidikan Geografi?</h2>
+            <p>
+              Periksa jadwal, persyaratan, dan jalur yang sedang dibuka melalui SPMB UNS.
+              Pendaftaran dilakukan melalui portal resmi calon mahasiswa.
+            </p>
+          </div>
+          <div class="admission-actions">
+            <a class="btn btn-yellow" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">DAFTAR SEKARANG →</a>
+            <a class="btn btn-outline" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">INFO SPMB S2/S3</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: struktur visual dipertahankan dari template -->
+  <footer>
+    <div class="footer-yellow-line"></div>
+    <div class="container footer-container">
+      <div class="footer-portals">
+        <a class="portal" href="https://uns.ac.id/" target="_blank" rel="noopener">
+          UNS<small>UNIVERSITAS SEBELAS MARET</small>
+        </a>
+        <a class="portal" href="https://fkip.uns.ac.id/" target="_blank" rel="noopener">
+          FKIP<small>FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</small>
+        </a>
+        <a class="portal" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">
+          SPMB<small>PENERIMAAN MAHASISWA BARU</small>
+        </a>
+        <a class="portal" href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener">
+          EXPERT<small>PORTAL KEPAKARAN UNS</small>
+        </a>
+        <a class="portal" href="https://s2geo.fkip.uns.ac.id/" target="_blank" rel="noopener">
+          PRODI<small>PENDIDIKAN GEOGRAFI</small>
+        </a>
+      </div>
+
+      <div class="foot-grid">
+        <div class="foot-col-brand">
+          <div class="foot-brand">
+            <img class="foot-mark" src="assets/logo-uns.png" alt="Logo Universitas Sebelas Maret" />
+            <div class="foot-brand-text"></div>
+          </div>
+          <p class="foot-address">
+            S2 Pendidikan Geografi · Pascasarjana FKIP Universitas Sebelas Maret.<br>
+            Jl. Ir. Sutami 36A, Surakarta 57126.<br>
+            Telepon: (0271) 669124 / 648939
+          </p>
+        </div>
+
+        <div class="foot-col-links">
           <div class="foot-title">Layanan Sistem</div>
           <div class="foot-links">
             <a href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">SPMB UNS</a>
-            <a href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener">Expert
-              UNS</a>
-            <a href="https://geografi.fkip.uns.ac.id/" target="_blank" rel="noopener">Website Prodi</a>
+            <a href="https://expert.uns.ac.id/researchers?fakultas%5B%5D=0106" target="_blank" rel="noopener">Expert UNS</a>
+            <a href="https://s2geo.fkip.uns.ac.id/" target="_blank" rel="noopener">Website Prodi</a>
           </div>
         </div>
-        <div>
+
+        <div class="foot-col-links">
           <div class="foot-title">Informasi</div>
           <div class="foot-links">
+            <a href="#profil">Profil</a>
             <a href="#jalur">Jalur Masuk</a>
             <a href="#akreditasi">Akreditasi</a>
-            <a href="#spmb">Info SPMB</a>
             <a href="#kurikulum">Kurikulum</a>
-            <a href="#dosen">Dosen & Kepakaran</a>
-            <a href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">Pendaftaran</a>
+            <a href="#kepakaran">Dosen &amp; Keahlian</a>
+            <a href="#alumni">Alumni &amp; Testimoni</a>
+            <a href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">Pendaftaran</a>
           </div>
         </div>
       </div>
+
       <div class="copyright">
         Copyright © 2026 Pascasarjana FKIP Universitas Sebelas Maret
       </div>
     </div>
   </footer>
 
-  <a class="mobile-cta" href="https://spmb.uns.ac.id/pendaftar/dashboard/index" target="_blank" rel="noopener">DAFTAR S2
-    PENDIDIKAN GEOGRAFI →</a>
+  <a class="mobile-cta" href="https://spmb.uns.ac.id/" target="_blank" rel="noopener">
+    DAFTAR S2 PENDIDIKAN GEOGRAFI →
+  </a>
 
   <script>
     const buttons = document.querySelectorAll('[data-tab]');
     const panels = document.querySelectorAll('[data-panel]');
+
     buttons.forEach(btn => btn.addEventListener('click', () => {
       const key = btn.dataset.tab;
-      buttons.forEach(b => { const active = b === btn; b.classList.toggle('active', active); b.setAttribute('aria-selected', String(active)); });
+      buttons.forEach(b => {
+        const active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
       panels.forEach(p => p.classList.toggle('active', p.dataset.panel === key));
     }));
+
+    const revealItems = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('visible'));
+    }
   </script>
 </body>
-
 </html>
